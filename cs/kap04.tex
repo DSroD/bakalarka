@@ -1,0 +1,203 @@
+\newcommand{\Ab}{{\boldsymbol{A}}}
+\newcommand{\Bb}{{\boldsymbol{B}}}
+\newcommand{\Cb}{{\boldsymbol{C}}}
+\newcommand{\Db}{{\boldsymbol{D}}}
+
+\chapter{Expandující gravitační vlny a spinorový popis}
+V této kapitole zavedeme spinorový formalismus, následně jej použijeme k popisu expandujících
+gravitačních vln. Spinorový formalismus vybudujeme na základě geometrického přístupu i přes fakt, že
+nejpřirozenější popis spinorů je v řeči teorie reprezentací grup, kde spolu s pinory tvoří vektory v
+irreducibilních reprezentacích sudých subalgeber Cliffordových algeber, resp. v reprezentacích příslušných
+Pinových a Spinových grup. S tímto přístupem se setkáme například v \textcolor{red}{zde přidat Cartana 1966
++ novější články}
+\cite{fecko_2006}. Geometrická konstrukce spinorů je ale pro použití v relativitě jakožto geometrické teorii,
+příhodnější a tohoto přístupu pak využívají právě práce zabývající se čistě relativistickým využitím spinorů, například
+\cite{penrose_rindler_1984}, \cite{doi:10.1142/5222}.
+\section{Spinorový formalismus}
+\subsection{Krátký úvod do 2-spinorů}
+
+Vezměme světelný kužel v Minkowského prostoročasu $\mathbb{M}$, tedy úplný podprostor kde pro každý vektor platí
+\begin{equation}
+    \eta_{\mu \nu} x^\mu x^\nu = 0.
+\end{equation}
+
+Každému časupodobnému nebo světelnému vektoru v prostoročasu přiřazujeme orientaci vůči počátku světelného
+kužele, může mířit do minulosti nebo do budoucnosti, světelný kužel tak rozdělíme na budoucí a minulý.
+Průnikem svetelného kuželu s plochou konstantního času dostaneme sféru v $\mathbb{R}^3$. Pokud leží nadplocha
+konstantního času v souřadnici $x^0 = t =1$, představuje vzniklá sféra tzv. Riemannovu sféru $\Sigma$ pro kterou
+platí rovnice
+\begin{equation}
+    x^2 + y^2 + z^2 = 1
+\end{equation} 
+
+Stereografickou projekcí pak můžeme ztotožnit sféru $\Sigma$ s rozšířenou komplexní rovinou $\tilde{\mathbb{C}}$
+(tedy $\mathbb{C} \cup \{\infty\}$) a body $x$, $y$ a $z$ na sféře můžeme popsat jednou komplexní souřadnicí,
+které se obvykle říká stereografická souřadnice,
+\begin{equation}
+    \xi = \frac{x + iy}{1-z},
+\end{equation}
+případně v polárních souřadnicích $(\theta, \phi)$
+\begin{equation}
+    \xi = e^{i \phi} \cos \frac{\theta}{2}.
+\end{equation}
+Inverzní vztahy jsou pak
+\begin{equation}
+    x=\frac{\xi+\bar{\xi}}{\xi \bar{\xi}+1},~~~y=\frac{\bar{\xi}-\xi}{\xi \bar{\xi}+1},~~~z=\frac{\xi\bar{\xi}-1}{\xi\bar{\xi}+1}.
+\end{equation}
+
+Dále zavedeme složky spinoru $\xi^\Ab$, $\xi^A = (\zeta, \eta)$, jako
+\begin{equation}
+    \label{eq:zavedeni_slozek_spinoru_z_stereograf_souradnice}
+    \xi = \frac{\zeta}{\eta},
+\end{equation}
+vyhneme se tak nekonečné hodnotě stereografické souřadnice pro horní (severní) pól Riemannovy sféry.
+Pokud je horní (a později i dolní) index tučný, jedná se o tzv. abstraktní index, který není svázaný se
+spinorovou bází, kterou zavedeme dále, ale pouze naznačuje strukturu objektu. Pokud index není tučný, jedná
+se přímo o souřadnicový index, který nabývá hodnot $1, 2$ a je svázaný s bází. Je zřejmé, že spinor $\xi^\Ab$
+a stereografická souřadnice $\xi$ jsou i přes použití podobného značení
+dva odlišné objekty.
+Pomocí komponent spinoru lze popsat libovolný bod $(t, x, y, z)$ na světelném kuželu jako
+\begin{equation}
+    \label{eq:inverse_spinor_souradnicove}
+    \begin{split}
+        t &= \frac{1}{\sqrt{2}} \left( \zeta\bar{\zeta} + \eta\bar{\eta} \right) \\
+        x &= \frac{1}{\sqrt{2}} \left( \zeta\bar{\eta} + \eta\bar{\zeta} \right) \\
+        y &= \frac{1}{\sqrt{2}} \left( \bar{\zeta}\eta - \eta\bar{\zeta} \right) \\
+        z &= \frac{1}{\sqrt{2}} \left( \zeta\bar{\zeta} - \eta\bar{\eta} \right).
+    \end{split}
+\end{equation}
+Na prostoru spinorů se dále zavádí 2-forma $[ \cdot , \cdot ]$, která je
+\begin{enumerate}[(1)]
+    \item antisymetrická,
+    \item bilineární a
+    \item nedegenerovaná.
+\end{enumerate}
+Všimněme si, že kombinací prvních dvou podmínek dostaneme pro dva lineárně závislé spinory
+(tedy pro dvojici $(\xi^\Ab, \kappa^\Ab)$ takové, že $\kappa^\Ab = \lambda \xi^\Ab$,
+$\lambda \in \mathbb{C}$)
+\begin{equation}
+    [\xi^\Ab, \kappa^\Ab] = 0.
+\end{equation}
+Z třetí podmínky ale máme
+\begin{equation}
+    [\xi^\Ab, \eta^\Ab] \neq 0
+\end{equation}
+pro všechny $\xi^\Ab$, $\eta^\Ab$ z prostoru spinorů.
+
+Tuto 2-formu obvykle zapisujeme symbolem $\epsilon_{\Ab \Bb}$, jedná se o tzv. Levi-Civitův spinor a na prostoru
+spinorů zavádí skalární součin
+\begin{equation}
+    \label{eq:pusobeni_levicivitova_symbolu_na_spinory1}
+    \epsilon_{\Ab \Bb} \xi^\Ab \eta^\Bb = \xi_\Bb \eta^\Bb = -\xi^\Ab\eta_\Ab
+\end{equation}
+a zastává tedy funkci obdobnou metrickému tenzoru. Zápis \ref{eq:pusobeni_levicivitova_symbolu_na_spinory1} lze
+také vyjádřit jako
+\begin{equation}
+    \label{eq:pusobeni_levicivitova_symbolu_na_spinory2}
+    \xi^\Ab = \epsilon^{\Ab\Bb} \xi_\Bb, ~~~~ \xi_\Ab = \epsilon_{\Bb\Ab} \xi^\Bb,
+\end{equation}
+kde platí
+\begin{equation}
+    \epsilon^{\Ab\Cb} \epsilon_{\Bb\Cb} = \delta_\Bb^\Ab.
+\end{equation}
+
+Dále se zavádí spin-báze $(o^\Ab, \iota^\Ab)$ tak, aby platilo
+\begin{equation}
+    \label{eq:noramlizacni_podminky_spinorove_baze}
+    [o^\Ab, \iota^\Ab] = -[\iota^\Ab, o^\Ab] = 1.
+\end{equation}
+
+Tak formálně propojíme souřadnicový zápis $\xi^A$ se samotným spinorem $\xi^\Ab$
+\begin{equation}
+    \xi^\Ab = \xi^0 o^\Ab + \xi^1 \iota^\Ab
+\end{equation}
+
+Z prvků báze lze pomocí dyadického součinu sestrojit Levi-Civitův spinor. S využitím normalizačních podmínek
+\ref{eq:noramlizacni_podminky_spinorove_baze} a vlastnosti \ref{eq:pusobeni_levicivitova_symbolu_na_spinory2}
+dostaneme vztah
+\begin{equation}
+    \epsilon_{\Ab\Bb} = o_\Ab \iota_\Bb - o_\Bb \iota_\Ab.
+\end{equation}
+
+V transformaci spinorových složek na reálné souřadnice \ref{eq:inverse_spinor_souradnicove} máme komplexně
+sdružené složky spinorů, operace komplexního sdružení ale není uzavřená na prostor spinorů, což lze jednoduše
+ukázat když sečteme složky spinoru se složkami komplexně sdruženého - výsledný objekt má reálné složky.
+Operace komplexního sdružení tedy zobrazuje spinory na prostor komplexně sdružených spinorů a píšeme
+\begin{equation}
+    \overline{\xi^\Ab} = \bar{\xi}^{\Ab'}.
+\end{equation}
+
+U Levi-Civitova spinoru je konvence psát $\overline{\epsilon_{\Ab\Bb}} = \epsilon_{\Ab'\Bb'}$ a ne 
+$\bar{\epsilon}_{\Ab'\Bb'}$ jak bychom mohli očekávat.
+
+Nejobecnějším typem spinoru je pak spinor s tzv. valencí $(p, q; r, s)$ který zapisujeme jako
+\begin{equation}
+    \chi^{\Ab\dots \Cb ~\boldsymbol{S}'\dots \boldsymbol{U}'}_{~~~~~~~~~~~\Db\dots \boldsymbol{F}~ \boldsymbol{W}'\dots \boldsymbol{Y}'},
+\end{equation}
+
+který má $p$ kontravariantních nečárkovaných indexů, $q$ kontravariantních čárkovaných indexů, $r$
+kovariantních nečárkovaných indexů a $s$ kovariantních čarkovaných indexů. Obecně platí
+\begin{equation}
+    \chi^{\Ab\Bb'}_{~~~~\Cb\Db'} = \chi^{\Bb'\Ab}_{~~~~\Db'\Cb} = \chi^{\Ab~~\Bb'}_{~~\Cb~~\Db'},
+\end{equation}
+tedy čárkované indexy můžeme libovolně prohazovat s něčárkovanými, musí ale zůstat pozice čárkovaných mezi sebou
+a nečárkovaných mezi sebou.
+
+Nyní jsme kompletně vybaveni k přepsání vztahů \ref{eq:inverse_spinor_souradnicove} do zápisu čistě pomocí spinorů.
+Využijeme k tomu Infield-van der Waerdenovy symboly $\sigma_\mu^{\Ab\Ab'}$. Ty můžeme v Minkowského prostoru reprezentovat
+čtyřmi hermitovskými maticemi
+\begin{equation} \scriptstyle
+    \sigma_0^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{smallmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{smallmatrix}\right)~,~~~ \sigma_1^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{smallmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{smallmatrix}\right)~,~~~ \sigma_2^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{smallmatrix}
+        0 & -i \\
+        i & 0
+    \end{smallmatrix}\right)~,~~~ \sigma_3^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{smallmatrix}
+        1 & 0 \\
+        0 & -1
+    \end{smallmatrix}\right).
+\end{equation}
+
+Tyto symboly nám dávají propojení mezi \textcolor{red}{world-tensory (překlad)} a spinory. Komponenty
+\ref{eq:inverse_spinor_souradnicove} vektoru ležícího na světelném kuželu pomocí spinoru se
+složkami $\xi^A=(\zeta, \eta)$ zapíšeme jako
+\begin{equation}
+    x^\mu = \bar{\xi}^{A'} \sigma_{AA'}^\mu \xi^A.
+\end{equation}
+
+Dále zavedeme spinorovou formu vektoru $x^\mu$
+\begin{equation}
+    x^{AA'} = \sigma_\mu^{AA'} x^\mu = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        t + z & x - iy \\
+        x + iy & t - z
+    \end{pmatrix}.
+\end{equation}
+\textcolor{red}{Je tohle správně? Je to jen speciální případ na Minkowského PČ - spinová
+struktura na varietě $\mathcal{M}$ je ekvivariantní lift frame bandlu - rozmyslet jak ten
+funguje}
+Z Levi-Civitových spinorů a Infield-van der Waerdenových symbolů můžeme zkonstruovat metriku
+\begin{equation}
+    g_{\mu \nu} = \epsilon_{AB} \epsilon_{A'B'} \sigma_\mu^{AA'} \sigma_\nu^{BB'}.
+\end{equation}
+Obecně můžeme s pomocí těchto symbolů vyjádřit spinory libovolné valence jako tenzory a
+naopak.
+
+Ve výpočtech se obvykle Infield-van der Waerdenovy symboly vynechávají a rovnou se píše
+\begin{equation}
+    g_{\mu \nu} = \epsilon_{AB}\epsilon_{A'B'}.
+\end{equation}
+\textcolor{red}{Zde by možná bylo příhodné ještě doplnit vyjádření null vektorů pomocí prvků spinorové báze
+a tedy zavedení nulové tetrády.}
+Pozorný čtenář si již jistě všiml korespondence mezi tenzorovými indexy a spinorovými indexy - každému
+tenzorovému indexu odpovídá pár spinorových indexů.
+
+
+
+\section{Geodetiky}
+
+
+\subsection{Refrakční rovnice}
