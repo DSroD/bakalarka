@@ -4,7 +4,7 @@
 \newcommand{\Db}{{\boldsymbol{D}}}
 
 \chapter{Expandující gravitační vlny a spinorový popis}
-V této kapitole zavedeme spinorový formalismus, následně jej použijeme k popisu expandujících
+V této kapitole zavedeme spinorový formalismus na Minkowského prostoročase, následně jej použijeme k popisu expandujících
 gravitačních vln. Spinorový formalismus vybudujeme na základě geometrického přístupu i přes fakt, že
 nejpřirozenější popis spinorů je v řeči teorie reprezentací grup, kde spolu s pinory tvoří vektory v
 irreducibilních reprezentacích sudých subalgeber Cliffordových algeber, resp. v reprezentacích příslušných
@@ -15,8 +15,10 @@ příhodnější a tohoto přístupu pak využívají právě práce zabývajíc
 \cite{penrose_rindler_1984}, \cite{doi:10.1142/5222}.
 \section{Spinorový formalismus}
 \subsection{Krátký úvod do 2-spinorů}
-
-Vezměme světelný kužel v Minkowského prostoročasu $\mathbb{M}$, tedy úplný podprostor kde pro každý vektor platí
+Definujme zde Minkowského prostor $\mathbb{M}$ jako čtyřdimenzionální vektorový prostor nad $\mathbb{R}$ s Lorentzovskou metrikou
+$\eta_{\mu \nu} = diag(1, -1, -1, -1)$. V každém bodě prostoru $\mathbb{R}^4$ existuje množina bázových vektorů z $\mathbb{M}$ kterou
+nazýváme tetrádou.
+Vezměme světelný kužel v $\mathbb{M}$, tedy úplný podprostor kde pro každý vektor platí
 \begin{equation}
     \eta_{\mu \nu} x^\mu x^\nu = 0.
 \end{equation}
@@ -50,7 +52,8 @@ Dále zavedeme složky spinoru $\xi^\Ab$, $\xi^A = (\zeta, \eta)$, jako
     \label{eq:zavedeni_slozek_spinoru_z_stereograf_souradnice}
     \xi = \frac{\zeta}{\eta},
 \end{equation}
-vyhneme se tak nekonečné hodnotě stereografické souřadnice pro horní (severní) pól Riemannovy sféry.
+vyhneme se tak nekonečné hodnotě stereografické souřadnice pro horní (severní) pól Riemannovy sféry. Nyní
+potřebujeme udělat jistou formalizaci indexové notace.
 Pokud je horní (a později i dolní) index tučný, jedná se o tzv. abstraktní index, který není svázaný se
 spinorovou bází, kterou zavedeme dále, ale pouze naznačuje strukturu objektu. Pokud index není tučný, jedná
 se přímo o souřadnicový index, který nabývá hodnot $1, 2$ a je svázaný s bází. Je zřejmé, že spinor $\xi^\Ab$
@@ -100,7 +103,6 @@ kde platí
 \begin{equation}
     \epsilon^{\Ab\Cb} \epsilon_{\Bb\Cb} = \delta_\Bb^\Ab.
 \end{equation}
-
 Dále se zavádí spin-báze $(o^\Ab, \iota^\Ab)$ tak, aby platilo
 \begin{equation}
     \label{eq:noramlizacni_podminky_spinorove_baze}
@@ -126,8 +128,11 @@ Operace komplexního sdružení tedy zobrazuje spinory na prostor komplexně sdr
 \begin{equation}
     \overline{\xi^\Ab} = \bar{\xi}^{\Ab'}.
 \end{equation}
-
-U Levi-Civitova spinoru je konvence psát $\overline{\epsilon_{\Ab\Bb}} = \epsilon_{\Ab'\Bb'}$ a ne 
+Komplexním sdružením spinorové báze dostáváme bázi prostoru komplexně sdružených spinorů
+\begin{equation}
+    \overline{o^\Ab} = \bar{o}^{\Ab'} = o^{\Ab'}, ~~ \overline{\iota^{\Ab}} = \bar{\iota}^{\Ab'} = \iota^{\Ab'}.
+\end{equation}
+U Levi-Civitova spinoru je stejně jako u složek spin-báze konvence psát $\overline{\epsilon_{\Ab\Bb}} = \epsilon_{\Ab'\Bb'}$ a ne 
 $\bar{\epsilon}_{\Ab'\Bb'}$ jak bychom mohli očekávat.
 
 Nejobecnějším typem spinoru je pak spinor s tzv. valencí $(p, q; r, s)$ který zapisujeme jako
@@ -190,14 +195,25 @@ Ve výpočtech se obvykle Infield-van der Waerdenovy symboly vynechávají a rov
 \begin{equation}
     g_{\mu \nu} = \epsilon_{AB}\epsilon_{A'B'}.
 \end{equation}
-\textcolor{red}{Zde by možná bylo příhodné ještě doplnit vyjádření null vektorů pomocí prvků spinorové báze
-a tedy zavedení nulové tetrády.}
-Pozorný čtenář si již jistě všiml korespondence mezi tenzorovými indexy a spinorovými indexy - každému
-tenzorovému indexu odpovídá pár spinorových indexů.
+Z tvaru Infield-van der Waerdenových symbolů je vidět korespondence mezi tenzorovými a spinorovými indexy,
+každému tenzorovému indexu odpovídají dva spinorové.
+
+Pomocí spinorové báze můžeme zavést světelnou (nulovou) tetrádu vztahy
+\begin{equation}
+    \begin{split}
+        l^a &= o^A o^{A'}, \\
+        n^a &= \iota^A \iota^{A'}, \\
+        m^a &= o^A \iota^{A'}, \\
+        \bar{m}^a &= \iota^A o^{A'}
+    \end{split}
+\end{equation}
+kde $l^a, n^a, m^a$ a $\bar{m}^a$ jsou normalizované světelné vektory tvořící bázi.
 
 
 
-\section{Geodetiky}
+\section{Expandující gravitační vlny}
+
+
 
 
 \subsection{Refrakční rovnice}
