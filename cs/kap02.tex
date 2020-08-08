@@ -7,7 +7,8 @@ Nejprve popíšeme několik způsobů konstrukce prostoročasů s neexpandujíc�
 "cut and paste" a zavedeme spojité souřadnice na tomto prostoročase. Dále zavedeme distribuční popis těchto prostoročasů
 
 \subsection{"Cut and paste"\ metoda konstrukce}
-Geometrická metoda konstrukce "cut and paste" impulzních gravitačních vln v Minkowského prostoročase \ref{eq:minkowski} se zakládá na rozdělení celého prostoročasu podél rovinné
+\label{sec:cut_and_paste_konstrukce1}
+Geometrická metoda konstrukce "cut and paste" impulzních gravitačních vln v Minkowského prostoročase \eqref{eq:minkowski} se zakládá na rozdělení celého prostoročasu podél rovinné
 světelné nadplochy $\mathcal{N}$ kde je implulzní vlna lokalizována na dvě části $\mathcal{M}^+$ a $\mathcal{M}^-$. Opětovným spojením těchto částí a ztotožněním bodů na hranici
 řezu $\mathcal{N}$ se specifickým posunutím dostaneme prostoročas s impulzní gravitační vlnou.
 
@@ -65,7 +66,7 @@ kde $H(\eta, \bar{\eta})$ je holomorfní. Penrose \cite{Penrose:1972xrn} ukázal
 jsou v tenzoru křivosti reprezentovány členy proporciálními Diracově delta distribuci $\delta(\mathcal{U})$.
 V Minkowského pozadí je nadplocha $\mathcal{U}=0$ rovina a řešení spadá do rodiny impulzních $pp-$vln, tedy
 rovnoběžně se propagujících rovinných vln. Obecně na pozadích konstantní křivosti platí stejné napojovací podmínky
-\ref{eq:lepici_podminky} a nadplocha představuje $\mathcal{U}=0$ plochu konstantní Gaussovské křivosti 
+\eqref{eq:lepici_podminky} a nadplocha představuje $\mathcal{U}=0$ plochu konstantní Gaussovské křivosti 
 $K=\frac{1}{3}\Lambda$ která je popsána metrikou $d\sigma^2=2(1+\frac{1}{6}\Lambda \eta \bar{\eta})^{-2} 
 d\eta~d\bar{\eta}$. V případě $\Lambda \neq 0$ se tedy jedná buďto o sféru
 ($\Lambda > 0$) nebo o hyperboloid ($\Lambda < 0$). Popis těchto nadploch konstatní křivostsi v (A)dS prostoročasech a
@@ -78,7 +79,7 @@ jejich geometrické vlastnosti jsou shrnuty v \cite{Podolsky:1997ri}, kde je tak
 Metoda "cut and paste"\ nám dává identifikaci bodů prostoročasu na obou stranách impulzní vlny a tedy napojovací podmínky
 pro geodetiky, nic ale neříká o podobě metriky kompletního prostoročasu s impulzní vlnou. Potřebujeme tedy najít vhodný
 souřadnicový systém, ve kterém bude metrika spojitá funkce $\mathcal{U}$. Toho dosáhneme postupem použitým např. v
-\cite{Podolsky:2014ysa}, kde z metriky prostoročasu pozadí \ref{eq:konfmetric}, respektive
+\cite{Podolsky:2014ysa}, kde z metriky prostoročasu pozadí \eqref{eq:konfmetric}, respektive
 \begin{equation}
     \label{eq:null_background_metric}
     \mathrm{d}s_0^2 = \frac{2~\mathrm{d}\eta~\mathrm{d}\bar{\eta}-2~\mathrm{d}\mathcal{U}~\mathrm{d}\mathcal{V}}
@@ -97,8 +98,8 @@ kde uvažujeme libovolnou reálnou funkci $H(Z, \bar{Z})$, obdržíme metriku
     \mathrm{d} Z+H_{, \bar{Z} \bar{Z}} \mathrm{d} \bar{Z}\right)\right|^{2}-2 \mathrm{d} U 
     \mathrm{d} V}{\left[1+\frac{1}{6} \Lambda(Z \bar{Z}-U V-U G)\right]^{2}}
 \end{equation}
-kde $G(Z, \bar{Z}) \equiv H - Z H_{,Z}-\bar{Z}H_{,\bar{Z}}$. Metriku \ref{eq:nonexp_cont_nokink_metric} pak 
-uvažujeme pouze pro $U>0$, zatímco na $U<0$ uvažujeme metriku \ref{eq:null_background_metric}. Definováním
+kde $G(Z, \bar{Z}) \equiv H - Z H_{,Z}-\bar{Z}H_{,\bar{Z}}$. Metriku \eqref{eq:nonexp_cont_nokink_metric} pak 
+uvažujeme pouze pro $U>0$, zatímco na $U<0$ uvažujeme metriku \eqref{eq:null_background_metric}. Definováním
 tzv. kink funkce jako
 \begin{equation}
     \label{eq:kink_function}
@@ -114,20 +115,23 @@ můžeme výslednou metriku zapsat jako
     \mathrm{d} Z+H_{, \bar{Z} \bar{Z}} \mathrm{d} \bar{Z}\right)\right|^{2}-2 \mathrm{d} U 
     \mathrm{d} V}{\left[1+\frac{1}{6} \Lambda(Z \bar{Z}-U V-U_+ G)\right]^{2}}.
 \end{equation}
-Transformaci \ref{eq:nonexp_cont_transform} lze pomocí Heavisideovy funkce $\Theta(U)$ přepsat do tvaru
-spojujícího metriku \ref{eq:null_background_metric} s metrikou \ref{eq:nonexp_continuous_metric}
+Transformaci \eqref{eq:nonexp_cont_transform} lze pomocí Heavisideovy funkce $\Theta(U)$ přepsat do tvaru
+spojujícího metriku \eqref{eq:null_background_metric} s metrikou \eqref{eq:nonexp_continuous_metric}
 \begin{equation}
     \label{eq:nonexp_cont_full_transform}
     \mathcal{U}=U,~~~~ \mathcal{V}=V+\Theta(U) H + U_+ H_{,Z}H_{,\bar{Z}},~~~~ \eta=Z+ U_+ H_{,\bar{Z}}.
 \end{equation}
-Tato transformace obsahuje Penroseovy spojovací podmínky \ref{eq:lepici_podminky} v $U=0$, kde
+Tato transformace obsahuje Penroseovy spojovací podmínky \eqref{eq:lepici_podminky} v $U=0$, kde
 vzniká nespojitost v souřadnici $\mathcal{V}$. Tato metoda konstrukce tedy představuje explicitní "cut and paste"\ konstrukci.
 
 
 
 \subsection{Distribuční tvar metriky}
 Dalším způsobem konstrukce impulzní gravitační vlny je limitní přechod od příslušných rodin tzv. "sandwichových"\
-gravtiačních vln s hladkým profilem vlnoplochy k distribučnímu vyjádření impulzní vlny. 
+gravtiačních vln s hladkým profilem vlnoplochy k limitnímu distribučnímu vyjádření impulzní vlny. Takové vyjádření
+také dostaneme dosazením invezní transformace k \eqref{eq:nonexp_cont_full_transform} do spojité metriky 
+\eqref{eq:nonexp_continuous_metric}.
+
 \begin{equation} \label{eq:nonexp_distr_metric_omega}
 \mathrm{d}s^2=\frac{2\mathrm{d}\eta~\mathrm{d}\bar{\eta} - 2 \mathrm{d}\mathcal{U}~\mathrm{d}\mathcal{V} + 2H(\eta, \bar{\eta}) \delta(\mathcal{U}) 
 ~\mathrm{d}\mathcal{U}^2}{\left[1+\frac{1}{6}\Lambda(\eta \bar{\eta}-\mathcal{U}\mathcal{V})\right]^2}
@@ -139,8 +143,13 @@ Další způsob, kterým lze prostoročas s impulzní pp-vlnou získat je boost 
 
 \section{Interakce s testovacími částicemi}
 
+\subsection{Profil impulsní gravitační vlny}
+
+Einsteinovy rovnice \eqref{eq:einsten_field_equations} se pro metriku \eqref{eq:nonexp_distr_metric_omega}
+redukují na 
+
 \subsection{Refrakční rovnice}
-\textcolor{red}{Zmínit existenční teorémy (ex. souř. systém kde jsou geodetiky spojité,
+\textcolor{red}{Zde více komentáře (ex. souř. systém kde jsou geodetiky spojité,
 zavést C1 matching a ospravedlnit použití refrakčních rovnic)}
 Změna polohy (nalepení geodetiky) je dána Penroseovými spojovacími podmínkami, tento skok ale generuje změnu v derivacích poloh a dojde tedy
 k refrakci geodetik na impulzní nadploše $\mathcal{U}=0$ podle sady tzv. refrakčních rovnic
