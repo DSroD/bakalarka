@@ -99,7 +99,17 @@ kde uvažujeme libovolnou reálnou funkci $H(Z, \bar{Z})$, obdržíme metriku
     \mathrm{d} V}{\left[1+\frac{1}{6} \Lambda(Z \bar{Z}-U V-U G)\right]^{2}}
 \end{equation}
 kde $G(Z, \bar{Z}) \equiv H - Z H_{,Z}-\bar{Z}H_{,\bar{Z}}$. Metriku \eqref{eq:nonexp_cont_nokink_metric} pak 
-uvažujeme pouze pro $U>0$, zatímco na $U<0$ uvažujeme metriku \eqref{eq:null_background_metric}. Definováním
+uvažujeme pouze pro $U>0$, zatímco na $U<0$ provedeme ztotožnení souřadnic
+\begin{equation}
+    \label{eq:transformation_just_rename}
+    \begin{split}
+        &\mathcal{U} = U \\
+        &\mathcal{V} = V \\
+        &\eta = Z
+    \end{split}
+\end{equation}
+a uvažujeme metriku vzniklou právě touto transformací.
+Definováním
 tzv. kink funkce jako
 \begin{equation}
     \label{eq:kink_function}
@@ -115,14 +125,19 @@ můžeme výslednou metriku zapsat jako
     \mathrm{d} Z+H_{, \bar{Z} \bar{Z}} \mathrm{d} \bar{Z}\right)\right|^{2}-2 \mathrm{d} U 
     \mathrm{d} V}{\left[1+\frac{1}{6} \Lambda(Z \bar{Z}-U V-U_+ G)\right]^{2}}.
 \end{equation}
-Transformaci \eqref{eq:nonexp_cont_transform} lze pomocí Heavisideovy funkce $\Theta(U)$ přepsat do tvaru
-spojujícího metriku \eqref{eq:null_background_metric} s metrikou \eqref{eq:nonexp_continuous_metric}
+Transformace \eqref{eq:nonexp_cont_transform} a \eqref{eq:transformation_just_rename} spojující separátně pro $\mathcal{U}>0$ a $\mathcal{U}<0$ metriku \eqref{eq:null_background_metric}
+s metrikou \eqref{eq:nonexp_continuous_metric} lze pomocí Heavisideovy funkce $\Theta(U)$ přepsat do tvaru 
 \begin{equation}
     \label{eq:nonexp_cont_full_transform}
     \mathcal{U}=U,~~~~ \mathcal{V}=V+\Theta(U) H + U_+ H_{,Z}H_{,\bar{Z}},~~~~ \eta=Z+ U_+ H_{,\bar{Z}}.
 \end{equation}
-Tato transformace obsahuje Penroseovy spojovací podmínky \eqref{eq:lepici_podminky} v $U=0$, kde
+Stále je ale nutné provádět transformaci separátně pro $\mathcal{U}>0$ a $\mathcal{U}<0$, Heavisideova funkce
+má při transformaci metriky \eqref{eq:null_background_metric} za následek vznik členů proporcionálních delta funkci.
+Ukazuje se, že tato transformace spojuje tzv. distribuční vyjádření metriky \eqref{eq:nonexp_distr_metric_omega}, které bude zavedeno dále,
+se spojitým tvarem metriky \eqref{eq:nonexp_continuous_metric}.
+Transformace \eqref{eq:nonexp_cont_full_transform} zároveň obsahuje Penroseovy spojovací podmínky \eqref{eq:lepici_podminky} v $U=0$, kde
 vzniká nespojitost v souřadnici $\mathcal{V}$. Tato metoda konstrukce tedy představuje explicitní "cut and paste"\ konstrukci.
+
 
 
 
@@ -137,6 +152,9 @@ také dostaneme dosazením invezní transformace k \eqref{eq:nonexp_cont_full_tr
 ~\mathrm{d}\mathcal{U}^2}{\left[1+\frac{1}{6}\Lambda(\eta \bar{\eta}-\mathcal{U}\mathcal{V})\right]^2}
 \end{equation}
 
+Pokud v případě nenulové konsmologické konstanty vnoříme prostoročas s impulsní vlnou do pětidimenzionálního plochého
+prostoročasu s Minkowského metrikou \textcolor{red}{nejdříve dopsat dS a AdS, ať se můžu odkazovat!}
+
 \subsection{Boost Schwarzchildova řešení}
 %%% TODO nechat to tady???
 Další způsob, kterým lze prostoročas s impulzní pp-vlnou získat je boost Schwarzchildova řešení
@@ -146,7 +164,7 @@ Další způsob, kterým lze prostoročas s impulzní pp-vlnou získat je boost 
 \subsection{Profil impulsní gravitační vlny}
 
 Einsteinovy rovnice \eqref{eq:einsten_field_equations} se pro metriku \eqref{eq:nonexp_distr_metric_omega}
-redukují na 
+redukují na
 
 \subsection{Refrakční rovnice}
 \textcolor{red}{Zde více komentáře (ex. souř. systém kde jsou geodetiky spojité,

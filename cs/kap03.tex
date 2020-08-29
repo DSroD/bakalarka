@@ -19,14 +19,38 @@ zanedbání topologických vlastností celého prostoročasu.
 \textcolor{red}{Má tahle sekce vůbec smysl? Možná přejmenovat na zobecnění na prostoročasy s gyratonovými členy a 
 totožnost cut and paste nechat jen v "úvodním slově".}
 Konstrukce neexpandujících gracitačních vln s gyratonovými členy je obdobná případu bez gyratonových
-členů. Opět můžeme využít Penroseovu "Cut and paste"\ metodu, v případě gyratonických prostoročasů ale bude
+členů. Opět můžeme využít Penroseovu "cut and paste"\ metodu, v případě gyratonických prostoročasů ale bude
 konstrukce totožná s konstrukcí popsanou v \eqref{sec:cut_and_paste_konstrukce1} a jak je ukázáno v článku \cite{Podolsky_2017}, Penroseovy lepící podmínky 
 v přítomnosti gyratonů nabývají tvaru \eqref{eq:lepici_podminky}. \textcolor{red}{(přeformulovat něják lépe...)},
 
 \subsection{"Cut and paste"\ metoda konstrukce}
 Metoda "cut and paste"\ ... \textcolor{red}{Tohle asi pryč.}
 \subsection{Spojitý tvar metriky}
-...
+Tvar spojité metriky pro gyratonové neexpandující impulsní vlny obdržíme zobecněním transformace \eqref{eq:nonexp_cont_full_transform},
+do tvaru který nalezli Podolský, Švarc, Säman a Steinbauer v \cite{Podolsky_2017}
+\begin{equation}
+    \label{eq:gyraton_cont_transformation}
+    \begin{split}
+        \matu &= U \\
+        \matv &= V + \Theta H + U_{+} H_{,Z} H_{,\bar{Z}} + W \\
+        \eta &= \left(Z + U_{+} H_{,\bar{Z}}\right) \exp \left(i F \right),
+    \end{split}
+\end{equation}
+
+kde opět $H = H(Z, \bar{Z})$, zároveň funkce $W = W(Z, \bar{Z}, U)$ a $F = F(Z, \bar{Z}, U)$ jsou reálné a splňují
+\begin{equation}
+    \begin{split}
+        F_{,U} &= \frac{i\bar{J}}{Z + U_{+}H_{,\bar{Z}}} \exp{\left(-iF\right)}, \\
+        W_{,U} &= -J \bar{J}.
+    \end{split}
+\end{equation}
+Zavedením
+\begin{equation}
+    \zeta \equiv Z + U_{+} H_{,\bar{Z}}
+\end{equation}
+a substitucí \eqref{eq:gyraton_cont_transformation} do \eqref{eq:nonexp_gyra_distrib_metric_omega}
+
+
 \section{Interakce s testovacími čísticemi v prostoročasech s gyratony}
 \subsection{Refrakční rovnice}
 \textcolor{red}{Stejná struktura jako předchozí kapitola, stačí přepsat a trochu okomentovat
