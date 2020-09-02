@@ -39,6 +39,7 @@ do tvaru který nalezli Podolský, Švarc, Säman a Steinbauer v \cite{Podolsky_
 
 kde opět $H = H(Z, \bar{Z})$, zároveň funkce $W = W(Z, \bar{Z}, U)$ a $F = F(Z, \bar{Z}, U)$ jsou reálné a splňují
 \begin{equation}
+    \label{eq:podminky_F_a_W}
     \begin{split}
         F_{,U} &= \frac{i\bar{J}}{Z + U_{+}H_{,\bar{Z}}} \exp{\left(-iF\right)}, \\
         W_{,U} &= -J \bar{J}.
@@ -46,12 +47,18 @@ kde opět $H = H(Z, \bar{Z})$, zároveň funkce $W = W(Z, \bar{Z}, U)$ a $F = F(
 \end{equation}
 Zavedením
 \begin{equation}
-    \zeta \equiv Z + U_{+} H_{,\bar{Z}}
+    \zeta \equiv Z + U_{+} H_{,\bar{Z}}.
 \end{equation}
-a substitucí \eqref{eq:gyraton_cont_transformation} do \eqref{eq:nonexp_gyra_distrib_metric_omega}
+Uvědomíme-li si, že distribuční metrika lze získat dosazením inverzní transformace s distribučními členy do spojité metriky,
+a tedy že zde můžeme postupovat opačným způsobem \textcolor{red}{(tohle mi zní trochu divně, přepsat trochu lépe)}, z distribuční metriky \eqref{eq:nonexp_gyra_distrib_metric_omega} dosazením transformace
+\eqref{eq:gyraton_cont_transformation} dostáváme po přímočarých úpravách s využitím \eqref{eq:podminky_F_a_W} metriku ve tvaru
+\begin{equation}
+    \label{eq:spojita_gyratonova_metrika}
+    ds^2 = 
+\end{equation}
 
 
 \section{Interakce s testovacími čísticemi v prostoročasech s gyratony}
 \subsection{Refrakční rovnice}
 \textcolor{red}{Stejná struktura jako předchozí kapitola, stačí přepsat a trochu okomentovat
-(např. "delty" ve skocích v čtyřrychlosti - započítat metrické členy)}
+(např. "delty" ve skocích v čtyřrychlosti - započítat metrické členy s J)}
