@@ -38,7 +38,7 @@ Souřadnicovými transformacemi
 převedeme metriku do symetrického tvaru
 \begin{equation}
      \label{eq:minkowski_null_metric}
-     \rmd s^2 = -2 \rmd \matu ~ \rmd \matv + 2 \rmd \eta ~ \rmd \bar{\eta}.
+     \rmd s^2 = -2 ~ \rmd \matu ~ \rmd \matv + 2 ~ \rmd \eta ~ \rmd \bar{\eta}.
 \end{equation}
 Souřadnicím zavedeným transformací \eqref{eq:retarded_coordinates} se říká retardovaná a advancovaná souřadnice,
 metrika \eqref{eq:minkowski_null_metric} je pak v tzv. světelných (nulových) souřadnicích.
@@ -57,13 +57,13 @@ kde $\rho \in [0, \infty)$ a $\varphi \in [0, 2\pi)$. Metrika pak nabývá tvaru
 \section{de Sitterův prostoročas}
 
 De Sitterův prostoročas je maximálně symetrické vakuové řešení Einsteinových rovnic s kladnou kosmologickou
-konstantou. Isometrie čtyřrozměrného de Sitterova prostoročasu tvoří grupu $SO(1,4)$. De Sitterův prostoročas topologicky odpovídá
-$\mathbb{R}^1 \times \mathbb{S}^3$ a lze jej tedy přirozeně reprezentovat jako vnoření hyperboloidu
+konstantou $\Lambda$. Isometrie čtyřrozměrného de Sitterova prostoročasu tvoří grupu $SO(1,4)$. De Sitterův prostoročas topologicky odpovídá
+$\mathbb{R}^1 \times \mathbb{S}^3$ a lze jej přirozeně reprezentovat jako vnoření hyperboloidu
 \begin{equation}
      \label{eq:dS_hyperboloid}
      - Z_0^2 + Z_1^2 + Z_2^2 + Z_3^2 + Z_4^2 = a^2
 \end{equation}
-do pětidimenzionálního Minkowského prostoru s metrikou
+do pětidimenzionálního Minkowského prostoru $\mathbb{E}^{1,3}$ s metrikou
 \begin{equation}
      \label{eq:5d_minkowski}
      ds^2 = - dZ_0^2 + dZ_1^2 + dZ_2^2 + dZ_3^2 + dZ_4^2.
@@ -72,7 +72,30 @@ Konstanta $a$ je daná kosmologickou konstantou jako $a = \sqrt{3/\Lambda}$.
 
 \textcolor{red}{Sem vložit vykreslený hyperboloid (TODO: v pythonu vygenerovat hyperboloid a vytvořit vektorovou grafiku, už žádné tikz)}
 
-\textcolor{red}{Dále psát o pokrytí nulovými souřadnicemi, pullback metrického tenzoru do konformního tvaru}
+Hyperboloid představující de Sitterův prostoročas lze v $\mathbb{E}^{1,3}$ parametrizovat souřadnicemi $(\matu, \matv, \eta, \bar{\eta})$
+
+\begin{equation}
+     \begin{split}
+          Z_0 &= \tfrac{1}{\sqrt{2}} \left(\matu + \matv\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1} \\
+          Z_1 &= \tfrac{1}{\sqrt{2}} \left(\matu - \matu\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1} \\
+          Z_2 &= \tfrac{1}{\sqrt{2}} \left(\eta + \bar{\eta}\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1} \\
+          Z_3 &= \tfrac{1}{\sqrt{2}} \left(\eta - \bar{\eta}\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1} \\
+          Z_4 &= a \left[1 + \tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right] \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1},
+     \end{split}
+\end{equation}
+které pro $\matu, \matv \in \left(-\infty, \infty\right)$ a komplexní $\eta$ pokrývají de Sitterův hyperboloid globálně, až na singularity v  $\mathcal{U}, \mathcal{V}=\textcolor{red}{?\pm}\infty$.
+Tyto souřadnice indukují metriku
+\begin{equation}
+     \label{eq:konfmetric}
+     \rmd s^2 = \frac{-2 ~ \rmd \matu ~ \rmd \matv + 2 ~ \rmd \eta ~ \rmd \bar{\eta}}{\left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^2}.
+\end{equation}
+Tato metrika je v takzvaném konformně plochém tvaru, tedy ve tvaru
+\begin{equation}
+     \rmd s^2 = \frac{\rmd s_0^2}{\Omega^2}
+\end{equation}
+kde $\rmd s_0^2$ je metrika na $\mathbb{E}^{1,3}$ a $\Omega$ je funkcí souřadnic \textcolor{red}{Jaké jsou na $\Omega$ kladeny podmínky (aby se opravdu jednalo o konformní souřadnici)}
+
+\textcolor{red}{Další pokrytí hyperboloidu (třeba FLRW metrika?)}
 
 
 \section{Anti-de Sitterův prostoročas}
