@@ -1,5 +1,6 @@
 \chapter{Prostoročasy konstantní křivosti}
-V této kapitole představáme prostoročasy, které budou sloužit jako pozadí pro propagaci impulzlních gravitačních vln. Jde o maximálně
+\label{chap:kap01}
+V této kapitole představíme prostoročasy, které budou sloužit jako pozadí pro propagaci impulzlních gravitačních vln. Jde o maximálně
 symetrická řešení Einsteinových polních rovnic \eqref{eq:einsten_field_equations} s nulovou pravou stranou a s konstantní skalární křivostí $R$ na celém prostoorčase.
 Celkem rozlišujeme 3 \textcolor{red}{třídy} řešení lišící se znaménkem skalární křivosti. Nulová skalární křivost odpovídá řešení s nulovou
 kosmologickou konstantou kterému se říká Minkowského prostoročas, kladná křivost odpovídá tzv. de Sitterovu prostoročasu s kladnou kosmologickou
@@ -18,7 +19,7 @@ o jednotlivých řešeních stručně (Minkowski - STR, AdS - CFT korespondence 
 
 
 \section{Minkowskeho prostoročas}
-Minkowského prostoročas je nejjednodušší řešení Einsteinových polních rovnic s nulovou pravou stranou.
+Minkowského prostoročas $\mathbb{E}^{1,3}$ je nejjednodušší řešení Einsteinových polních rovnic s nulovou pravou stranou.
 Jde o řešení s nulovou křivostí v celém prostoročase. Grupou symetrií Minkowského prostoročasu je Poincarého
 grupa, která je tvořena všemi translacemi a Lorentzovou grupou představující rotace a boosty.
 
@@ -52,27 +53,40 @@ kde $\rho \in [0, \infty)$ a $\varphi \in [0, 2\pi)$. Metrika pak nabývá tvaru
      \rmd s^2 = -\rmd t^2 + \rmd \rho^2 + \rho^2 \rmd \varphi^2 + \rmd z^2.
 \end{equation}
 
+V Minkowského prostoročase jsou složky afinní konexe v kartézských souřadnicích,
+kterým odpovídá metrika \ref{eq:minkowski}, identicky nulové. Řešení rovnice geodetiky pak
+nabývá tvaru přímek
+\begin{equation}
+     \label{eq:minkowski_cartesian_geodesics}
+     \begin{split}
+     t(\lambda) &= t_0 + \lambda {\dot t}_0 \\
+     x(\lambda) &= x_0 + \lambda {\dot x}_0 \\
+     y(\lambda) &= y_0 + \lambda {\dot y}_0 \\
+     z(\lambda) &= z_0 + \lambda {\dot z}_0,
+     \end{split}
+\end{equation}
+kde veličiny s dolním indexem $0$ představují počáteční podmínky.
 
 
 \section{de Sitterův prostoročas}
 
-De Sitterův prostoročas je maximálně symetrické vakuové řešení Einsteinových rovnic s kladnou kosmologickou
+De Sitterův prostoročas $dS_4$ je maximálně symetrické vakuové řešení Einsteinových rovnic s kladnou kosmologickou
 konstantou $\Lambda$. Isometrie čtyřrozměrného de Sitterova prostoročasu tvoří grupu $SO(1,4)$. De Sitterův prostoročas topologicky odpovídá
 $\mathbb{R}^1 \times \mathbb{S}^3$ a lze jej přirozeně reprezentovat jako vnoření hyperboloidu
 \begin{equation}
      \label{eq:dS_hyperboloid}
      - Z_0^2 + Z_1^2 + Z_2^2 + Z_3^2 + Z_4^2 = a^2
 \end{equation}
-do pětidimenzionálního Minkowského prostoru $\mathbb{E}^{1,3}$ s metrikou
+do pětidimenzionálního Minkowského prostoru $\mathbb{E}^{1,4}$ s metrikou
 \begin{equation}
      \label{eq:5d_minkowski}
-     ds^2 = - dZ_0^2 + dZ_1^2 + dZ_2^2 + dZ_3^2 + dZ_4^2.
+     \rmd s^2 = - \rmd Z_0^2 + \rmd Z_1^2 + \rmd Z_2^2 + \rmd Z_3^2 + \rmd Z_4^2.
 \end{equation}
 Konstanta $a$ je daná kosmologickou konstantou jako $a = \sqrt{3/\Lambda}$.
 
 \textcolor{red}{Sem vložit vykreslený hyperboloid (TODO: v pythonu vygenerovat hyperboloid a vytvořit vektorovou grafiku, už žádné tikz)}
 
-Hyperboloid představující de Sitterův prostoročas lze v $\mathbb{E}^{1,3}$ parametrizovat souřadnicemi $(\matu, \matv, \eta, \bar{\eta})$
+Hyperboloid představující de Sitterův prostoročas lze v $\mathbb{E}^{1,4}$ parametrizovat souřadnicemi $(\matu, \matv, \eta, \bar{\eta})$
 
 \begin{equation}
      \begin{split}
@@ -93,14 +107,23 @@ Tato metrika je v takzvaném konformně plochém tvaru, tedy ve tvaru
 \begin{equation}
      \rmd s^2 = \frac{\rmd s_0^2}{\Omega^2}
 \end{equation}
-kde $\rmd s_0^2$ je metrika na $\mathbb{E}^{1,3}$ a $\Omega$ je funkcí souřadnic \textcolor{red}{Jaké jsou na $\Omega$ kladeny podmínky (aby se opravdu jednalo o konformní souřadnici)}
+kde $\rmd s_0^2$ je metrika na $\mathbb{E}^{1,3}$ a $\Omega$ je hladkou funkcí souřadnic \textcolor{red}{Jaké jsou na $\Omega$ kladeny podmínky (aby se opravdu jednalo o konformní souřadnice)}
 
 \textcolor{red}{Další pokrytí hyperboloidu (třeba FLRW metrika?)}
 
 
 \section{Anti-de Sitterův prostoročas}
 
-Anti-de Sitterův prostoročas je maximálně symetrické vakuové řešení Einsteinových rovnic se zápornou
-kosmologickou konstantou. 
+Anti-de Sitterův prostoročas $AdS_4$ je maximálně symetrické vakuové řešení Einsteinových rovnic se zápornou
+kosmologickou konstantou $\Lambda$. Isometrie tvoří grupu $SO(2,3)$ a topologie $AdS_4$ odpovídá $\mathbb{S^1} \times \mathbb{R}^3$.
+Vnořením $AdS_4$ do $\mathbb{E}^{2,3}$, tedy do prostoru s metrikou
+\begin{equation}
+     \rmd s^2 = -\rmd Z_0^2 + \rmd Z_1^2 + \rmd Z_2^2 + \rmd Z_3^2 - \rmd Z_4^2,
+\end{equation}
+vzniká hyperboloid
+\begin{equation}
+     -Z_0^2 + Z_1^2 + Z_2^2 + Z_3^2 - Z_4^2 = a^2,
+\end{equation}
+kde $a = -\sqrt{\Lambda/3}$.
 
 \textcolor{red}{Stejně jako u dS}

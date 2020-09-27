@@ -142,29 +142,46 @@ vzniká nespojitost v souřadnici $\mathcal{V}$. Tato metoda konstrukce tedy př
 
 
 \subsection{Distribuční tvar metriky}
-Dalším způsobem konstrukce impulzní gravitační vlny je limitní přechod od příslušných rodin tzv. "sandwichových"\
-gravtiačních vln s hladkým profilem vlnoplochy k limitnímu distribučnímu vyjádření impulzní vlny. Takové vyjádření
-také dostaneme dosazením invezní transformace k \eqref{eq:nonexp_cont_full_transform} do spojité metriky 
-\eqref{eq:nonexp_continuous_metric}.
-
-\begin{equation} \label{eq:nonexp_distr_metric_omega}
-\mathrm{d}s^2=\frac{2\mathrm{d}\eta~\mathrm{d}\bar{\eta} - 2 \mathrm{d}\mathcal{U}~\mathrm{d}\mathcal{V} + 2H(\eta, \bar{\eta}) \delta(\mathcal{U}) 
-~\mathrm{d}\mathcal{U}^2}{\left[1+\frac{1}{6}\Lambda(\eta \bar{\eta}-\mathcal{U}\mathcal{V})\right]^2}
+Dalším způsobem konstrukce impulzní gravitační vlny je přechod od příslušných rodin tzv. "sandwichových"\
+gravtiačních vln s hladkým profilem vlnoplochy k limitnímu distribučnímu vyjádření impulzní vlny. Pro případ neexpandujícíh vln, propagujících se
+na $\mathbb{E}^{1,3}$, byl tento limitní přechod uvažován např. v \textcolor{red}{citace, citace, citace...}, výsledná metrika
+nabývá tvaru
+\begin{equation}
+    \rmd s^2 = 2~ \rmd \xi \rmd \bar{\xi} - 2 \rmd u \rmd v + \mathcal{H(\xi, \bar{\xi})} \delta\left( u\right) \rmd u^2
 \end{equation}
 
-Pokud v případě nenulové konsmologické konstanty vnoříme prostoročas s impulsní vlnou do pětidimenzionálního plochého
-prostoročasu s Minkowského metrikou \textcolor{red}{nejdříve dopsat dS a AdS, ať se můžu odkazovat!}
 
-\subsection{Boost Schwarzchildova řešení}
-%%% TODO nechat to tady???
-Další způsob, kterým lze prostoročas s impulzní pp-vlnou získat je boost Schwarzchildova řešení
+Distribuční tvar metriky také dostaneme dosazením invezní transformace k \eqref{eq:nonexp_cont_full_transform} do spojité metriky 
+\eqref{eq:nonexp_continuous_metric}. Vzhledem k nespojitosti v transformaci toto dosazení nemůže být provedeno
+v rámci klasické teorie distribucí, kde nelze konzistentně definovat násobení dvou distribucí. S využitím regularizačních metod teorie
+nelineárních zobecněných funkcí \textcolor{red}{zde citace}, které zakládají na Colombeaových algebrách, lze ale odvodit pravidla pro násobení
+jisté třídy distribucí, která dostačují pro toto odvození. Konkrétně potřebujeme násobit distribuce
+\begin{equation}
+        \Theta^2 = \Theta, ~~~~ \Theta U_{+} = U_{+}.
+\end{equation}
+Kromě pravidel pro násobení ještě využijeme identity z klasické teorie distribucí
+\begin{equation}
+    \Theta' = \delta, ~~~~ U_{+}' = \Theta
+\end{equation}
+a dostáváme metriku ve tvaru
+\begin{equation} \label{eq:nonexp_distr_metric_omega}
+\mathrm{d}s^2=\frac{2\mathrm{d}\eta~\mathrm{d}\bar{\eta} - 2 \mathrm{d}\mathcal{U}~\mathrm{d}\mathcal{V} + 2H(\eta, \bar{\eta}) \delta(\mathcal{U}) 
+~\mathrm{d}\mathcal{U}^2}{\left[1+\frac{1}{6}\Lambda(\eta \bar{\eta}-\mathcal{U}\mathcal{V})\right]^2}.
+\end{equation}
+
+Pokud v případě nenulové konsmologické konstanty vnoříme prostoročas s impulsní vlnou do $\mathbb{E}^{1,4}$, případně $\mathbb{E}^{2,4}$ (podle znaménka metriky, jak je popsáno v kapitole\autoref{chap:kap01}) \textcolor{red}{nejdříve dopsat dS a AdS, ať se můžu odkazovat!}
 
 \section{Interakce s testovacími částicemi}
 
 \subsection{Profil impulsní gravitační vlny}
 
-Einsteinovy rovnice \eqref{eq:einsten_field_equations} se pro metriku \eqref{eq:nonexp_distr_metric_omega}
-redukují na
+Einsteinovy rovnice \eqref{eq:einsten_field_equations} ve vakuovém případě implikují podmínku pro Ricciho tenzor
+\textcolor{red}{Zde $\Phi_{22} = 0$ a implikaci pro profil vlny (tedy tvar funkce $H$)}
+
+případě pro metriku \eqref{eq:nonexp_distr_metric_omega}
+
+\textcolor{red}{představení uvažovaných profilů - Aichelburg-Sexl, nějáké arbitrární řešení Laplaceovy rovnice atd...}
+
 
 \subsection{Refrakční rovnice}
 \textcolor{red}{Zde více komentáře (ex. souř. systém kde jsou geodetiky spojité,
@@ -187,6 +204,6 @@ složky označené znakem - jsou před impulzem v $\mathcal{M}^-$.
 %%%TODO 5D formalismus pro konformně ploché pč
 
 
-\subsection{Interakce}
+\subsection{Vizualizace}
 \textcolor{red}{Zde vykreslené obrázky s popisem, jak pro světelné částice tak pro
 časupodobné geodetiky (případně i pro srandu prosoturupodobné)}
