@@ -139,8 +139,6 @@ Transformace \eqref{eq:nonexp_cont_full_transform} zároveň obsahuje Penroseovy
 vzniká nespojitost v souřadnici $\mathcal{V}$. Tato metoda konstrukce tedy představuje explicitní "cut and paste"\ konstrukci.
 
 
-
-
 \subsection{Distribuční tvar metriky}
 Dalším způsobem konstrukce impulzní gravitační vlny je přechod od příslušných rodin tzv. "sandwichových"\
 gravtiačních vln s hladkým profilem vlnoplochy k limitnímu distribučnímu vyjádření impulzní vlny. Pro případ neexpandujícíh vln, propagujících se
@@ -169,7 +167,19 @@ a dostáváme metriku ve tvaru
 ~\mathrm{d}\mathcal{U}^2}{\left[1+\frac{1}{6}\Lambda(\eta \bar{\eta}-\mathcal{U}\mathcal{V})\right]^2}.
 \end{equation}
 
-Pokud v případě nenulové konsmologické konstanty vnoříme prostoročas s impulsní vlnou do $\mathbb{E}^{1,4}$, případně $\mathbb{E}^{2,4}$ (podle znaménka metriky, jak je popsáno v kapitole\autoref{chap:kap01}) \textcolor{red}{nejdříve dopsat dS a AdS, ať se můžu odkazovat!}
+V případě nenulové kosmologické konstanty můžeme také využít vnoření do $\mathbb{E}^{1,4}$, případně $\mathbb{E}^{2,4}$ (podle znaménka kosmologické
+konstanty, jak je popsáno v kapitole\autoref{chap:kap01}) s dodatečným neexpandujícím impulsem
+\begin{equation}
+    \label{eq:5DDistributionalWaveMetric}
+    \rmd s^2 = \rmd Z_2^2 \rmd Z_3^2 + \epsilon \rmd Z_4^2 - 2 \rmd \tilde{U} \rmd \tilde{V} + \mathcal{H}(Z_2, Z_3, Z_4) \delta(\tilde{U}) \rmd \tilde{U}^2,
+\end{equation}
+kde $\epsilon = \text{sgn} \Lambda$, $\tilde{U} = \tfrac{1}{\sqrt{2}}(Z_0 + Z_1)$, $\tilde{V}= \tfrac{1}{\sqrt{2}}(Z_0-Z_1)$.
+S podmínkou analogickou k \eqref{eq:dS_hyperboloid} a \eqref{eq:AdS_hyperboloid},
+\begin{equation}
+    Z_2^2 + Z_3^2 + \epsilon Z_4^2 - 2 \tilde{U} \tilde{V} = \epsilon a^2,
+\end{equation}
+dostáváme reprezentaci impulsních vln propagujících se na (A)dS prostoročasu s impulsem na $\tilde{U}=0$ \cite{Podolsky1997}.
+
 
 \section{Interakce s testovacími částicemi}
 
@@ -201,7 +211,8 @@ k refrakci geodetik na impulzní nadploše $\mathcal{U}=0$ podle sady tzv. refra
 \end{align}
 Index $i$ znamená hodnotu na impulzní nadploše, složky označené znakem + jsou za impulzem a tedy v části prostoročasu $\mathcal{M}^+$,
 složky označené znakem - jsou před impulzem v $\mathcal{M}^-$.
-%%%TODO 5D formalismus pro konformně ploché pč
+
+
 
 
 \subsection{Vizualizace}
