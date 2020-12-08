@@ -1,16 +1,17 @@
 \chapter{Prostoročasy konstantní křivosti}
 \label{chap:kap01}
-V této kapitole představíme prostoročasy, které budou sloužit jako pozadí pro propagaci impulzlních gravitačních vln. Jde o maximálně
-symetrická řešení Einsteinových polních rovnic \eqref{eq:einsten_field_equations} s nulovou pravou stranou a s konstantní skalární křivostí $R$ na celém prostoorčase.
+V této kapitole představíme prostoročasy, které budou sloužit jako pozadí pro propagaci impulslních gravitačních vln. Jde o maximálně
+symetrická řešení Einsteinových polních rovnic \eqref{eq:einsten_field_equations} s nulovou pravou stranou a s konstantní skalární křivostí $R$ na celém prostoročase.
 Celkem rozlišujeme 3 \textcolor{red}{třídy} řešení lišící se znaménkem skalární křivosti. Nulová skalární křivost odpovídá řešení s nulovou
-kosmologickou konstantou kterému se říká Minkowského prostoročas, kladná křivost odpovídá tzv. de Sitterovu prostoročasu s kladnou kosmologickou
+kosmologickou konstantou, kterému se říká Minkowského prostoročas, kladná křivost odpovídá tzv. de Sitterovu prostoročasu s kladnou kosmologickou
 konstantou a záporná odpovídá anti-de Sitterovu prostoročasu se zápornou kosmologickou konstantou. Vztah mezi kosmologickou konstantou a skalární
 křivostí ve vakuových řešeních (tedy s nulovým tenzorem energie a hybnosti) dostaneme kontrakcí polních rovnic \eqref{eq:einsten_field_equations} jako
 \begin{equation}
      R = 4 \Lambda.
 \end{equation}
-Všechna tato řešení vykazují deset symetrií, jejich interpretace jsou pro jednotlivé prostoročasy různé a budou dále diskutovány níže. \textcolor{red}{Tohle vyjádřit trochu jinak, zní to neohrabaně :D}
-I přes svou jednoduchost jsou zmíněné prostoročasy na poli teoretické fyziky velmi podstatné, čtyřdimenzionální Minkowskeho prostoročas je arénou speciální
+Všechna tato řešení vykazují deset generátorů symetrie, které se však pro jednotlivá znaménka kosmologické konstanty liší.
+
+I přes svou jednoduchost jsou zmíněné prostoročasy na poli teoretické fyziky velmi podstatné, čtyřdimenzionální Minkowského prostoročas je arénou speciální
 teorie relativity, vícedimenzionální Minkowského prostoročas pak běžně slouží jako vhodný prostor pro vnoření složitějších prostoročasů.
 De-Sitterův prostoročas je pro moderní fyziku důležitý při popisu vesmíru, experimentální data
 ukazují, že v aproximaci do prvního řádu jej lze právě na velkých škálách (a také v inflační epoše) popsat právě jako de Sitterův prostoročas.
@@ -23,7 +24,7 @@ Minkowského prostoročas $\mathbb{E}^{1,3}$ je nejjednodušší řešení Einst
 Jde o řešení s nulovou křivostí v celém prostoročase. Grupou symetrií Minkowského prostoročasu je Poincarého
 grupa, která je tvořena všemi translacemi a Lorentzovou grupou představující rotace a boosty.
 
-Metrika Minkowského prostoročasu má v nejpřirozenějším vyjádření, v karzézských souřadnicích, tvar
+Metrika Minkowského prostoročasu má v nejpřirozenějším vyjádření, v kartézských souřadnicích, tvar
 \begin{equation}
      \label{eq:minkowski}
      \rmd s^2 = - \rmd t^2 + \rmd x^2 + \rmd y^2 + \rmd z^2.
@@ -43,7 +44,7 @@ převedeme metriku do symetrického tvaru
 \end{equation}
 Souřadnicím zavedeným transformací \eqref{eq:retarded_coordinates} se říká retardovaná a advancovaná souřadnice,
 metrika \eqref{eq:minkowski_null_metric} je pak v tzv. světelných (nulových) souřadnicích.
-Pokud zkoumáme axiálně symetrickou situaci na Minkowského pozadí, je vhodné zavést cylindrické
+Pokud zkoumáme axiálně symetrickou situaci na pozadí Minkowského prostoročasu, je vhodné zavést cylindrické
 souřadnice parametrizací
 \begin{equation}
      x = \rho \cos (\varphi), ~~~~~~ y = \rho \sin (\varphi),
@@ -71,7 +72,7 @@ kde veličiny s dolním indexem $0$ představují počáteční podmínky.
 \section{de Sitterův prostoročas}
 
 De Sitterův prostoročas $dS_4$ je maximálně symetrické vakuové řešení Einsteinových rovnic s kladnou kosmologickou
-konstantou $\Lambda$. Isometrie čtyřrozměrného de Sitterova prostoročasu tvoří grupu $SO(1,4)$. De Sitterův prostoročas topologicky odpovídá
+konstantou $\Lambda$. Isometrie čtyřrozměrného de Sitterova prostoročasu tvoří grupu $SO(1,\,4)$. De Sitterův prostoročas topologicky odpovídá
 $\mathbb{R}^1 \times \mathbb{S}^3$ a lze jej přirozeně reprezentovat jako vnoření hyperboloidu
 \begin{equation}
      \label{eq:dS_hyperboloid}
@@ -84,41 +85,87 @@ do pětidimenzionálního Minkowského prostoru $\mathbb{E}^{1,4}$ s metrikou
 \end{equation}
 Konstanta $a$ je daná kosmologickou konstantou jako $a = \sqrt{3/\Lambda}$.
 
-\textcolor{red}{Sem vložit vykreslený hyperboloid (TODO: v pythonu vygenerovat hyperboloid a vytvořit vektorovou grafiku, už žádné tikz)}
+Přirozenou parametrizací celého de-Sitterova prostoročasu jsou souřadnice $(t, \chi, \theta, \phi)$
+\begin{equation}
+     \begin{split}
+          Z_0 &= a \sinh \frac{t}{a} \\
+          Z_1 &= a \cosh \frac{t}{a} \cos \chi \\
+          Z_2 &= a \cosh \frac{t}{a} \sin \chi \cos \theta \\
+          Z_3 &= a \cosh \frac{t}{a} \sin \chi \sin \theta \cos \phi \\
+          Z_4 &= a \cosh \frac{t}{a} \sin \chi \sin \theta \sin \phi,
+     \end{split}
+\end{equation}
+kde $t \in \left(-\infty, +\infty\right), \chi \in \left[0, \pi\right], \theta \in \left[0, \pi \right]$ a
+$\phi \in \left[0, 2\pi\right]$. Souřadnicové singularity v~$\chi = 0, \pi$ a $\theta = 0, \pi$ odpovídají pólům
+ve sférických souřadnicích.
+V souřadnicích $(t, \chi, \theta, \phi)$ má metrika de Sitterova prostoročasu formu FLRW metriky s
+křivostí prostorových řezů $k=1$,
+\begin{equation}
+     \rmd s^2 = - \rmd t^2 + a^2 \cosh^2 \frac{t}{a} \left(\rmd \chi^2 + \sin^2 \chi \left( \rmd \theta^2 + \sin^2 \theta ~ \rmd \phi^2\right) \right).
+\end{equation}
 
-Hyperboloid představující de Sitterův prostoročas lze v $\mathbb{E}^{1,4}$ parametrizovat souřadnicemi $(\matu, \matv, \eta, \bar{\eta})$
+\begin{figure}[H]
+     \centering
+     \begin{tikzpicture}
+          \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+         {\adjincludegraphics[trim={{.25\width} {.2\height} {.25\width} {.3\height}}, width=.7\textwidth, clip]{../img/kap01/hyperboloiddS.pdf}};
+         \node[text width=5cm, anchor=north] at (6.8,7.15) {$t = konst.$};
+         \node[text width=5cm, rotate=90] at (6.17,6.65) {$\chi = konst.$};
+     \end{tikzpicture}
+     \caption{Vnoření dS prostoročasu do $\mathbb{E}^{1,4}$. Plocha hyperboloidu je vykreslena pro $\theta=\phi=\frac{\pi}{2}$, tedy $Z_2 = Z_3 = 0$. Souřadnicové čáry odpovídají konstantním $t$ a $\chi$.}
+\end{figure}
+
+
+Hyperboloid představující de Sitterův prostoročas lze dále parametrizovat souřadnicemi $(\matu, \matv, \eta, \bar{\eta})$
 
 \begin{equation}
      \label{eq:5DToNullMetricTransformation}
      \begin{split}
-          Z_0 &= \tfrac{1}{\sqrt{2}} \left(\matu + \matv\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1} \\
-          Z_1 &= \tfrac{1}{\sqrt{2}} \left(\matu - \matu\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1} \\
-          Z_2 &= \tfrac{1}{\sqrt{2}} \left(\eta + \bar{\eta}\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1} \\
-          Z_3 &= \tfrac{1}{\sqrt{2}} \left(\eta - \bar{\eta}\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1} \\
+          Z_0 &= \tfrac{1}{\sqrt{2}} \left(\matu + \matv\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1}, \\
+          Z_1 &= \tfrac{1}{\sqrt{2}} \left(\matv - \matu\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1}, \\
+          Z_2 &= \tfrac{1}{\sqrt{2}} \left(\eta + \bar{\eta}\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1}, \\
+          Z_3 &= \tfrac{-i}{\sqrt{2}} \left(\eta - \bar{\eta}\right) \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1}, \\
           Z_4 &= a \left[1 + \tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right] \left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^{-1},
      \end{split}
 \end{equation}
-které pro $\matu, \matv \in \left(-\infty, \infty\right)$ a komplexní $\eta$ pokrývají de Sitterův hyperboloid globálně, až na singularity v  $\mathcal{U}, \mathcal{V}=\textcolor{red}{?\pm}\infty$.
-Tyto souřadnice indukují metriku
+které pro $\matu, \matv \in \left(-\infty, +\infty\right)$ a komplexní $\eta$ pokrývají de Sitterův hyperboloid až na singularity v  $\mathcal{U}, \mathcal{V} = \infty$.
+Inverzní transformační vztahy jsou
+\begin{equation}
+     \label{eq:NullConformalToD5Transformation}
+     \begin{split}
+          \matu &= \sqrt{2} a \frac{Z_0 - Z_1}{Z_4 + a}, \\
+          \matv &= \sqrt{2} a \frac{Z_0 + Z_1}{Z_4 + a}, \\
+          \eta &= \sqrt{2} a \frac{Z_2 + i Z_3}{Z_4 + a}.
+     \end{split}
+\end{equation}
+
+Tato parametrizace indukuje metriku
 \begin{equation}
      \label{eq:konfmetric}
      \rmd s^2 = \frac{-2 ~ \rmd \matu ~ \rmd \matv + 2 ~ \rmd \eta ~ \rmd \bar{\eta}}{\left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^2}.
 \end{equation}
+
 Tato metrika je v takzvaném konformně plochém tvaru, tedy ve tvaru
 \begin{equation}
-     \rmd s^2 = \frac{\rmd s_0^2}{\Omega^2}
+     \rmd s^2 = \frac{\rmd s_0^2}{\Omega^2},
 \end{equation}
-kde $\rmd s_0^2$ je metrika na $\mathbb{E}^{1,3}$ a $\Omega$ je hladkou funkcí souřadnic \textcolor{red}{Jaké jsou na $\Omega$ kladeny podmínky (aby se opravdu jednalo o konformní souřadnice)}
+kde $\rmd s_0^2$ je metrika na $\mathbb{E}^{1,3}$ a $\Omega$ je hladkou funkcí souřadnic. Jak uvidíme dále,
+metrika \eqref{eq:konfmetric} je ve tvaru, který unifikuje všechny prostoročasy konstantní křivosti.
+Pro $\Lambda = 0$ se redukuje na \eqref{eq:minkowski_null_metric} a pro $\Lambda < 0$ představuje metriku na
+anti-de Sitterově prostoročase.
 
-\textcolor{red}{Další pokrytí hyperboloidu (třeba FLRW metrika?), řešení rovnice geodetiky (asi v 5D souřadnicích)}
+Souřadnicové čáry $\matu =$ konst. a $\matv =$ konst. tvoří na de Sitterově hyperboloidu nulové
+přímky, resp. nadplochy.
 
+\textcolor{red}{řešení rovnice geodetiky?}
 
 \section{Anti-de Sitterův prostoročas}
 
 Anti-de Sitterův prostoročas $AdS_4$ je maximálně symetrické vakuové řešení Einsteinových rovnic se zápornou
-kosmologickou konstantou $\Lambda$. Isometrie tvoří grupu $SO(2,3)$ a topologie $AdS_4$ odpovídá $\mathbb{S^1} \times \mathbb{R}^3$.
+kosmologickou konstantou $\Lambda$. Isometrie tvoří grupu $SO(2,\,3)$ a topologie $AdS_4$ odpovídá $\mathbb{S}^1 \times \mathbb{R}^3$.
 Vnořením $AdS_4$ do $\mathbb{E}^{2,3}$, tedy do prostoru s metrikou
 \begin{equation}
+     \label{eq:AdS5DMetric}
      \rmd s^2 = -\rmd Z_0^2 + \rmd Z_1^2 + \rmd Z_2^2 + \rmd Z_3^2 - \rmd Z_4^2,
 \end{equation}
 vzniká hyperboloid
@@ -128,11 +175,47 @@ vzniká hyperboloid
 \end{equation}
 kde $a = -\sqrt{\Lambda/3}$.
 
-\textcolor{red}{Stejně jako u dS sem hyperboloid}
+Celý hyperboloid je pokrytý souřadnicemi $(T, r, \theta, \phi)$
+\begin{equation}
+     \begin{split}
+          Z_0 &= a \cosh r \sin \frac{T}{a}, \\
+          Z_1 &= a \sinh r \cos \theta, \\
+          Z_2 &= a \sinh r \sin \theta \cos \phi, \\
+          Z_3 &= a \sinh r sin \theta \sin \phi, \\
+          Z_4 &= a \cosh r \cos \frac{T}{a}.
+     \end{split}
+\end{equation}
+
+Metrika anti-de Sitterova prostoročasu v těchto souřadnicích nabývá tvaru
+
+\begin{equation}
+     \rmd s^2 = - \cosh^2 r ~ \rmd T^2 + a^2 \left( \rmd r^2 + \sinh^2 r \left( \rmd \theta^2 + \sin^2 \theta ~ \rmd \phi^2 \right) \right)
+\end{equation}
+a vidíme, že každý řez $T =$ konst. odpovídá pro $r\in\left[0, \infty\right], \theta \in \left[0, \pi\right], \phi \in \left[0, 2\pi\right]$
+prostoru konstantní negativní křivosti (hyperbolickému prostoru $H^3$).
+Singularity v $r = 0$ a $\theta = 0, \pi$ jsou pouze souřadnicové.
+
+$T$ představuje časovou souřadnici, která je $2 \pi a-$periodická, což odpovídá již zmíněné topologii $\mathbb{S}^1 \times \mathbb{R}^3$.
+Obvykle se ale uvažuje $T \in \left(-\infty, +\infty\right)$, dochází tedy k rozvinutí $\mathbb{S}^1$ na celé $\mathbb{R}^1$, a dostáváme
+prostor s topologií $\mathbb{R}^4$, jehož univerzálním nakrytím je AdS prostoročas.
+
+
+\begin{figure}[H]
+     \centering
+     \begin{tikzpicture}
+          \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+         {\adjincludegraphics[trim={{.25\width} {.2\height} {.25\width} {.3\height}}, width=.7\textwidth, clip]{../img/kap01/hyperboloidAdS.pdf}};
+         \node[text width=5cm, anchor=north] at (6.2,7.2) {$T = konst.$};
+         \node[text width=5cm, rotate=90] at (6,7) {$r = konst.$};
+     \end{tikzpicture}
+     \caption{Vnoření AdS prostoročasu do $\mathbb{E}^{2,3}$. Plocha hyperboloidu je vykreslena pro $\theta=\phi=\frac{\pi}{2}$, tedy $Z_2 = Z_3 = 0$. Souřadnicové čáry odpovídají konstantním $T$ a $r$.}
+\end{figure}
 
 Parametrizací \eqref{eq:5DToNullMetricTransformation} obdržíme totožný konformě plochý tvar metriky \eqref{eq:konfmetric} jako
-v případě de Sitterova prosotočasu,
+v případě de Sitterova prosotočasu
 \begin{equation*}
      \rmd s^2 = \frac{-2 ~ \rmd \matu ~ \rmd \matv + 2 ~ \rmd \eta ~ \rmd \bar{\eta}}{\left[1-\tfrac{1}{6} \Lambda \left(\matu \matv - \eta \bar{\eta}\right)\right]^2},
 \end{equation*}
 liší se pouze znaménkem kosmologické konstanty ($\Lambda<0$).
+
+\textcolor{red}{řešení rovnice geodetiky?}
