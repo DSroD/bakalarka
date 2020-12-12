@@ -82,10 +82,12 @@ jejich geometrické vlastnosti jsou shrnuty v \cite{Podolsky:1997ri}, kde je tak
     \begin{tikzpicture}
          \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
         {\adjincludegraphics[trim={{.2\width} {.2\height} {.25\width} {.3\height}}, width=.7\textwidth, clip]{../img/kap02/CutAndPaste_NOSUP.pdf}};
+        \node[text width=5cm, rotate=45, anchor=north] at (7.6,8.3) {\tiny\textcolor{gray}{$\matu = \pm \infty$}};
+        \node[text width=5cm, rotate=45, anchor=north] at (5.6,6.75) {\tiny$\matu = 0$};
     \end{tikzpicture}
     \caption{Nulové geodetiky procházející impulsem nacházejícím se v $\matu=0$ (černá čára) v AdS prostoročase jsou podle cut and paste konstrukce posunuty
     v souřadnici $\matv$ a dochází k refrakci. Geodetiky jsou opět nulovými generátory AdS na $\matu > 0$, neleží už ale v $\eta = 0$ a proto
-    neleží na ploše vykresleného hyperboloidu. Světlejší šedá čára odpovídá $\matu = \pm \infty$}
+    neleží na ploše vykresleného hyperboloidu.}
 \end{figure}
 
 \subsection{Spojitý tvar metriky}
@@ -155,12 +157,11 @@ vzniká nespojitost v souřadnici $\mathcal{V}$. Tato metoda konstrukce tedy př
 \subsection{Distribuční tvar metriky}
 Dalším způsobem konstrukce impulsní gravitační vlny je přechod od příslušných rodin tzv. "sandwichových"\
 gravtiačních vln s hladkým profilem vlnoplochy k limitnímu distribučnímu vyjádření impulsní vlny. Pro případ neexpandujícíh vln, propagujících se
-na $\mathbb{E}^{1,3}$, byl tento limitní přechod uvažován např. v \textcolor{red}{citace, citace, citace...}, výsledná metrika
-nabývá tvaru
+na $\mathbb{E}^{1,3}$, byl tento limitní přechod uvažován např. v \cite{Penrose1968TwistorQuant}, \cite{Podolsky_1998}, \cite{Podolsky_1998_nonexpanding}.
+Výsledná metrika nabývá tvaru
 \begin{equation}
     \rmd s^2 = 2~ \rmd \xi \rmd \bar{\xi} - 2 \rmd u \rmd v + H(\xi, \bar{\xi}) \delta\left( u\right) \rmd u^2
 \end{equation}
-
 
 Distribuční tvar metriky také dostaneme dosazením invezní transformace k \eqref{eq:nonexp_cont_full_transform} do spojité metriky 
 \eqref{eq:nonexp_continuous_metric}. Vzhledem k nespojitosti v transformaci toto dosazení nemůže být provedeno
@@ -174,7 +175,7 @@ Kromě pravidel pro násobení ještě využijeme identity z klasické teorie di
 \begin{equation}
     \Theta' = \delta, ~~~~ U_{+}' = \Theta
 \end{equation}
-a dostáváme metriku ve tvaru
+a dostáváme pro libovolnou hodnotu $\Lambda$ metriku ve tvaru
 \begin{equation} \label{eq:nonexp_distr_metric_omega}
 \mathrm{d}s^2=\frac{2\mathrm{d}\eta~\mathrm{d}\bar{\eta} - 2 \mathrm{d}\mathcal{U}~\mathrm{d}\mathcal{V} + 2H(\eta, \bar{\eta}) \delta(\mathcal{U}) 
 ~\mathrm{d}\mathcal{U}^2}{\left[1+\frac{1}{6}\Lambda(\eta \bar{\eta}-\mathcal{U}\mathcal{V})\right]^2}.
@@ -191,7 +192,7 @@ S podmínkou analogickou k \eqref{eq:dS_hyperboloid} a \eqref{eq:AdS_hyperboloid
 \begin{equation}
     Z_2^2 + Z_3^2 + \epsilon Z_4^2 - 2 \tilde{U} \tilde{V} = \epsilon a^2,
 \end{equation}
-dostáváme reprezentaci impulsních vln propagujících se na (A)dS prostoročasu s impulsem na $\tilde{U}=0$ \cite{Podolsky1997}.
+dostáváme reprezentaci impulsních vln propagujících se na (A)dS prostoročasu s impulsem na $\tilde{U}=0$. 
 Funkce $H$ a $\mathcal{H}$ v metrikách \eqref{eq:nonexp_distr_metric_omega} a \eqref{eq:5DDistributionalWaveMetric} jsou svázány vztahem
 \begin{equation}
     \mathcal{H} = \frac{2H}{1+\frac{1}{6}\Lambda \eta \bar{\eta}}
@@ -225,12 +226,24 @@ Griffiths a Podolský v článcích \cite{Griffiths_1997} a \cite{Podolsky1997} 
 ke zkonstruování obecnějšího tvaru funkce $H$, resp. $\mathcal{H}$, kde je neexpandující gravitační vlna generována
 nulovými částicemi s libovolnou multipólovou strukturou.
 
-\subsection{Refrakční rovnice}
-V článku \cite{Podolsky:2014ysa} Podolský, Säamann, Steinbauer a Švarc \textcolor{red}{dopsat o C1 matchingu (Filippov, existence úplných C1 geodetik v spojitých souřadnicích)}
-
-
-Změna polohy (nalepení geodetiky) je dána Penroseovými spojovacími podmínkami, tento skok ale generuje změnu v derivacích poloh a dojde tedy
-k refrakci geodetik na impulsní nadploše $\mathcal{U}=0$ podle tzv. refrakčních rovnic
+\subsection{$\mathcal{C}^1$-matching a refrakční rovnice}
+Dále budeme explicitně modelovat geodetiky na prostoročasech s neexpandujícími impulsními vlnami v souřadnicích
+\eqref{eq:nonexp_distr_metric_omega}. V těchto souřadnicích není řešení rovnice geodetiky dobře definované v
+klasické teorii distribucí, pro neexpandující impulsní vlny na Minkowského prostoročasu byla rovnice geodetiky
+a její řešení zkoumána v rámci teorie zobecněných funkcí ve smyslu Colombeaových algeber a v článích \cite{Steinbauer_1998} a \cite{Kunzinger_1999}
+byla ukázána existence a jednoznačnost řešení v prostoru těchto funkcí a bylo ověřeno, že geodetiky na $\mathcal{M}^-$ a $\mathcal{M}^+$ odpovídají
+geodetikám na Minkowského pozadí se skokem v souřadnici $\matv$ při přechodu přes nadplochu $\matu=0$. V prostoročasech s
+nenulovou kosmologickou konstantou lze využít přístup vnoření do pětidimenzionálního Minkowského prostoru, kde se v rovnici
+geodetiky nenachází výrazy nedefinované v klasické teorii distribucí, \textcolor{red}{Chápu to tak správně?} řešení rovnice geodetiky
+pro (anti-)de Sitterův prostoročas s impulsními neexpandujícími vlnami byly tímto způsobem odvozeny v \cite{Podolsk__2001}.
+V článku \cite{Podolsky:2014ysa} byla odvozena rovnice geodetiky v souřadnicích \eqref{eq:nonexp_continuous_metric}.
+Odvozený tvar je v tomto případě ve smyslu Filippových systému (diferenciálních inkluzí), což je zobecnění teorie obyčejných diferenciálních rovnic.
+V článku je ukázána existence, jednoznačnost a úplnost takových řešení a dále autoři představují $\mathcal{C}^1$-matching,
+kde při splnění předpokladů na geodetiky ve smyslu Filippova řešení lze toto řešení přiřadit řešením rovnice geodetiky na jednotlivých částech prostoročasu
+("před a za impulsem").
+Výsledkem $\mathcal{C}^1$-matchingu je sada refrakčních rovnic, které udávají jak skok v souřadnici $\matv$,
+tak i změnu v rychlostech před a za impulsem. Geodetiku procházející impulsní plochou ve spojitých souřadnicích tedy
+ztotožníme s geodetikami v souřadnicích prostoročasů na pozadí před a za vlnou pomocí refrakčních rovnic
 \begin{align}
     \label{eq:refraction_nonexpanding}
     \begin{split}
@@ -242,10 +255,24 @@ k refrakci geodetik na impulsní nadploše $\mathcal{U}=0$ podle tzv. refrakčn�
         \dot{\mathcal{U}}_{\mathrm{i}}^{-}.
     \end{split}
 \end{align}
-Index $i$ znamená hodnotu na impulsní nadploše, složky označené znakem + jsou za impulsem a tedy v části prostoročasu $\mathcal{M}^+$,
-složky označené znakem - jsou před impulsem v $\mathcal{M}^-$.
+Index $i$ znamená hodnotu na impulsní nadploše $\matu = 0$, složky označené znakem + jsou za impulsem ($\matu > 0$),
+složky označené znakem - jsou před impulsem ($\matu <0$).
 
+\subsection{Vizualizace geodetik prostoročasů s neexpandující impulsní vlnou}
+Refrakční rovnice jsou vhodným nástrojem k vizualizaci geodetik v souřadnicích prostoročasů na pozadí impulsní vlny.
+Pro vybrané funkce $H$, resp. $\mathcal{H}$ v prostoročasech s $\Lambda \neq 0$, byly zvolené geodetiky před impulsem ztotožněny
+s geodetikami za impulsem. Integrací rovnice geodetiky na oblastech před a za impulsem zvlášť pak obdržíme celé geodetiky v prostoročasu s
+impulsní vlnou. Pro účel vizualizace geodetik v těchto prostoročasech autor této práce vytvořil balíček GRImpulsiveWaves pro jazyk Python,
+tento open-source balíček je volně dostupný na platformě GitHub. \textcolor{red}{přidat na pip!} V následujících podsekcích
+představíme vizualizace pro jednotlivá řešení (tedy funkce $H$), parametry a počáteční podmínky geodetik.
 
-\subsection{Vizualizace}
-\textcolor{red}{Zde vykreslené obrázky s popisem, jak pro světelné částice tak pro
-časupodobné geodetiky (případně i pro srandu prosoturupodobné)}
+\subsection{Impulsní gravitační vlna generovaná světelnou částicí s multipólovou strukturou s $\Lambda=0$}
+Řešení impulsní vlny, generované nulovou částicí s multipólovou strukturou, propagující se na Minkowského prostoročase odvodili
+Griffiths a Podolský v \cite{Griffiths_1997}. Toto řešení má v cylindrických prostorových souřadnicích tvar
+\begin{equation}
+    \label{eq:multipole_minkowski}
+    H = -b_0 \log(\rho) + \sum_{m=1}^\infty b_m \rho^{-m} \cos\left[ m \left(\phi - \phi_m \right) \right].
+\end{equation}
+Aichelburg-Sexlovo řešení je axiálně symetrické řešení odpovídající monopólové světelné částici propagující se
+na pozadí Minkowského prostoročasu. 
+
