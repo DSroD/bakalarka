@@ -241,11 +241,22 @@ Odvozený tvar je v tomto případě ve smyslu Filippových systému (diferenci�
 V článku je ukázána existence, jednoznačnost a úplnost takových řešení a dále autoři představují $\mathcal{C}^1$-matching,
 kde při splnění předpokladů na geodetiky ve smyslu Filippova řešení lze toto řešení přiřadit řešením rovnice geodetiky na jednotlivých částech prostoročasu
 ("před a za impulsem").
+
 Výsledkem $\mathcal{C}^1$-matchingu je sada refrakčních rovnic, které udávají jak skok v souřadnici $\matv$,
 tak i změnu v rychlostech před a za impulsem. Geodetiku procházející impulsní plochou ve spojitých souřadnicích tedy
-ztotožníme s geodetikami v souřadnicích prostoročasů na pozadí před a za vlnou pomocí refrakčních rovnic
-\begin{align}
-    \label{eq:refraction_nonexpanding}
+ztotožníme transformací \eqref{eq:nonexp_cont_full_transform} (a její derivací), v oblastech $U > 0$ a $U < 0$ separátně, s geodetikami v souřadnicích prostoročasu na pozadí.
+Pro polohy dostáváme limitou $U \to 0^+$ a $U \to 0^-$ rovnice
+\begin{equation}
+    \label{eq_refraction_nonexpanding_positions}
+    \begin{split}
+        \matu^{+}_{\mathrm{i}} &= \matu^{-}_{\mathrm{i}} = 0,\\
+        \matv^{+}_{\mathrm{i}} &= \matv^{-}_{\mathrm{i}} + H_{\mathrm{i}},\\
+        \eta^{+}_{\mathrm{i}} &= \eta^{-}_{\mathrm{i}},
+    \end{split}
+\end{equation}
+což odpovídá Penroseovým spojovacím podmínkám. Pro rychlosti obdržíme stejnou limitou rovnice
+\begin{equation}
+    \label{eq:refraction_nonexpanding_velocities}
     \begin{split}
         &\dot{\mathcal{U}}^{+}_{\mathrm{i}} = \dot{\mathcal{U}}^{-}_{\mathrm{i}}\\
         &\dot{\mathcal{V}}^{+}_{\mathrm{i}} = \dot{\mathcal{V}}_{\mathrm{i}}^{-} + H_{\mathrm{i}, Z}
@@ -254,10 +265,10 @@ ztotožníme s geodetikami v souřadnicích prostoročasů na pozadí před a za
         &\dot{\eta}_{\mathrm{i}}^{+} =\dot{\eta}_{\mathrm{i}}^{-}+H_{\mathrm{i}, \bar{Z}}
         \dot{\mathcal{U}}_{\mathrm{i}}^{-}.
     \end{split}
-\end{align}
+\end{equation}
 Index $i$ znamená hodnotu na impulsní nadploše $\matu = 0$, složky označené znakem + jsou za impulsem ($\matu > 0$),
 složky označené znakem - jsou před impulsem ($\matu <0$).
-
+\textcolor{red}{Ještě zmínit že je fakt super že to nezáleží na lambdě a 5dim!}
 \subsection{Vizualizace geodetik prostoročasů s neexpandující impulsní vlnou}
 Refrakční rovnice jsou vhodným nástrojem k vizualizaci geodetik v souřadnicích prostoročasů na pozadí impulsní vlny.
 Pro vybrané funkce $H$, resp. $\mathcal{H}$ v prostoročasech s $\Lambda \neq 0$, byly zvolené geodetiky před impulsem ztotožněny
@@ -271,8 +282,21 @@ představíme vizualizace pro jednotlivá řešení (tedy funkce $H$), parametry
 Griffiths a Podolský v \cite{Griffiths_1997}. Toto řešení má v cylindrických prostorových souřadnicích tvar
 \begin{equation}
     \label{eq:multipole_minkowski}
-    H = -b_0 \log(\rho) + \sum_{m=1}^\infty b_m \rho^{-m} \cos\left[ m \left(\phi - \phi_m \right) \right].
+    H = -b_0 \log(\rho) + \sum_{m=1}^\infty b_m \rho^{-m} \cos\left[ m \left(\phi - \phi_m \right) \right],
 \end{equation}
-Aichelburg-Sexlovo řešení je axiálně symetrické řešení odpovídající monopólové světelné částici propagující se
-na pozadí Minkowského prostoročasu. 
+kde $b_m$, $\phi_m$ jsou konstanty.
 
+Aichelburg-Sexlovo řešení je pak speciálním případem odpovídající monopólové částici, tedy všechna $b_m$ pro $m \geq 1$
+jsou nulová. 
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+         \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\includegraphics[width=.7\textwidth, clip]{../img/kap02/monopole.pdf}};
+    \end{tikzpicture}
+    \caption{Funkce $H$ v případě Aichelburg-Sexlova řešní. Funkce je singulární v počátku souřadného systému, kde se nachází částice
+    generující impulsní vlnu.}
+\end{figure}
+
+Nulové geodetiky procházející 
