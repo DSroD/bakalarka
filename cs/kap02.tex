@@ -185,7 +185,7 @@ V případě nenulové kosmologické konstanty můžeme také využít vnoření
 konstanty, jak je popsáno v kapitole\autoref{chap:kap01}) s dodatečným neexpandujícím impulsem
 \begin{equation}
     \label{eq:5DDistributionalWaveMetric}
-    \rmd s^2 = \rmd Z_2^2 \rmd Z_3^2 + \epsilon \rmd Z_4^2 - 2 \rmd \tilde{U} \rmd \tilde{V} + \mathcal{H}(Z_2, Z_3, Z_4) \delta(\tilde{U}) \rmd \tilde{U}^2,
+    \rmd s^2 = \rmd Z_2^2 + \rmd Z_3^2 + \epsilon \rmd Z_4^2 - 2 \rmd \tilde{U} \rmd \tilde{V} + \mathcal{H}(Z_2, Z_3, Z_4) \delta(\tilde{U}) \rmd \tilde{U}^2,
 \end{equation}
 kde $\epsilon = \text{sign} (\Lambda)$, $\tilde{U} = \tfrac{1}{\sqrt{2}}(Z_0 + Z_1)$, $\tilde{V}= \tfrac{1}{\sqrt{2}}(Z_0-Z_1)$.
 S podmínkou analogickou k \eqref{eq:dS_hyperboloid} a \eqref{eq:AdS_hyperboloid},
@@ -237,10 +237,10 @@ nenulovou kosmologickou konstantou lze využít přístup vnoření do pětidime
 geodetiky nenachází výrazy nedefinované v klasické teorii distribucí, \textcolor{red}{Chápu to tak správně?} řešení rovnice geodetiky
 pro (anti-)de Sitterův prostoročas s impulsními neexpandujícími vlnami byly tímto způsobem odvozeny v \cite{Podolsk__2001}.
 V článku \cite{Podolsky:2014ysa} byla odvozena rovnice geodetiky v souřadnicích \eqref{eq:nonexp_continuous_metric}.
-Odvozený tvar je v tomto případě ve smyslu Filippových systému (diferenciálních inkluzí), což je zobecnění teorie obyčejných diferenciálních rovnic.
-V článku je ukázána existence, jednoznačnost a úplnost takových řešení a dále autoři představují $\mathcal{C}^1$-matching,
-kde při splnění předpokladů na geodetiky ve smyslu Filippova řešení lze toto řešení přiřadit řešením rovnice geodetiky na jednotlivých částech prostoročasu
-("před a za impulsem").
+Odvozený tvar je v tomto případě ve smyslu Filippových řešení (diferenciálních inkluzí) \cite{filippov1988differential}, což je zobecnění teorie obyčejných diferenciálních rovnic.
+V článku je ukázána existence a jednoznačnost takových řešení, dále autoři využívají metodou $\mathcal{C}^1$-matchingu,
+kde při splnění určitých předpokladů na metriku, lze řešení ve smyslu Filippova přiřadit řešením rovnice geodetiky na jednotlivých částech prostoročasu
+("před a za impulsem"), bez nutné znalosti detailů teorie za Filippovými řešeními.
 
 Výsledkem $\mathcal{C}^1$-matchingu je sada refrakčních rovnic, které udávají jak skok v souřadnici $\matv$,
 tak i změnu v rychlostech před a za impulsem. Geodetiku procházející impulsní plochou ve spojitých souřadnicích tedy
@@ -254,7 +254,8 @@ Pro polohy dostáváme limitou $U \to 0^+$ a $U \to 0^-$ rovnice
         \eta^{+}_{\mathrm{i}} &= \eta^{-}_{\mathrm{i}},
     \end{split}
 \end{equation}
-což odpovídá Penroseovým spojovacím podmínkám. Pro rychlosti obdržíme stejnou limitou rovnice
+což odpovídá Penroseovým spojovacím podmínkám - geodetika je spojitá v $\matu$ a $\eta$ a dochází ke skoku ve $\matv$.
+Pro rychlosti obdržíme stejnou limitou rovnice
 \begin{equation}
     \label{eq:refraction_nonexpanding_velocities}
     \begin{split}
@@ -268,7 +269,31 @@ což odpovídá Penroseovým spojovacím podmínkám. Pro rychlosti obdržíme s
 \end{equation}
 Index $i$ znamená hodnotu na impulsní nadploše $\matu = 0$, složky označené znakem + jsou za impulsem ($\matu > 0$),
 složky označené znakem - jsou před impulsem ($\matu <0$).
-\textcolor{red}{Ještě zmínit že je fakt super že to nezáleží na lambdě a 5dim!}
+
+Bližším pohledem na refrakční rovnice také vidíme, že zachovávají kauzální charakter geodetik. Složka rychlosti $\dot \matu$ se
+nemění, ve složkách $\dot \matv$ a $\dot \eta$ dojde k refrakci tak, že se po "vložení"\ do metrického tenzoru zachová velikost i znaménko.
+\textcolor{red}{přeformulovat lépe?}
+
+Díky tomu, že odvození proběhlo v konformně plochých souřadnicích, nezávisí na hodnotě $\Lambda$ a máme jednotné rovnice pro
+refrakci způsobenou impulsními vlnami, propagujícími se v Minkowského i (anti-)de Sitterově prostoročase.
+
+V (anti-)de Sitterově prostoročasech můžeme opět využít pětidimenzionálního vnoření do \eqref{eq:5DDistributionalWaveMetric} a odvodit refrakční rovnice
+i v tomto formalismu. Konformní faktor je při cut and paste konstrukci daný jako
+$\Omega^{\pm}_{\mathrm{i}} = 1 + \frac{1}{6} \eta^{\pm} \bar{\eta}^{\pm}$, ze spojitosti $\eta, \bar{\eta}$ při přechodu přes $\matu=0$
+však plyne, že pro konformní faktor stačí psát $\Omega_{\mathrm{i}}$, jelikož při přechodu přes impulsní nadplochu nedochází k jeho změně.
+
+Použitím rovnic pro polohy \eqref{eq_refraction_nonexpanding_positions} dostáváme
+\begin{align}
+        \tilde{U}^{+}_\mathrm{i} &= 0 = \tilde{U}^{-}_\mathrm{i}, &
+        \tilde{V}^{+}_\mathrm{i} &= \tilde{V}^{-}_\mathrm{i} + \frac{H_\mathrm{i}}{\Omega_\mathrm{i}}, &
+        Z^{+}_{2\mathrm{i}} &= Z^{-}_{2\mathrm{i}}, &
+        Z^{+}_{3\mathrm{i}} &= Z^{-}_{3\mathrm{i}}, &
+        Z^{+}_{4\mathrm{i}} &= Z^{-}_{4\mathrm{i}}  &
+\end{align}
+
+
+\textcolor{red}{5dim formalismus!}
+
 \subsection{Vizualizace geodetik prostoročasů s neexpandující impulsní vlnou}
 Refrakční rovnice jsou vhodným nástrojem k vizualizaci geodetik v souřadnicích prostoročasů na pozadí impulsní vlny.
 Pro vybrané funkce $H$, resp. $\mathcal{H}$ v prostoročasech s $\Lambda \neq 0$, byly zvolené geodetiky před impulsem ztotožněny
@@ -286,17 +311,57 @@ Griffiths a Podolský v \cite{Griffiths_1997}. Toto řešení má v cylindrický
 \end{equation}
 kde $b_m$, $\phi_m$ jsou konstanty.
 
-Aichelburg-Sexlovo řešení je pak speciálním případem odpovídající monopólové částici, tedy všechna $b_m$ pro $m \geq 1$
+Aichelburg-Sexlovo řešení je pak speciálním případem, který odpovídá monopólové nulové částici, tedy všechna $b_m$ pro $m \geq 1$
 jsou nulová. 
 
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}
          \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-        {\includegraphics[width=.7\textwidth, clip]{../img/kap02/monopole.pdf}};
+        {\includegraphics[width=.5\textwidth, clip]{../img/kap02/monopole.pdf}};
     \end{tikzpicture}
     \caption{Funkce $H$ v případě Aichelburg-Sexlova řešní. Funkce je singulární v počátku souřadného systému, kde se nachází částice
     generující impulsní vlnu.}
 \end{figure}
 
-Nulové geodetiky procházející 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\includegraphics[width=.95\textwidth, clip]{../img/kap02/ASNullRing_UV.png}};
+    \end{tikzpicture}
+     \caption{Nulové geodetiky $\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$ procházející impulsem
+     Aichelburg-Sexlova řešení v $\rho=2$ pro různé parametry $b_0$.}
+     \label{fig:Null_UV_AichelburgSexl_parameters}
+\end{figure}
+
+Na obrázku \ref{fig:Null_UV_AichelburgSexl_parameters} vidíme skok v souřadnici $\matv$ a refrakci,
+kde se s rostoucí absolutní hodnotou parametru $b_0$ dochází k větší změně ve složze rychlosti $\dot \matv$. Tato změna
+je podle být doprovázena příslušnou změnou ve složce $\dot \eta$, pro kterou opět platí, že se spolu s
+rostoucí absolutní hodnotou $b_0$ dochází k větší změně, jak znázorňuje \ref{fig:NullASRing01}.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\adjincludegraphics[trim={{.18\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASNullRingxyUmu-1.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0 = -1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\adjincludegraphics[trim={{.18\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASNullRingxyUmu-2.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0 = -2$}
+    \end{subfigure}
+    \caption{Nulové geodetiky procházející impulsní vlnou Aichelburg-Sexlova řešení. Prstenec testovacích částic je před průchodem impulsem v $\rho=2$.}
+    \label{fig:NullASRing01}
+\end{figure}
+
+Záporné hodnoty parametru $b_0$, použté v \ref{fig:Null_UV_AichelburgSexl_parameters} a \ref{fig:NullASRing01}, byly vhodné pro přehlednější vizualizaci
+efektu impulsní vlny, ale nemají v originální konstrukci pomocí ultraboostu \cite{Aichelburg_1971} fyzikální význam. Parametr $b_0$ totiž v této konstrukci
+představuje při limitě ultraboostu $v \to 1, m \to 0$ konstantu, která splňuje $8M = b_0\sqrt{1-v^2}$, pro fyzikální systémy konstruované touto metodou
+tedy nabývá kladných hodnot.
