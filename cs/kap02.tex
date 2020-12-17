@@ -98,7 +98,7 @@ souřadnicový systém, ve kterém bude metrika spojitá funkce $\mathcal{U}$. T
 \begin{equation}
     \label{eq:null_background_metric}
     \mathrm{d}s_0^2 = \frac{2~\mathrm{d}\eta~\mathrm{d}\bar{\eta}-2~\mathrm{d}\mathcal{U}~\mathrm{d}\mathcal{V}}
-    {\left[1+\frac{1}{6}\Lambda \left(\eta \bar{\eta}
+    {\left[1-\frac{1}{6}\Lambda \left(\eta \bar{\eta}
     -\mathcal{U}\mathcal{V}\right)\right]^2},
 \end{equation}
 souřadnicovou transformací
@@ -109,9 +109,9 @@ souřadnicovou transformací
 kde uvažujeme libovolnou reálnou funkci $H(Z, \bar{Z})$, obdržíme metriku
 \begin{equation}
     \label{eq:nonexp_cont_nokink_metric}
-    \mathrm{d} s^{2}=\frac{2\left|\mathrm{d} Z+U\left(H_{, Z \bar{Z}} 
+    \mathrm{d} s^{2}=\frac{2\left|\mathrm{d} Z-U\left(H_{, Z \bar{Z}} 
     \mathrm{d} Z+H_{, \bar{Z} \bar{Z}} \mathrm{d} \bar{Z}\right)\right|^{2}-2 \mathrm{d} U 
-    \mathrm{d} V}{\left[1+\frac{1}{6} \Lambda(Z \bar{Z}-U V-U G)\right]^{2}}
+    \mathrm{d} V}{\left[1-\frac{1}{6} \Lambda(Z \bar{Z}-U V-U G)\right]^{2}}
 \end{equation}
 kde $G(Z, \bar{Z}) \equiv H - Z H_{,Z}-\bar{Z}H_{,\bar{Z}}$. Metriku \eqref{eq:nonexp_cont_nokink_metric} pak 
 uvažujeme pouze pro $U>0$, zatímco na $U<0$ provedeme ztotožnení souřadnic
@@ -136,22 +136,23 @@ tzv. kink funkce jako
 můžeme výslednou metriku zapsat jako
 \begin{equation}
     \label{eq:nonexp_continuous_metric}
-    \mathrm{d} s^{2}=\frac{2\left|\mathrm{d} Z+U_+\left(H_{, Z \bar{Z}} 
+    \mathrm{d} s^{2}=\frac{2\left|\mathrm{d} Z+U_-\left(H_{, Z \bar{Z}} 
     \mathrm{d} Z+H_{, \bar{Z} \bar{Z}} \mathrm{d} \bar{Z}\right)\right|^{2}-2 \mathrm{d} U 
-    \mathrm{d} V}{\left[1+\frac{1}{6} \Lambda(Z \bar{Z}-U V-U_+ G)\right]^{2}}.
+    \mathrm{d} V}{\left[1-\frac{1}{6} \Lambda(Z \bar{Z}-U V-U_+ G)\right]^{2}}.
 \end{equation}
 Transformace \eqref{eq:nonexp_cont_transform} a \eqref{eq:transformation_just_rename} spojující separátně pro $\mathcal{U}>0$ a $\mathcal{U}<0$ metriku \eqref{eq:null_background_metric}
-s metrikou \eqref{eq:nonexp_continuous_metric} lze pomocí Heavisideovy funkce $\Theta(U)$ přepsat do tvaru 
+s metrikou \eqref{eq:nonexp_continuous_metric} lze pomocí Heavisideovy theta funkce $\Theta(U)$ přepsat do tvaru 
 \begin{equation}
     \label{eq:nonexp_cont_full_transform}
     \mathcal{U}=U,~~~~ \mathcal{V}=V+\Theta(U) H + U_+ H_{,Z}H_{,\bar{Z}},~~~~ \eta=Z+ U_+ H_{,\bar{Z}}.
 \end{equation}
 Stále je ale nutné provádět transformaci separátně pro $\mathcal{U}>0$ a $\mathcal{U}<0$, Heavisideova funkce
-má při transformaci metriky \eqref{eq:null_background_metric} za následek vznik členů proporcionálních delta funkci.
+má při transformaci metriky \eqref{eq:null_background_metric} za následek vznik členů proporcionálních delta funkci. Je také nutné podotknout,
+že toto vyjádření je pak ve smyslu distribucí.
 Ukazuje se, že tato transformace spojuje tzv. distribuční vyjádření metriky \eqref{eq:nonexp_distr_metric_omega}, které bude zavedeno dále,
 se spojitým tvarem metriky \eqref{eq:nonexp_continuous_metric}.
 Transformace \eqref{eq:nonexp_cont_full_transform} zároveň obsahuje Penroseovy spojovací podmínky \eqref{eq:lepici_podminky} v $U=0$, kde
-vzniká nespojitost v souřadnici $\mathcal{V}$. Tato metoda konstrukce tedy představuje explicitní "cut and paste"\ konstrukci.
+vzniká nespojitost v souřadnici $\mathcal{V}$. Tato metoda konstrukce, ve smyslu distribucí, tedy představuje explicitní "cut and paste"\ konstrukci.
 
 
 \subsection{Distribuční tvar metriky}
@@ -178,7 +179,7 @@ Kromě pravidel pro násobení ještě využijeme identity z klasické teorie di
 a dostáváme pro libovolnou hodnotu $\Lambda$ metriku ve tvaru
 \begin{equation} \label{eq:nonexp_distr_metric_omega}
 \mathrm{d}s^2=\frac{2\mathrm{d}\eta~\mathrm{d}\bar{\eta} - 2 \mathrm{d}\mathcal{U}~\mathrm{d}\mathcal{V} + 2H(\eta, \bar{\eta}) \delta(\mathcal{U}) 
-~\mathrm{d}\mathcal{U}^2}{\left[1+\frac{1}{6}\Lambda(\eta \bar{\eta}-\mathcal{U}\mathcal{V})\right]^2}.
+~\mathrm{d}\mathcal{U}^2}{\left[1-\frac{1}{6}\Lambda(\eta \bar{\eta}-\mathcal{U}\mathcal{V})\right]^2}.
 \end{equation}
 
 V případě nenulové kosmologické konstanty můžeme také využít vnoření do $\mathbb{E}^{1,4}$, případně $\mathbb{E}^{2,4}$ (podle znaménka kosmologické
@@ -187,7 +188,7 @@ konstanty, jak je popsáno v kapitole\autoref{chap:kap01}) s dodatečným neexpa
     \label{eq:5DDistributionalWaveMetric}
     \rmd s^2 = \rmd Z_2^2 + \rmd Z_3^2 + \epsilon \rmd Z_4^2 - 2 \rmd \tilde{U} \rmd \tilde{V} + \mathcal{H}(Z_2, Z_3, Z_4) \delta(\tilde{U}) \rmd \tilde{U}^2,
 \end{equation}
-kde $\epsilon = \text{sign} (\Lambda)$, $\tilde{U} = \tfrac{1}{\sqrt{2}}(Z_0 + Z_1)$, $\tilde{V}= \tfrac{1}{\sqrt{2}}(Z_0-Z_1)$.
+kde $\epsilon = \text{sign} (\Lambda)$, $\tilde{U} = \tfrac{1}{\sqrt{2}}(Z_0 - Z_1)$, $\tilde{V}= \tfrac{1}{\sqrt{2}}(Z_0 + Z_1)$.
 S podmínkou analogickou k \eqref{eq:dS_hyperboloid} a \eqref{eq:AdS_hyperboloid},
 \begin{equation}
     Z_2^2 + Z_3^2 + \epsilon Z_4^2 - 2 \tilde{U} \tilde{V} = \epsilon a^2,
@@ -195,7 +196,7 @@ S podmínkou analogickou k \eqref{eq:dS_hyperboloid} a \eqref{eq:AdS_hyperboloid
 dostáváme reprezentaci impulsních vln propagujících se na (A)dS prostoročasu s impulsem na $\tilde{U}=0$. 
 Funkce $H$ a $\mathcal{H}$ v metrikách \eqref{eq:nonexp_distr_metric_omega} a \eqref{eq:5DDistributionalWaveMetric} jsou svázány vztahem
 \begin{equation}
-    \mathcal{H} = \frac{2H}{1+\frac{1}{6}\Lambda \eta \bar{\eta}}
+    \mathcal{H} = \frac{2H}{1-\frac{1}{6}\Lambda \eta \bar{\eta}}
 \end{equation}
 
 
@@ -214,8 +215,8 @@ pro případ nulové kosmologické konstanty dostáváme
     \Delta H = 2 H_{,\eta \bar{\eta}} = 0.
 \end{equation}
 
-Konkrétní tvar $H=2\mu \log(\eta \bar{\eta})$ pro prostoročas s $\Lambda=0$ odvodili Aichelburg a Sexl \cite{Aichelburg_1971} pomocí limitního boostu ($v \to c$)
-Schwrazschildova řešení při $m \to 0$, aby byla hodnota $\mu = m(1-v^2)^{-1/2}$ konstantní.
+Konkrétní tvar $H=-\mu \log(2 \eta \bar{\eta})$ pro prostoročas s $\Lambda=0$ odvodili Aichelburg a Sexl \cite{Aichelburg_1971} pomocí limitního boostu ($v \to 1$)
+Schwrazschildova řešení, při $m \to 0$, aby byla hodnota $\mu = m \sqrt{1-v^2}$ konstantní.
 Zobecnění na (anti-)de Sitterův prostoročas provedli Hotta a Tanaka \cite{Hotta_1993} 
 boostem Schwarzschildova- (anti-) de Sitterova prostoročasu. Aichelburg-Sexlovo řešení představuje gravitační vlnu generovanou
 nulovou částicí v $\eta = 0$, Hottovo-Tanakovo řešení pak v de Sitterově prostoročasu odpovídá dvěma, opačným směrem letícím, nulovým částicím,
@@ -271,15 +272,14 @@ Index $i$ znamená hodnotu na impulsní nadploše $\matu = 0$, složky označen�
 složky označené znakem - jsou před impulsem ($\matu <0$).
 
 Bližším pohledem na refrakční rovnice také vidíme, že zachovávají kauzální charakter geodetik. Složka rychlosti $\dot \matu$ se
-nemění, ve složkách $\dot \matv$ a $\dot \eta$ dojde k refrakci tak, že se po "vložení"\ do metrického tenzoru zachová velikost i znaménko.
-\textcolor{red}{přeformulovat lépe?}
+nemění, ve složkách $\dot \matv$ a $\dot \eta$ dojde k refrakci tak, že se po "vložení"\ do metrického tenzoru zachová velikost i znaménko. \textcolor{red}{přeformulovat lépe?}
 
 Díky tomu, že odvození proběhlo v konformně plochých souřadnicích, nezávisí na hodnotě $\Lambda$ a máme jednotné rovnice pro
 refrakci způsobenou impulsními vlnami, propagujícími se v Minkowského i (anti-)de Sitterově prostoročase.
 
 V (anti-)de Sitterově prostoročasech můžeme opět využít pětidimenzionálního vnoření do \eqref{eq:5DDistributionalWaveMetric} a odvodit refrakční rovnice
 i v tomto formalismu. Konformní faktor je při cut and paste konstrukci daný jako
-$\Omega^{\pm}_{\mathrm{i}} = 1 + \frac{1}{6} \eta^{\pm} \bar{\eta}^{\pm}$, ze spojitosti $\eta, \bar{\eta}$ při přechodu přes $\matu=0$
+$\Omega^{\pm}_{\mathrm{i}} = 1 + \frac{1}{6} \Lambda \eta^{\pm} \bar{\eta}^{\pm}$, ze spojitosti $\eta, \bar{\eta}$ při přechodu přes $\matu=0$
 však plyne, že pro konformní faktor stačí psát $\Omega_{\mathrm{i}}$, jelikož při přechodu přes impulsní nadplochu nedochází k jeho změně.
 
 Použitím rovnic pro polohy \eqref{eq_refraction_nonexpanding_positions} dostáváme
@@ -288,7 +288,7 @@ Použitím rovnic pro polohy \eqref{eq_refraction_nonexpanding_positions} dostá
         \tilde{V}^{+}_\mathrm{i} &= \tilde{V}^{-}_\mathrm{i} + \frac{H_\mathrm{i}}{\Omega_\mathrm{i}}, &
         Z^{+}_{2\mathrm{i}} &= Z^{-}_{2\mathrm{i}}, &
         Z^{+}_{3\mathrm{i}} &= Z^{-}_{3\mathrm{i}}, &
-        Z^{+}_{4\mathrm{i}} &= Z^{-}_{4\mathrm{i}}  &
+        Z^{+}_{4\mathrm{i}} &= Z^{-}_{4\mathrm{i}}.  &
 \end{align}
 
 
@@ -314,23 +314,23 @@ kde $b_m$, $\phi_m$ jsou konstanty.
 Aichelburg-Sexlovo řešení je pak speciálním případem, který odpovídá monopólové nulové částici, tedy všechna $b_m$ pro $m \geq 1$
 jsou nulová. 
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \begin{tikzpicture}
          \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
         {\includegraphics[width=.5\textwidth, clip]{../img/kap02/monopole.pdf}};
     \end{tikzpicture}
     \caption{Funkce $H$ v případě Aichelburg-Sexlova řešní. Funkce je singulární v počátku souřadného systému, kde se nachází částice
-    generující impulsní vlnu.}
+    generující impulsní vlnu. \textcolor{red}{přidat ještě dipól}}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \begin{tikzpicture}
         \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
         {\includegraphics[width=.95\textwidth, clip]{../img/kap02/ASNullRing_UV.png}};
     \end{tikzpicture}
-     \caption{Nulové geodetiky $\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$ procházející impulsem
+     \caption{Nulové geodetiky ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) procházející impulsem
      Aichelburg-Sexlova řešení v $\rho=2$ pro různé parametry $b_0$.}
      \label{fig:Null_UV_AichelburgSexl_parameters}
 \end{figure}
@@ -338,14 +338,16 @@ jsou nulová.
 Na obrázku \ref{fig:Null_UV_AichelburgSexl_parameters} vidíme skok v souřadnici $\matv$ a refrakci,
 kde se s rostoucí absolutní hodnotou parametru $b_0$ dochází k větší změně ve složze rychlosti $\dot \matv$. Tato změna
 je podle být doprovázena příslušnou změnou ve složce $\dot \eta$, pro kterou opět platí, že se spolu s
-rostoucí absolutní hodnotou $b_0$ dochází k větší změně, jak znázorňuje \ref{fig:NullASRing01}.
+rostoucí absolutní hodnotou $b_0$ dochází k větší změně, jak znázorňuje \ref{fig:Null_UV_AichelburgSexl_parameters} a \ref{fig:NullASRing01}.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \begin{tikzpicture}
             \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-        {\adjincludegraphics[trim={{.18\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASNullRingxyUmu-1.pdf}};
+        {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASNullRingxyUmu-1.pdf}};
+        \filldraw[white] (0.59,2.65) circle (5pt);
+        \node[text width=7pt] at (0.59,2.65) {\footnotesize{$\matu$}};
         \end{tikzpicture}
         \caption{$b_0 = -1$}
     \end{subfigure}
@@ -353,15 +355,87 @@ rostoucí absolutní hodnotou $b_0$ dochází k větší změně, jak znázorňu
     \begin{subfigure}[b]{0.45\textwidth}
         \begin{tikzpicture}
             \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-        {\adjincludegraphics[trim={{.18\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASNullRingxyUmu-2.pdf}};
+            {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASNullRingxyUmu-2.pdf}};
+            \filldraw[white] (0.59,2.65) circle (5pt);
+            \node[text width=7pt] at (0.59,2.65) {\footnotesize{$\matu$}};
         \end{tikzpicture}
         \caption{$b_0 = -2$}
     \end{subfigure}
-    \caption{Nulové geodetiky procházející impulsní vlnou Aichelburg-Sexlova řešení. Prstenec testovacích částic je před průchodem impulsem v $\rho=2$.}
+    \caption{Nulové geodetiky ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) procházející impulsní vlnou Aichelburg-Sexlova řešení. Prstenec testovacích částic je před průchodem impulsem v $\rho=2$.}
     \label{fig:NullASRing01}
 \end{figure}
 
-Záporné hodnoty parametru $b_0$, použté v \ref{fig:Null_UV_AichelburgSexl_parameters} a \ref{fig:NullASRing01}, byly vhodné pro přehlednější vizualizaci
-efektu impulsní vlny, ale nemají v originální konstrukci pomocí ultraboostu \cite{Aichelburg_1971} fyzikální význam. Parametr $b_0$ totiž v této konstrukci
-představuje při limitě ultraboostu $v \to 1, m \to 0$ konstantu, která splňuje $8M = b_0\sqrt{1-v^2}$, pro fyzikální systémy konstruované touto metodou
-tedy nabývá kladných hodnot.
+Záporné hodnoty parametru $b_0$, použté na obrázcích \ref{fig:Null_UV_AichelburgSexl_parameters} a \ref{fig:NullASRing01}, byly vhodné pro přehlednější vizualizaci
+efektu impulsní vlny, nemají ale v originální konstrukci pomocí ultraboostu \cite{Aichelburg_1971} fyzikální význam. Parametr $b_0$ totiž v této konstrukci
+představuje při ultraboostové limitě $v \to 1, m \to 0$ konstantu, která splňuje $8m = b_0\sqrt{1-v^2}$, pro fyzikální systémy konstruované touto metodou
+tedy nabývá kladných hodnot. Příklady nulových geodetiky pro tyto hodnoty jsou na obrázku \ref{fig:ASNullFyzikalnejsi}, vidíme,
+že geodetiky jsou refraktovány směrem k $\rho=0$ \textcolor{red}{Šlo by tohle interpretovat jako stržení polem nulové částice generující vlnu (ve smyslu aproximace
+pole generovaného takovou částicí), tedy jako "přitažlivý efekt"?}
+
+\textcolor{red}{Jak moc vadí, že ty geodetiky jdou vlastně pozpátku v souřadnicovém čase??}
+
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.1\width} {.1\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASNullRingxyUmu1.pdf}};
+            \filldraw[white] (0.59,3.1) circle (5pt);
+            \node[text width=7pt] at (0.59,3.1) {\footnotesize{$\matu$}};
+        \end{tikzpicture}
+        \caption{$b_0 = 1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.1\width} {.1\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASNullRingxyUmu2.pdf}};
+            \filldraw[white] (0.59,3.1) circle (5pt);
+            \node[text width=7pt] at (0.59,3.1) {\footnotesize{$\matu$}};
+        \end{tikzpicture}
+        \caption{$b_0 = 2$}
+    \end{subfigure}
+\caption{Nulové geodetiky ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) procházející impulsem v $\rho=2$ pro kladné hodnoty parametru $b_0$.}
+\label{fig:ASNullFyzikalnejsi}
+\end{figure}
+
+Testovací částice na časupodobných geodetikách se chovají stejným způsobem, na obrázku \ref{fig:AsMatter01} vidíme časupodobné geodetiky,
+po kterých se testovací částice šíří paralelně s osou $z$. Při průchodu $\matu = 0$ dojde k refrakci a částice po průchodu letí směrem k ose $z$.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASMatterRingxyzmu1.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0 = 1$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASMatterRingxyzmu2.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0 = 2$}
+    \end{subfigure}
+    \caption{\textcolor{red}{PŘEPLOTIT!!!} Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2}$, $\dot \matv^-=1$, $\dot \eta^-=0$) procházející impulsní vlnou Aichelburg-Sexlova řešení. Prstenec testovacích částic je před průchodem impulsem v $\rho=\frac{1}{2}$.}
+    \label{fig:AsMatter01}
+\end{figure}
+
+Závislost efektu refrakce je klesající se vzdáleností od částice generující impuls. Na obrázku \ref{fig:AS_zavislost_na_rho} jsou znázorněny už
+refraktované časupodobné geodetiky pro různé vzdálenosti od osy symetrie. Před refrakcí se jedná o pohyb testovacích částic ve směru osy $z$.
+Efekt refrakce se vzdáleností od $\rho=0$ snižuje.
+
+\begin{figure}[!ht]
+    \centering
+       \begin{tikzpicture}
+           \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+           {\includegraphics[width=.8\textwidth, clip]{../img/kap02/ASMatterLinexz.png}};
+        \end{tikzpicture}
+    \caption{Refraktované časupodobné geodetiky po průchodu impulsem v různých vzdálenostech $\rho$ pro $b_0 = \frac{1}{2}$.
+    Červená barva odpovídá částici refraktované nejblíže ($\rho=\frac{1}{2}$), modrá nejdále ($\rho = 2$). Černá přímka odpovídá
+    ose $x=0$.}
+    \label{fig:AS_zavislost_na_rho}
+\end{figure}
