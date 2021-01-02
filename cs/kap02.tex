@@ -203,16 +203,19 @@ Funkce $H$ a $\mathcal{H}$ v metrikách \eqref{eq:nonexp_distr_metric_omega} a \
 \section{Interakce s testovacími částicemi}
 
 \subsection{Profil impulsní gravitační vlny}
-\textcolor{red}{Toto bych raději přejmenoval jinak}
-Pro distribuční metriku \eqref{eq:nonexp_distr_metric_omega} se Einsteinovy rovnice \eqref{eq:einsten_field_equations} pro nulovou pravou stranu redukují na
+
+
+
+\textcolor{red}{TOTO SE SMAŽE}
+Pro distribuční metriku \eqref{eq:nonexp_distr_metric_omega} se Einsteinovy rovnice \eqref{eq:einsten_field_equations} redukují na
 \begin{equation}
-    \label{eq:podminka_na_H_lambda}
-    \left(\Delta + \frac{2}{3} \Lambda \right)\mathcal{H} = 0,
+    \label{eq:podminka_na_H_lambda_stare}
+    \left(\Delta + \frac{2}{3} \Lambda \right)\mathcal{H} = 8 \pi T_{\matu \matu},
 \end{equation}
 pro případ nulové kosmologické konstanty dostáváme
 \begin{equation}
-    \label{eq:podminka_na_H}
-    \Delta H = 2 H_{,\eta \bar{\eta}} = 0.
+    \label{eq:podminka_na_H_stare}
+    \Delta H = 2 H_{,\eta \bar{\eta}} = 8 \pi T_{\matu \matu}.
 \end{equation}
 
 Konkrétní tvar $H=-\mu \log(2 \eta \bar{\eta})$ pro prostoročas s $\Lambda=0$ odvodili Aichelburg a Sexl \cite{Aichelburg_1971} pomocí limitního boostu ($v \to 1$)
@@ -223,9 +226,9 @@ nulovou částicí v $\eta = 0$, Hottovo-Tanakovo řešení pak v de Sitterově 
 které generují neexpandující sférickou gravitační vlnu, v anti-de Sitterově prostoročasu (ve kterém existují uzavřené časupodobné křivky) impulsní vlnu generovanou nulovou částicí
 která v nekonečném cyklu prolétává z jedné strany vesmíru na druhou.
 
-Griffiths a Podolský v článcích \cite{Griffiths_1997} a \cite{Podolsky1997} využili \eqref{eq:podminka_na_H}, resp. \eqref{eq:podminka_na_H_lambda}
-ke zkonstruování obecnějšího tvaru funkce $H$, resp. $\mathcal{H}$, kde je neexpandující gravitační vlna generována
-nulovými částicemi s libovolnou multipólovou strukturou.
+Griffiths a Podolský v článcích \cite{Griffiths_1997} a \cite{Podolsky1997}
+zkonstruovali obecnějšího tvar funkce $H$, resp. $\mathcal{H}$, kde je neexpandující impulsní vlna generována
+nulovými částicemi s libovolnou multipólovou strukturou. Tento postup lze 
 
 \subsection{$\mathcal{C}^1$-matching a refrakční rovnice}
 Dále budeme explicitně modelovat geodetiky na prostoročasech s neexpandujícími impulsními vlnami v souřadnicích
@@ -271,8 +274,10 @@ Pro rychlosti obdržíme stejnou limitou rovnice
 Index $i$ znamená hodnotu na impulsní nadploše $\matu = 0$, složky označené znakem + jsou za impulsem ($\matu > 0$),
 složky označené znakem - jsou před impulsem ($\matu <0$).
 
-Bližším pohledem na refrakční rovnice také vidíme, že zachovávají kauzální charakter geodetik. Složka rychlosti $\dot \matu$ se
-nemění, ve složkách $\dot \matv$ a $\dot \eta$ dojde k refrakci tak, že se po "vložení"\ do metrického tenzoru zachová velikost i znaménko. \textcolor{red}{přeformulovat lépe?}
+Všimněme si, že při přechodu přes impulsní plochu platí $\eta_i = Z_i$ a tedy $ H_{i,Z} = \frac{\partial}{\partial \eta} H(\eta, \bar{\eta})$.
+
+Bližším pohledem na refrakční rovnice také vidíme, že zachovávají kauzální charakter. Složka rychlosti $\dot \matu$ se
+nemění, ve složkách $\dot \matv$ a $\dot \eta$ dojde k refrakci tak, že nedochází ke změně normy čtyřrychlosti. \textcolor{red}{Poznámka že norma je indukovaná metrikou na jednotlivých částech PČ? Dále ještě v polárních souřadnicích}
 
 Díky tomu, že odvození proběhlo v konformně plochých souřadnicích, nezávisí na hodnotě $\Lambda$ a máme jednotné rovnice pro
 refrakci způsobenou impulsními vlnami, propagujícími se v Minkowského i (anti-)de Sitterově prostoročase.
@@ -300,28 +305,55 @@ Pro vybrané funkce $H$, resp. $\mathcal{H}$ v prostoročasech s $\Lambda \neq 0
 s geodetikami za impulsem. Integrací rovnice geodetiky na oblastech před a za impulsem zvlášť pak obdržíme celé geodetiky v prostoročasu s
 impulsní vlnou. Pro účel vizualizace geodetik v těchto prostoročasech autor této práce vytvořil balíček GRImpulsiveWaves pro jazyk Python,
 tento open-source balíček je volně dostupný na platformě GitHub. \textcolor{red}{přidat na pip!} V následujících podsekcích
-představíme vizualizace pro jednotlivá řešení (tedy funkce $H$), parametry a počáteční podmínky geodetik.
+představíme vizualizace pro tato vybraná řešení, pro různé parametry a počáteční podmínky geodetik.
 
-\subsection{Impulsní gravitační vlna generovaná světelnou částicí s multipólovou strukturou s $\Lambda=0$}
-Řešení impulsní vlny, generované nulovou částicí s multipólovou strukturou, propagující se na Minkowského prostoročase odvodili
-Griffiths a Podolský v \cite{Griffiths_1997}. Toto řešení má v cylindrických prostorových souřadnicích tvar
+\subsection{Impulsní gravitační vlna generovaná světelnými částicemi s multipólovou strukturou s $\Lambda=0$}
+
+Řešení impulsní vlny generované nulovými částicemi s multipólovou strukturou v Minkowského prostoročase odvodili
+Griffiths a Podolský v \cite{Griffiths_1997}. Polní rovnice se pro tento případ redukují na
+
+\begin{equation}
+    \label{eq:podminka_na_H}
+    \Delta H = 2 H_{,\eta \bar{\eta}} = 8 \pi T_{\matu \matu},
+\end{equation}
+ 
+kde $T_{\matu \matu} = f(\eta, \bar{\eta}) \delta(\matu)$. Funkce $H$ v cylindrických prostorových souřadnicích nabývá tvaru 
 \begin{equation}
     \label{eq:multipole_minkowski}
     H = -b_0 \log(\rho) + \sum_{m=1}^\infty b_m \rho^{-m} \cos\left[ m \left(\phi - \phi_m \right) \right],
 \end{equation}
 kde $b_m$, $\phi_m$ jsou konstanty.
 
-Aichelburg-Sexlovo řešení je pak speciálním případem, který odpovídá monopólové nulové částici, tedy všechna $b_m$ pro $m \geq 1$
-jsou nulová. 
+Řešení s jedinou monopólovou částicí, tedy $b_m=0$ pro všechna $m \geq 1$, odpovídá Aichelburg-Sexlovu řešení - prostoročasu
+zkonstruovanému ultraboostem Schwarzschildova řešení \cite{Aichelburg_1971}.
 
 \begin{figure}[h]
     \centering
-    \begin{tikzpicture}
-         \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-        {\includegraphics[width=.5\textwidth, clip]{../img/kap02/monopole.pdf}};
-    \end{tikzpicture}
-    \caption{Funkce $H$ v případě Aichelburg-Sexlova řešní. Funkce je singulární v počátku souřadného systému, kde se nachází částice
-    generující impulsní vlnu. \textcolor{red}{přidat ještě dipól}}
+    \begin{subfigure}[b]{0.31\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+           {\adjincludegraphics[trim={{.1\width} {.05\height} {.1\width} {.1\height}}, width=0.9\textwidth, clip]{../img/kap02/monopole.pdf}};
+       \end{tikzpicture}
+       \caption{}
+    \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.31\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+           {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.1\height}}, width=\textwidth, clip]{../img/kap02/dipole.pdf}};
+       \end{tikzpicture}
+       \caption{}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.31\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+           {\adjincludegraphics[trim={{.1\width} {.18\height} {.1\width} {.1\height}}, width=0.8\textwidth, clip]{../img/kap02/quadrupole.pdf}};
+       \end{tikzpicture}
+       \caption{}
+     \end{subfigure}
+
+    \caption{Funkce $H$ v případě (a) Aichelburg-Sexlova řešní, impulsní vlny generované nulovou částicí s (b) dipólovou strukturou a s (c) kvadrupólovou strukturou}
 \end{figure}
 
 \begin{figure}[h]
@@ -335,10 +367,14 @@ jsou nulová.
      \label{fig:Null_UV_AichelburgSexl_parameters}
 \end{figure}
 
-Na obrázku \ref{fig:Null_UV_AichelburgSexl_parameters} vidíme skok v souřadnici $\matv$ a refrakci,
-kde se s rostoucí absolutní hodnotou parametru $b_0$ dochází k větší změně ve složze rychlosti $\dot \matv$. Tato změna
-je podle být doprovázena příslušnou změnou ve složce $\dot \eta$, pro kterou opět platí, že se spolu s
-rostoucí absolutní hodnotou $b_0$ dochází k větší změně, jak znázorňuje \ref{fig:Null_UV_AichelburgSexl_parameters} a \ref{fig:NullASRing01}.
+Na obrázku \ref{fig:Null_UV_AichelburgSexl_parameters} je vyobrazena refrakce v Aichelburg-Sexlově řešneí pro různé
+parametry $b_0$. Dochází ke skoku v souřadnici $\matv$, jak plyne z Penroseových napojovacích podmínek, a k refrakci.
+S rostoucí absolutní hodnotou parametru $b_0$ dochází k větší změně ve složce rychlosti $\dot \matv$.
+Skok ve složce $\dot \matv$ doprovází změna ve složce $\dot \eta$, pro kterou opět platí, že se spolu s
+rostoucí absolutní hodnotou $b_0$ dochází k větší změně. Tato závislost je také vidět na obrázku \ref{fig:NullASRing01},
+kde vidíme geodetikcý pohyb v prostoru v závislosti na retardované souřadnici $\matu$, kterou v případě neexpandujících vln
+v Minkowského prostoročase můžeme použít jako afinní parametr. \textcolor{red}{Zde by se asi hodila část o tom, že je poměrně vhodné vizualizovat
+tyto PČ právě potlačením souřadnice $\matv$}
 
 \begin{figure}[h]
     \centering
@@ -366,8 +402,8 @@ rostoucí absolutní hodnotou $b_0$ dochází k větší změně, jak znázorňu
 \end{figure}
 
 Záporné hodnoty parametru $b_0$, použté na obrázcích \ref{fig:Null_UV_AichelburgSexl_parameters} a \ref{fig:NullASRing01}, byly vhodné pro přehlednější vizualizaci
-efektu impulsní vlny, nemají ale v originální konstrukci pomocí ultraboostu \cite{Aichelburg_1971} fyzikální význam. Parametr $b_0$ totiž v této konstrukci
-představuje při ultraboostové limitě $v \to 1, m \to 0$ konstantu, která splňuje $8m = b_0\sqrt{1-v^2}$, pro fyzikální systémy konstruované touto metodou
+efektu impulsní vlny, nemají ale v originální konstrukci Aichelburg-Sexlova ultraboostu fyzikální význam. Parametr $b_0$
+představuje v ultraboostové limitě $v \to 1, m \to 0$ konstantu, která splňuje $8m = b_0\sqrt{1-v^2}$, pro fyzikální systémy konstruované touto metodou
 tedy nabývá kladných hodnot. Příklady nulových geodetiky pro tyto hodnoty jsou na obrázku \ref{fig:ASNullFyzikalnejsi}, vidíme,
 že geodetiky jsou refraktovány směrem k $\rho=0$ \textcolor{red}{Šlo by tohle interpretovat jako stržení polem nulové částice generující vlnu (ve smyslu aproximace
 pole generovaného takovou částicí), tedy jako "přitažlivý efekt"?}
@@ -408,34 +444,107 @@ po kterých se testovací částice šíří paralelně s osou $z$. Při průcho
     \begin{subfigure}[b]{0.45\textwidth}
         \begin{tikzpicture}
             \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-        {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASMatterRingxyzmu1.pdf}};
+        {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASMatterRingxyUmu0.5.pdf}};
+        \filldraw[white] (0.59,2.6) circle (5pt);
+        \node[text width=7pt] at (0.59,2.6) {\footnotesize{$\matu$}};
         \end{tikzpicture}
-        \caption{$b_0 = 1$}
+        \caption{$b_0 = 0.5$}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \begin{tikzpicture}
             \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-            {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASMatterRingxyzmu2.pdf}};
+            {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASMatterRingxyUmu2.pdf}};
+            \filldraw[white] (0.59,2.6) circle (5pt);
+            \node[text width=7pt] at (0.59,2.6) {\footnotesize{$\matu$}};
         \end{tikzpicture}
         \caption{$b_0 = 2$}
     \end{subfigure}
-    \caption{\textcolor{red}{PŘEPLOTIT!!!} Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2}$, $\dot \matv^-=1$, $\dot \eta^-=0$) procházející impulsní vlnou Aichelburg-Sexlova řešení. Prstenec testovacích částic je před průchodem impulsem v $\rho=\frac{1}{2}$.}
+    \caption{Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2}$, $\dot \matv^-=1$, $\dot \eta^-=0$) procházející impulsní vlnou AS řešení. Prstenec testovacích částic je před průchodem impulsem v $\rho=2$.}
     \label{fig:AsMatter01}
 \end{figure}
 
-Závislost efektu refrakce je klesající se vzdáleností od částice generující impuls. Na obrázku \ref{fig:AS_zavislost_na_rho} jsou znázorněny už
+Refrakce je slabší s rostoucí vzdáleností od částice generující impuls. Na obrázku \ref{fig:AS_zavislost_na_rho} jsou znázorněny už
 refraktované časupodobné geodetiky pro různé vzdálenosti od osy symetrie. Před refrakcí se jedná o pohyb testovacích částic ve směru osy $z$.
-Efekt refrakce se vzdáleností od $\rho=0$ snižuje.
 
 \begin{figure}[!ht]
     \centering
        \begin{tikzpicture}
            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-           {\includegraphics[width=.8\textwidth, clip]{../img/kap02/ASMatterLinexz.png}};
+           {\includegraphics[width=.7\textwidth, clip]{../img/kap02/ASMatterLinexz.png}};
         \end{tikzpicture}
     \caption{Refraktované časupodobné geodetiky po průchodu impulsem v různých vzdálenostech $\rho$ pro $b_0 = \frac{1}{2}$.
     Červená barva odpovídá částici refraktované nejblíže ($\rho=\frac{1}{2}$), modrá nejdále ($\rho = 2$). Černá přímka odpovídá
     ose $x=0$.}
     \label{fig:AS_zavislost_na_rho}
+\end{figure}
+
+
+Pro potěšení oka čtenáře jsou přiloženy další vizualizace geodetického pohybu v Aichelburg-Sexlově řešní. Na obrázku \ref{fig:AsMatter02} se jedná systém časupodobných geodetik, které se před
+průchodem impulsní vlnou šíří od osy symetrie $z$. V (b) dochází k refrakci, která otáčí směr šíření směrem zpět k ose $z$.
+Na obrázku \ref{fig:AsMatterNonAxial} je pak zobrazení průchodu geodetik, které nejsou uspořádáný axiálně symetricky.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASMatterRing_XYMOVING__xyU_mu2.pdf}};
+        \filldraw[white] (0.59,2.7) circle (5pt);
+        \node[text width=7pt] at (0.59,2.7) {\footnotesize{$\matu$}};
+        \end{tikzpicture}
+        \caption{$b_0 = 2$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.25\height}}, width=\textwidth, clip]{../img/kap02/ASMatterRing_XYMOVING__xyU_mu4.pdf}};
+            \filldraw[white] (0.59,2.7) circle (5pt);
+            \node[text width=7pt] at (0.59,2.7) {\footnotesize{$\matu$}};
+        \end{tikzpicture}
+        \caption{$b_0 = 4$}
+    \end{subfigure}
+    \caption{Časupodobné geodetiky ($\dot \matu^-=1$, $\dot \matv^-=2$, $\dot \eta^-=\sqrt{\frac{3}{2}} e^{i \phi}$), kde $\phi$ odpovídá úhlu v
+    cylindrických souřadnicích ve kterém částice leží, procházející impulsní vlnou AS řešení v $\rho=2$.}
+    \label{fig:AsMatter02}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.22\height}}, width=0.8\textwidth, clip]{../img/kap02/ASMatterHearthxyUmu1.pdf}};
+        \filldraw[white] (1.87,2.7) circle (9pt);
+        \node[text width=9pt] at (1.87,2.7) {\small{$\matu$}};
+    \end{tikzpicture}    
+    \caption{Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2}$, $\dot \matv^-=1$, $\dot \eta^-=0$) ve vybraném uspořádání, procházející nadplochou $\matu = 0$.}
+    \label{fig:AsMatterNonAxial}
+\end{figure}
+
+Pro $m>0$ závisí změna geodetického pohybu na prostorovém úhlu. Derivace $H_{i,Z}$m která vystupuje v refrakčních rovnicíchm je pro jednotlivá $m$
+\begin{equation}
+    H_{i,Z}^{(m)}(\eta, \bar{\eta}) = -\frac{(\sqrt{2})^{m} b_m m}{\eta^{m+1}}.
+\end{equation}
+Speciálně pro $m=1$, tedy částici s dipólovou strukturou, je vykreslena na obrázku \ref{fig:DipoleHZ}. Vidíme, že
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\includegraphics[width=1\textwidth, clip]{../img/kap02/DipoleHZReal.pdf}};
+        \end{tikzpicture}
+        \caption{$Re(H_{i,Z}^{(1)})$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\includegraphics[width=1\textwidth, clip]{../img/kap02/DipoleHZImaginary.pdf}};
+        \end{tikzpicture}
+        \caption{$Im(H_{i,Z}^{(1)})$}
+    \end{subfigure}
+    \caption{Reálná a imaginární část $H_{i,Z}^{(1)}(x, y)$.}
+    \label{fig:DipoleHZ}
 \end{figure}
