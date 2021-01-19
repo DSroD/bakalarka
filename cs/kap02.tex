@@ -16,7 +16,7 @@ Geometrická metoda konstrukce "cut and paste"\ impulsních gravitačních vln v
 světelné nadplochy $\mathcal{N}$, kde je implulzní vlna lokalizována na dvě části $\mathcal{M}^+$ a $\mathcal{M}^-$. Opětovným spojením těchto částí a ztotožněním bodů na hranici
 řezu $\mathcal{N}$ se specifickým posunutím dostaneme prostoročas s impulsní gravitační vlnou.
 
-\begin{figure}[h]\centering
+\begin{figure}[ht]\centering
 \begin{tikzpicture}
 \clip(-2.5,-0.5) rectangle (6.,3.5);
 \draw [line width=1.2pt] (-2.,1.)-- (0.,0.);
@@ -199,37 +199,6 @@ Funkce $H$ a $\mathcal{H}$ v metrikách \eqref{eq:nonexp_distr_metric_omega} a \
     \mathcal{H} = \frac{2H}{1-\frac{1}{6}\Lambda \eta \bar{\eta}}
 \end{equation}
 
-
-\section{Interakce s testovacími částicemi}
-
-\subsection{Profil impulsní gravitační vlny}
-
-
-
-\textcolor{red}{TOTO SE SMAŽE}
-Pro distribuční metriku \eqref{eq:nonexp_distr_metric_omega} se Einsteinovy rovnice \eqref{eq:einsten_field_equations} redukují na
-\begin{equation}
-    \label{eq:podminka_na_H_lambda_stare}
-    \left(\Delta + \frac{2}{3} \Lambda \right)\mathcal{H} = 8 \pi T_{\matu \matu},
-\end{equation}
-pro případ nulové kosmologické konstanty dostáváme
-\begin{equation}
-    \label{eq:podminka_na_H_stare}
-    \Delta H = 2 H_{,\eta \bar{\eta}} = 8 \pi T_{\matu \matu}.
-\end{equation}
-
-Konkrétní tvar $H=-\mu \log(2 \eta \bar{\eta})$ pro prostoročas s $\Lambda=0$ odvodili Aichelburg a Sexl \cite{Aichelburg_1971} pomocí limitního boostu ($v \to 1$)
-Schwrazschildova řešení, při $m \to 0$, aby byla hodnota $\mu = m \sqrt{1-v^2}$ konstantní.
-Zobecnění na (anti-)de Sitterův prostoročas provedli Hotta a Tanaka \cite{Hotta_1993} 
-boostem Schwarzschildova- (anti-) de Sitterova prostoročasu. Aichelburg-Sexlovo řešení představuje gravitační vlnu generovanou
-nulovou částicí v $\eta = 0$, Hottovo-Tanakovo řešení pak v de Sitterově prostoročasu odpovídá dvěma, opačným směrem letícím, nulovým částicím,
-které generují neexpandující sférickou gravitační vlnu, v anti-de Sitterově prostoročasu (ve kterém existují uzavřené časupodobné křivky) impulsní vlnu generovanou nulovou částicí
-která v nekonečném cyklu prolétává z jedné strany vesmíru na druhou.
-
-Griffiths a Podolský v článcích \cite{Griffiths_1997} a \cite{Podolsky1997}
-zkonstruovali obecnějšího tvar funkce $H$, resp. $\mathcal{H}$, kde je neexpandující impulsní vlna generována
-nulovými částicemi s libovolnou multipólovou strukturou. Tento postup lze 
-
 \subsection{$\mathcal{C}^1$-matching a refrakční rovnice}
 Dále budeme explicitně modelovat geodetiky na prostoročasech s neexpandujícími impulsními vlnami v souřadnicích
 \eqref{eq:nonexp_distr_metric_omega}. V těchto souřadnicích není řešení rovnice geodetiky dobře definované v
@@ -274,17 +243,38 @@ Pro rychlosti obdržíme stejnou limitou rovnice
 Index $i$ znamená hodnotu na impulsní nadploše $\matu = 0$, složky označené znakem + jsou za impulsem ($\matu > 0$),
 složky označené znakem - jsou před impulsem ($\matu <0$).
 
-Všimněme si, že při přechodu přes impulsní plochu platí $\eta_i = Z_i$ a tedy $ H_{i,Z} = \frac{\partial}{\partial \eta} H(\eta, \bar{\eta})$.
+Všimněme si, že při přechodu přes impulsní plochu platí $\eta_{\mathrm{i}} = Z_{\mathrm{i}}$ a tedy $ H_{\mathrm{i},Z} = \frac{\partial}{\partial \eta} H(\eta, \bar{\eta})$.
 
 Bližším pohledem na refrakční rovnice také vidíme, že zachovávají kauzální charakter. Složka rychlosti $\dot \matu$ se
-nemění, ve složkách $\dot \matv$ a $\dot \eta$ dojde k refrakci tak, že nedochází ke změně normy čtyřrychlosti. \textcolor{red}{Poznámka že norma je indukovaná metrikou na jednotlivých částech PČ? Dále ještě v polárních souřadnicích}
+nemění, ve složkách $\dot \matv$ a $\dot \eta$ dojde k refrakci tak, že nedochází ke změně normy čtyřrychlosti.
+
+Dále ještě uvedeme refrakční rovnice v reálných polárních prostorových souřadnicích, které odvodíme z transformace spojitých souřadnic
+$\rho = \sqrt{2} \left|Z + U_{+} H_{,\bar{Z}}\right|$ a $\varphi = \frac{1}{2i} \log \frac{Z + U_+ H_{,\bar{Z}}}{\bar{Z} + U_+ H_{,Z}}$.
+Limitou $U \to 0^+$ a $U \to 0^-$ dostáváme
+\begin{equation}
+    \begin{split}
+        \matv^{+}_{\mathrm{i}} &= \matv^{-}_{\mathrm{i}} + H_{\mathrm{i}},\\
+        \rho^{+}_{\mathrm{i}} &= \rho^{-}_{\mathrm{i}}\\
+        \varphi^{+}_{\mathrm{i}} &= \varphi^{-}_{\mathrm{i}},
+    \end{split}
+\end{equation}
+tedy radiální i úhlová složka jsou spojité. Pro složky rychlosti pak provedeme stejnou limitu na derivaci souřadnic,
+\begin{equation}
+    \begin{split}
+        \dot{\mathcal{V}}_{\mathrm{i}}^{+}=& ~\dot{\mathcal{V}}_{\mathrm{i}}^{-}+\frac{1}{\sqrt{2}}\left(e^{i \varphi_{\mathrm{i}}^{-}} H_{\mathrm{i}, Z}+e^{-i \varphi_{\mathrm{i}}^{-}} H_{\mathrm{i}, \bar{Z}}\right) \dot{\rho}_{\mathrm{i}}^{-}+\frac{i}{\sqrt{2}}\left(e^{i \varphi_{\mathrm{i}}^{-}} H_{\mathrm{i}, Z}-e^{-i \varphi_{\mathrm{i}}^{-}} H_{\mathrm{i}, \bar{Z}}\right) \rho_{\mathrm{i}}^{-} \dot{\varphi}_{\mathrm{i}}^{-} \\
+        &+\left(H_{\mathrm{i}, Z} H_{\mathrm{i}, \bar{Z}}\right) \dot{\mathcal{U}}_{\mathrm{i}}^{-} \\
+        \dot{\rho}_{\mathrm{i}}^{+}=& \dot{\rho}_{\mathrm{i}}^{+} + \frac{1}{2} \left(e^{i \varphi^-_\mathrm{i}} H_{\mathrm{i},Z} + e^{-i \varphi^-_\mathrm{i}} H_{\mathrm{i},\bar{Z}}\right)\dot{\matu}_\mathrm{i}^{-}\\
+        \dot{\varphi}_{\mathrm{i}}^{+}=&\dot{\varphi}_{\mathrm{i}}^{-} + \frac{i}{\sqrt{2}\rho_{\mathrm{i}}^{-}} \left(e^{i \varphi_{\mathrm{i}}^{-}} H_{\mathrm{i}, Z} - e^{-i \varphi_{\mathrm{i}}^{-}} H_{\mathrm{i}, \bar{Z}}\right) \dot{\matu}_{\mathrm{i}}^{-}.
+        \end{split}
+\end{equation}
+
 
 Díky tomu, že odvození proběhlo v konformně plochých souřadnicích, nezávisí na hodnotě $\Lambda$ a máme jednotné rovnice pro
 refrakci způsobenou impulsními vlnami, propagujícími se v Minkowského i (anti-)de Sitterově prostoročase.
 
-V (anti-)de Sitterově prostoročasech můžeme opět využít pětidimenzionálního vnoření do \eqref{eq:5DDistributionalWaveMetric} a odvodit refrakční rovnice
-i v tomto formalismu. Konformní faktor je při cut and paste konstrukci daný jako
-$\Omega^{\pm}_{\mathrm{i}} = 1 + \frac{1}{6} \Lambda \eta^{\pm} \bar{\eta}^{\pm}$, ze spojitosti $\eta, \bar{\eta}$ při přechodu přes $\matu=0$
+V (anti-)de Sitterově prostoročasech můžeme také využít pětidimenzionálního formalismu a odvodit refrakční rovnice v souřadnicích \eqref{eq:5DDistributionalWaveMetric}.
+Konformní faktor je na jednotlivých částech prostoročasu při cut and paste konstrukci daný jako $\Omega^{\pm}_{\mathrm{i}} = 1 + \frac{1}{6} \Lambda \eta^{\pm} \bar{\eta}^{\pm}$,
+ze spojitosti $\eta, \bar{\eta}$ při přechodu přes $\matu=0$
 však plyne, že pro konformní faktor stačí psát $\Omega_{\mathrm{i}}$, jelikož při přechodu přes impulsní nadplochu nedochází k jeho změně.
 
 Použitím rovnic pro polohy \eqref{eq_refraction_nonexpanding_positions} dostáváme
@@ -307,7 +297,7 @@ impulsní vlnou. Pro účel vizualizace geodetik v těchto prostoročasech autor
 tento open-source balíček je volně dostupný na platformě GitHub. \textcolor{red}{přidat na pip!} V následujících podsekcích
 představíme vizualizace pro tato vybraná řešení, pro různé parametry a počáteční podmínky geodetik.
 
-\subsection{Impulsní gravitační vlna generovaná světelnými částicemi s multipólovou strukturou s $\Lambda=0$}
+\subsection{Impulsní gravitační vlna generovaná nehmotnými částicemi s multipólovou strukturou s $\Lambda=0$}
 
 Řešení impulsní vlny generované nulovými částicemi s multipólovou strukturou v Minkowského prostoročase odvodili
 Griffiths a Podolský v \cite{Griffiths_1997}. Polní rovnice se pro tento případ redukují na
@@ -373,8 +363,7 @@ S rostoucí absolutní hodnotou parametru $b_0$ dochází k větší změně ve 
 Skok ve složce $\dot \matv$ doprovází změna ve složce $\dot \eta$, pro kterou opět platí, že se spolu s
 rostoucí absolutní hodnotou $b_0$ dochází k větší změně. Tato závislost je také vidět na obrázku \ref{fig:NullASRing01},
 kde vidíme geodetikcý pohyb v prostoru v závislosti na retardované souřadnici $\matu$, kterou v případě neexpandujících vln
-v Minkowského prostoročase můžeme použít jako afinní parametr. \textcolor{red}{Zde by se asi hodila část o tom, že je poměrně vhodné vizualizovat
-tyto PČ právě potlačením souřadnice $\matv$}
+v Minkowského prostoročase můžeme použít jako afinní parametr.
 
 \begin{figure}[h]
     \centering
@@ -405,8 +394,7 @@ Záporné hodnoty parametru $b_0$, použté na obrázcích \ref{fig:Null_UV_Aich
 efektu impulsní vlny, nemají ale v originální konstrukci Aichelburg-Sexlova ultraboostu fyzikální význam. Parametr $b_0$
 představuje v ultraboostové limitě $v \to 1, m \to 0$ konstantu, která splňuje $8m = b_0\sqrt{1-v^2}$, pro fyzikální systémy konstruované touto metodou
 tedy nabývá kladných hodnot. Příklady nulových geodetiky pro tyto hodnoty jsou na obrázku \ref{fig:ASNullFyzikalnejsi}, vidíme,
-že geodetiky jsou refraktovány směrem k $\rho=0$ \textcolor{red}{Šlo by tohle interpretovat jako stržení polem nulové částice generující vlnu (ve smyslu aproximace
-pole generovaného takovou částicí), tedy jako "přitažlivý efekt"?}
+že geodetiky jsou refraktovány směrem k $\rho=0$ -- jde tedy o přitažlivý efekt nulové částice generující impulsní vlnu.
 
 \textcolor{red}{Jak moc vadí, že ty geodetiky jdou vlastně pozpátku v souřadnicovém čase??}
 
@@ -521,12 +509,14 @@ Na obrázku \ref{fig:AsMatterNonAxial} je pak zobrazení průchodu geodetik, kte
     \caption{Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2}$, $\dot \matv^-=1$, $\dot \eta^-=0$) ve vybraném uspořádání, procházející nadplochou $\matu = 0$.}
     \label{fig:AsMatterNonAxial}
 \end{figure}
-
 Pro $m>0$ závisí změna geodetického pohybu na prostorovém úhlu. Derivace $H_{i,Z}$m která vystupuje v refrakčních rovnicíchm je pro jednotlivá $m$
 \begin{equation}
     H_{i,Z}^{(m)}(\eta, \bar{\eta}) = -\frac{(\sqrt{2})^{m} b_m m}{\eta^{m+1}}.
 \end{equation}
-Speciálně pro $m=1$, tedy částici s dipólovou strukturou, je vykreslena na obrázku \ref{fig:DipoleHZ}. Vidíme, že
+Speciálně pro $m=1$, tedy impuls generovaný částicí s dipólovou strukturou, je vykreslena na obrázku \ref{fig:DipoleHZ}. \textcolor{red}{Tento obrázek mi příjde trochu nicneříkající, bez hlubšího zamyšlení,
+možná odstranit nebo popsat (což bude vyžadovat právě to hlubší zamyšlení).}
+
+Příklad nulových geodetik procházejících impulsem s jediným nenulovým členem pro $m=1$ je na obrázku \ref{fig:DipoleHZ}
 
 \begin{figure}[ht]
     \centering
@@ -548,3 +538,60 @@ Speciálně pro $m=1$, tedy částici s dipólovou strukturou, je vykreslena na 
     \caption{Reálná a imaginární část $H_{i,Z}^{(1)}(x, y)$.}
     \label{fig:DipoleHZ}
 \end{figure}
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\adjincludegraphics[trim={{.1\width} {.15\height} {.1\width} {.22\height}}, width=0.8\textwidth, clip]{../img/kap02/DipoleNullxyUb1_0.2.pdf}};
+        \filldraw[white] (9.1,2) circle (9pt);
+        \node[text width=9pt] at (9.1,2) {\small{$\matu$}};
+    \end{tikzpicture}    
+    \caption{Nulové geodetiky ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) ve axiálně symetrickém uspořádání ($\rho=1$), procházející impulsní nadplochou vlny generované částicí s dipólovou strukturou,
+    s parametrem $b_1=0.2$.}
+    \label{fig:DipoleAxial}
+\end{figure}
+\clearpage
+
+\subsection{Impulsní gravitační vlna generovaná nehmotnými částicemi s multipólovou strukturou s $\Lambda\neq 0$}
+
+V prostoročasech s nenulovou konstantou odvodili Griffiths a Podolský \cite{Podolsky1997} tvar řešení obdobný \eqref{eq:multipole_minkowski},
+tedy impulsních vln generovaných nulovými částicemi s multipólovou strukturou. Vyšli z redukce Einsteinových rovnic pro distribuční
+metriku \eqref{eq:5DDistributionalWaveMetric}. V případě ryze gravitačních vln dostáváme podmínku
+
+\begin{equation}
+    \label{eq:podminka_na_H_lambda_stare}
+    \left(\Delta + \frac{2}{3} \Lambda \right)\mathcal{H} = 0,
+\end{equation}
+
+kde $\Delta$ je laplaceův operátor působící na impulsní nadploše. Při parametrizaci 
+
+\begin{equation}
+    \begin{split}
+        Z_2 &= a \sqrt{\epsilon(1-z^2)} \cos \phi\\
+        Z_3 &= a \sqrt{\epsilon(1-z^2)} \sin \phi\\
+        Z_4 &= a~z
+    \end{split}
+\end{equation}
+
+nabývá funkce $\mathcal{H}(z, \phi)$ tvaru
+\begin{equation}
+    \mathcal{H}(z, \phi) = b_0 Q_1(z) + \sum_{m=1}^\infty b_0 Q_1^m(z) \cos [m(\phi - \phi_m)],
+\end{equation}
+
+kde $Q_1^m(z)$ jsou přidružené Legendrovy funkce druhého druhu
+\begin{equation}
+    Q_1^m(z) = -(\epsilon)^m |1-z^2|^{m/2} \frac{d^m}{dz^m}Q_1(z)
+\end{equation}
+
+První člen
+\begin{equation}
+    b_0 Q_1(z) = b_0 \frac{z}{2} \log \left|\frac{1+z}{1-z}\right| - 1
+\end{equation}
+představuje axiálně symetrické Hottovo-Tanakovo řešení \cite{Hotta_1993}, které odpovídá boostu Schwarzschildova-(anti-)de Sitterova
+prostoročasu, jde o analogii Aichelburg-Sexlova řešení v (anti-)de Sitterově prostoročasu. V případě de Sitterova prostoročasu je impulsní nadplocha
+neexpandující sféra generovaná dvěma nehmotnými částicemi které letí v opačném směru. V anti-de Sitterové prostoročasu je impulsní plochou nadplocha hyperboloidální
+plochou, generovanou částicí, která se (díky díky tomu, že se jedná o nakrytí $\mathbb{R}^4$ s topologií $\mathbb{S^1} \times \mathbb{R}^3$) periodicky pohybuje mezi prostorovými nekonečny,
+z jedné strany na druhou.
+
+
+
