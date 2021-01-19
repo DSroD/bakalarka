@@ -38,23 +38,44 @@ kde opět $H = H(Z, \bar{Z})$, zároveň funkce $W = W(Z, \bar{Z}, U)$ a $F = F(
     \label{eq:podminky_F_a_W}
     \begin{split}
         F_{,U} &= \frac{i\bar{J}}{Z + U_{+}H_{,\bar{Z}}} \exp{\left(-iF\right)}, \\
-        W_{,U} &= -J \bar{J}.
+        W_{,U} &= -J \bar{J}, \\
+        W &= 0 \text{ pro } U \leq 0.
     \end{split}
 \end{equation}
 Zavedením
 \begin{equation}
-    \zeta \equiv Z + U_{+} H_{,\bar{Z}}.
+    \zeta \equiv Z + U_{+} H_{,\bar{Z}}
 \end{equation}
-Uvědomíme-li si, že distribuční metrika lze získat dosazením inverzní transformace s distribučními členy do spojité metriky,
-a tedy že zde můžeme postupovat opačným způsobem \textcolor{red}{(tohle mi zní trochu divně, přepsat trochu lépe)}, z distribuční metriky \eqref{eq:nonexp_gyra_distrib_metric_omega} dosazením transformace
-\eqref{eq:gyraton_cont_transformation} dostáváme po přímočarých úpravách s využitím \eqref{eq:podminky_F_a_W} metriku ve tvaru
+a prostorového diferenciálu $\underline{\rmd}$ tak, že
+\begin{equation}
+    \label{eq:spatial_differential_on_functions}
+    \begin{split}
+        \underline{\rmd}\zeta &\equiv \rmd Z + U_{+}(H_{,\bar{Z}Z}\rmd Z + H_{,\bar{Z}\bar{Z}}\rmd \bar{Z}), \\
+        \underline{\rmd}H &\equiv H_{,Z}\rmd Z + H_{,\bar{Z}}\rmd \bar{Z}, \\
+        \underline{\rmd}F &\equiv F_{,Z}\rmd Z + F_{,\bar{Z}}\rmd \bar{Z}, \\
+        \underline{\rmd}W &\equiv W_{,Z}\rmd Z + W_{,\bar{Z}}\rmd \bar{Z}.
+    \end{split}
+\end{equation}
+Dosazením \eqref{eq:gyraton_cont_transformation} do \eqref{eq:nonexp_gyra_distrib_metric_omega} a využitím vztahů \eqref{eq:podminky_F_a_W},
+\eqref{eq:spatial_differential_on_functions} a multiplikativních pravidel z nelineární teorie distribucí,
+\begin{equation}
+    \Theta^2 = \Theta, ~~~~~~ \Theta U_{+} = U_{+},
+\end{equation}
+dostaneme metriku ve spojitém tvaru
 \begin{equation}
     \label{eq:spojita_gyratonova_metrika}
-    \rmd s^2 = 
+    \rmd s^2 = \frac{2 \left|\underline{\rmd} \zeta + i \zeta \underline{\rmd}F\right|^2 + 2 \left[i \Theta\left(\zeta H_{,Z} - \bar{\zeta} H_{,\bar{Z}}\right) \underline{\rmd}F - \underline{\rmd}W\right] \rmd U - 2\rmd U \rmd V}{\left[1+\frac{1}{6}\Lambda\left(Z \bar{Z} - UV - U_{+}G\right)\right]^2}.
 \end{equation}
 
+Volba $J=0$ dovoluje řešení $F = W = 0$, přičemž se metrika \eqref{eq:spojita_gyratonova_metrika} redukuje na \eqref{eq:nonexp_continuous_metric}.
+\eqref{eq:spojita_gyratonova_metrika} je spojitá v případě, že $\underline{\rmd}F$ a $\underline{\rmd}W$ jsou funkce spojité v $U$ a $\underline{\rmd}F$
+jde v $U=0$ k nule. V tomto případě je metrika lokálně lipschitzovská a lze využít formalismu Filippových řešení, jako v předchozí kapitole.
 
-\section{Interakce s testovacími čísticemi v prostoročasech s gyratony}
+\subsection{Gyraton s $J \propto \Theta$}
+
+
+
+\section{Interakce gyratonů s testovacími částicemi}
 \subsection{Refrakční rovnice}
 \textcolor{red}{Stejná struktura jako předchozí kapitola, stačí přepsat a trochu okomentovat
 (např. "delty" ve skocích v čtyřrychlosti - započítat metrické členy s J)}
