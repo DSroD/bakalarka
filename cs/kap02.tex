@@ -220,7 +220,7 @@ tak i změnu v rychlostech před a za impulsem. Geodetiku procházející impuls
 ztotožníme transformací \eqref{eq:nonexp_cont_full_transform} (a její derivací), v oblastech $U > 0$ a $U < 0$ separátně, s geodetikami v souřadnicích prostoročasu na pozadí.
 Pro polohy dostáváme limitou $U \to 0^+$ a $U \to 0^-$ rovnice
 \begin{equation}
-    \label{eq_refraction_nonexpanding_positions}
+    \label{eq:refraction_nonexpanding_positions}
     \begin{split}
         \matu^{+}_{\mathrm{i}} &= \matu^{-}_{\mathrm{i}} = 0,\\
         \matv^{+}_{\mathrm{i}} &= \matv^{-}_{\mathrm{i}} + H_{\mathrm{i}},\\
@@ -248,7 +248,7 @@ Všimněme si, že při přechodu přes impulsní plochu platí $\eta_{\mathrm{i
 Bližším pohledem na refrakční rovnice také vidíme, že zachovávají kauzální charakter. Složka rychlosti $\dot \matu$ se
 nemění, ve složkách $\dot \matv$ a $\dot \eta$ dojde k refrakci tak, že nedochází ke změně normy čtyřrychlosti.
 
-Dále ještě uvedeme refrakční rovnice v reálných polárních prostorových souřadnicích, které odvodíme z transformace spojitých souřadnic
+Dále uvedeme refrakční rovnice v reálných polárních prostorových souřadnicích, které odvodíme z transformace spojitých souřadnic
 $\rho = \sqrt{2} \left|Z + U_{+} H_{,\bar{Z}}\right|$ a $\varphi = \frac{1}{2i} \log \frac{Z + U_+ H_{,\bar{Z}}}{\bar{Z} + U_+ H_{,Z}}$.
 Limitou $U \to 0^+$ a $U \to 0^-$ dostáváme
 \begin{equation}
@@ -268,24 +268,63 @@ tedy radiální i úhlová složka jsou spojité. Pro složky rychlosti pak prov
         \end{split}
 \end{equation}
 
+Transfomrací
+\begin{align}
+    Z &= \frac{1}{\sqrt{2}}\left(X + i Y\right) & \bar{Z} = \frac{1}{\sqrt{2}}\left(X - i Y\right)
+\end{align}
+můžeme odvodit refrakční rovnice v reálných souřadnicích $(\matu, \matv, x, y)$
 
-Díky tomu, že odvození proběhlo v konformně plochých souřadnicích, nezávisí na hodnotě $\Lambda$ a máme jednotné rovnice pro
-refrakci způsobenou impulsními vlnami, propagujícími se v Minkowského i (anti-)de Sitterově prostoročase.
+\begin{align}
+    \label{eq:kartezske_refrakcni_rovnice}
+        \matu_i^{+} &= \matu_i^{-} = 0, & 
+        \matv_i^{+} = \matv_i^{-} + H_i, &
+        x_i^{+} = x_i^{-}, & 
+        y_i^{+} = y_i^{-},
+\end{align}
+a pro čtyřrychlosti
+\begin{equation}
+    \label{eq:refraction_velocity_null_cart}
+    \begin{split}
+        \dot \matu_{\mathrm{i}}^{+} &= \dot \matu_{\mathrm{i}}^{-}, \\
+        \dot \matv_{\mathrm{i}}^{+} &= \dot \matv_{\mathrm{i}}^{-} + H_{\mathrm{i}, X} \dot x_{\mathrm{i}}^{-} + H_{\mathrm{i}, Y} \dot y_{\mathrm{i}}^{-} + \frac{1}{2}\left(\left(H_{\mathrm{i}, X}\right)^2 + \left(H_{\mathrm{i}, Y}\right)^2\right) \dot \matu_{\mathrm{i}}^{-}, \\
+        \dot x_{\mathrm{i}}^{+} &= \dot x_{\mathrm{i}}^{-} + H_{\mathrm{i}, X} \dot \matu_{\mathrm{i}}^{-}, \\
+        \dot y_{\mathrm{i}}^{+} &= \dot y_{\mathrm{i}}^{-} + H_{\mathrm{i}, Y} \dot \matu_{\mathrm{i}}^{+}.
+    \end{split}
+\end{equation}
+
+$H_{i,X}$ a $H_{i, Y}$ odpovídají derivacím funkce $H$ ve směru $X$ a $Y$ v bodě impulzu, díky spojitosti tedy platí
+$H_{i,X} = \frac{\partial}{\partial x} H$, $H_{i,Y} = \frac{\partial}{\partial y} H$.
+
+Díky tomu, že odvození rovnic \eqref{eq:refraction_nonexpanding_positions} a \eqref{eq:refraction_nonexpanding_velocities} bylo provedeno v konformně plochých souřadnicích,
+jejich tvar nezávisí na hodnotě $\Lambda$ a jedná se o jednotné rovnice pro refrakci způsobenou impulsními vlnami propagujícími se v
+Minkowského i (anti-)de Sitterově prostoročase.
 
 V (anti-)de Sitterově prostoročasech můžeme také využít pětidimenzionálního formalismu a odvodit refrakční rovnice v souřadnicích \eqref{eq:5DDistributionalWaveMetric}.
 Konformní faktor je na jednotlivých částech prostoročasu při cut and paste konstrukci daný jako $\Omega^{\pm}_{\mathrm{i}} = 1 + \frac{1}{6} \Lambda \eta^{\pm} \bar{\eta}^{\pm}$,
 ze spojitosti $\eta, \bar{\eta}$ při přechodu přes $\matu=0$
 však plyne, že pro konformní faktor stačí psát $\Omega_{\mathrm{i}}$, jelikož při přechodu přes impulsní nadplochu nedochází k jeho změně.
 
-Použitím rovnic pro polohy \eqref{eq_refraction_nonexpanding_positions} dostáváme
+Z rovnic pro polohy \eqref{eq:kartezske_refrakcni_rovnice} dostáváme Penroseovu napojovací podmínku v 5 dimenzionálním formalismu
 \begin{align}
         \tilde{U}^{+}_\mathrm{i} &= 0 = \tilde{U}^{-}_\mathrm{i}, &
-        \tilde{V}^{+}_\mathrm{i} &= \tilde{V}^{-}_\mathrm{i} + \frac{H_\mathrm{i}}{\Omega_\mathrm{i}}, &
+        \tilde{V}^{+}_\mathrm{i} &= \tilde{V}^{-}_\mathrm{i} + \frac{H_\mathrm{i}}{\Omega_\mathrm{i}}, \nonumber \\
         Z^{+}_{2\mathrm{i}} &= Z^{-}_{2\mathrm{i}}, &
         Z^{+}_{3\mathrm{i}} &= Z^{-}_{3\mathrm{i}}, &
         Z^{+}_{4\mathrm{i}} &= Z^{-}_{4\mathrm{i}}.  &
 \end{align}
 
+Pro derivaci konforního faktoru podle afinního parametru máme
+$\dot{\Omega}_{\mathrm{i}}^{+} = \dot{\Omega}^{-}_{\mathrm{i}} - \frac{1}{2 \epsilon a^2} G_{\mathrm{i}} \Omega_{\mathrm{i}}  \dot{\tilde{U}}^{-}_{\mathrm{i}}$, kde (díky spojitosti) $G_{\mathrm{i}}=G_{\mathrm{i}}^{\pm} = H_{\mathrm{i}} - \Omega_{\mathrm{i}}(H_{\mathrm{i}, X} Z_{2\mathrm{i}}^{\pm} + H_{\mathrm{i}, Y}Z_{3\mathrm{i}}^{\pm})$.
+Refrakční rovnice složek rychlostí pak mají tvar
+\begin{equation}
+    \begin{split}
+        \dot{\tilde{U}}^{-}_{\mathrm{i}} &= \dot{\tilde{U}}{}^{+}_{\mathrm{i}} \\
+        \dot{\tilde{V}}^{-}_{\mathrm{i}} &= \dot{\tilde{V}}^{+}_{\mathrm{i}} + 2 p \dot{\tilde{U}}^{+}_{\mathrm{i}} - H_{\mathrm{i}, X} \dot Z_{2\mathrm{i}}^{+} - H_{\mathrm{i}, Y} \dot Z_{3\mathrm{i}}^{+} - \frac{G_\mathrm{i}}{2a} \dot Z_{4\mathrm{i}}^{+} \\
+        \dot Z_{2\mathrm{i}}^{-} &= \dot Z_{2\mathrm{i}}^{+} - \dot{\tilde{U}}^{+}_{\mathrm{i}} \left( H_{\mathrm{i},X} + \frac{G_{\mathrm{i}}}{2 \epsilon a^2} Z_{2\mathrm{i}}^{+}\right) \\
+        \dot Z_{3\mathrm{i}}^{-} &= \dot Z_{3\mathrm{i}}^{+} - \dot{\tilde{U}}^{+}_{\mathrm{i}} \left( H_{\mathrm{i},Y} + \frac{G_{\mathrm{i}}}{2 \epsilon a^2} Z_{3\mathrm{i}}^{+}\right) \\
+        \dot Z_{4\mathrm{i}}^{-} &= \dot Z_{4\mathrm{i}}^{+} - \dot{\tilde{U}}^{+}_{\mathrm{i}} \frac{G_{\mathrm{i}}}{\epsilon a \Omega_{\mathrm{i}}}
+    \end{split}
+\end{equation}
 
 \textcolor{red}{5dim formalismus!}
 
@@ -307,7 +346,7 @@ Griffiths a Podolský v \cite{Griffiths_1997}. Polní rovnice se pro tento pří
     \Delta H = 2 H_{,\eta \bar{\eta}} = 8 \pi T_{\matu \matu},
 \end{equation}
  
-kde $T_{\matu \matu} = f(\eta, \bar{\eta}) \delta(\matu)$. Funkce $H$ v cylindrických prostorových souřadnicích nabývá tvaru 
+kde $T_{\matu \matu} = f(\eta, \bar{\eta}) \delta(\matu)$. Řešení částice s multipólovou strukturou pak odpovídá funkci $H$ v cylindrických prostorových souřadnicích ve tvaru
 \begin{equation}
     \label{eq:multipole_minkowski}
     H = -b_0 \log(\rho) + \sum_{m=1}^\infty b_m \rho^{-m} \cos\left[ m \left(\phi - \phi_m \right) \right],
@@ -395,9 +434,6 @@ efektu impulsní vlny, nemají ale v originální konstrukci Aichelburg-Sexlova 
 představuje v ultraboostové limitě $v \to 1, m \to 0$ konstantu, která splňuje $8m = b_0\sqrt{1-v^2}$, pro fyzikální systémy konstruované touto metodou
 tedy nabývá kladných hodnot. Příklady nulových geodetiky pro tyto hodnoty jsou na obrázku \ref{fig:ASNullFyzikalnejsi}, vidíme,
 že geodetiky jsou refraktovány směrem k $\rho=0$ -- jde tedy o přitažlivý efekt nulové částice generující impulsní vlnu.
-
-\textcolor{red}{Jak moc vadí, že ty geodetiky jdou vlastně pozpátku v souřadnicovém čase??}
-
 
 \begin{figure}[ht]
     \centering
@@ -509,12 +545,20 @@ Na obrázku \ref{fig:AsMatterNonAxial} je pak zobrazení průchodu geodetik, kte
     \caption{Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2}$, $\dot \matv^-=1$, $\dot \eta^-=0$) ve vybraném uspořádání, procházející nadplochou $\matu = 0$.}
     \label{fig:AsMatterNonAxial}
 \end{figure}
-Pro $m>0$ závisí změna geodetického pohybu na prostorovém úhlu. Derivace $H_{i,Z}$m která vystupuje v refrakčních rovnicíchm je pro jednotlivá $m$
+Pro $m>0$ závisí změna geodetického pohybu na prostorovém úhlu. Derivace $H_{i,Z}$ která vystupuje v refrakčních rovnicíchm je pro jednotlivá $m$
 \begin{equation}
     H_{i,Z}^{(m)}(\eta, \bar{\eta}) = -\frac{(\sqrt{2})^{m} b_m m}{\eta^{m+1}}.
 \end{equation}
-Speciálně pro $m=1$, tedy impuls generovaný částicí s dipólovou strukturou, je vykreslena na obrázku \ref{fig:DipoleHZ}. \textcolor{red}{Tento obrázek mi příjde trochu nicneříkající, bez hlubšího zamyšlení,
-možná odstranit nebo popsat (což bude vyžadovat právě to hlubší zamyšlení).}
+Speciálně pro $m=1$, tedy impuls generovaný částicí s dipólovou strukturou, je $H_{i,Z}^{(1)}$ vykreslena na obrázku \ref{fig:DipoleHZ}. Reálná část a imaginární část
+odpovídají derivacím ve směru $X$ a $Y$, vystupujícím v refrakčních rovnicích \eqref{eq:refraction_velocity_null_cart}
+
+\begin{equation}
+    \begin{split}
+        Re(H_{i,Z}) &= \frac{1}{\sqrt{2}} H_{i,X}, \\
+        Im(H_{i,Z}) &=-\frac{1}{\sqrt{2}}H_{i,Y}.
+    \end{split}
+\end{equation}
+
 
 Příklad nulových geodetik procházejících impulsem s jediným nenulovým členem pro $m=1$ je na obrázku \ref{fig:DipoleHZ}
 
@@ -590,6 +634,6 @@ První člen
 představuje axiálně symetrické Hottovo-Tanakovo řešení \cite{Hotta_1993}, které odpovídá boostu Schwarzschildova-(anti-)de Sitterova
 prostoročasu, jde o analogii Aichelburg-Sexlova řešení v (anti-)de Sitterově prostoročasu. V případě de Sitterova prostoročasu je impulsní nadplocha
 neexpandující sféra generovaná dvěma nehmotnými částicemi které letí v opačném směru. V anti-de Sitterové prostoročasu je impulsní plochou nadplocha hyperboloidální
-plochou, generovanou částicí, která se (díky díky tomu, že se jedná o nakrytí $\mathbb{R}^4$ s topologií $\mathbb{S^1} \times \mathbb{R}^3$) periodicky pohybuje mezi prostorovými nekonečny,
+plochou, generovanou částicí, která se (díky díky tomu, že se jedná o nakrytí $\mathbb{R}^4$ s topologií $\mathbb{S}^1 \times \mathbb{R}^3$) periodicky pohybuje mezi prostorovými nekonečny,
 z jedné strany na druhou.
 

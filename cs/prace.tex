@@ -39,6 +39,7 @@
 
 %%% Další užitečné balíčky (jsou součástí běžných distribucí LaTeXu)
 \usepackage{amsmath}        % rozšíření pro sazbu matematiky
+\usepackage{amssymb}
 \usepackage{amsfonts}       % matematické fonty
 \usepackage{amsthm}         % sazba vět, definic apod.
 \usepackage{bbding}         % balíček s nejrůznějšími symboly
@@ -62,6 +63,10 @@
 \usepackage{caption}		%subplots
 \usepackage{subcaption}		%subplots
 \usepackage{tikz}			% tikz
+
+\makeatletter
+\AtBeginDocument{\let\mathaccentV\AMS@mathaccentV}
+\makeatother
 
 %%% Údaje o práci
 
