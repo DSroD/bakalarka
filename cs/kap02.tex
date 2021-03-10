@@ -335,11 +335,13 @@ Vidíme, že i v 5 dimenzionálním formalismu dochází ke skoku na vlnoploše 
 \section{Vizualizace geodetik prostoročasů s neexpandující impulsní vlnou}
 Refrakční rovnice jsou vhodným nástrojem k vizualizaci geodetik v souřadnicích prostoročasů na pozadí impulsní vlny.
 Pro vybrané funkce $H$, resp. $\mathcal{H}$ v prostoročasech s $\Lambda \neq 0$, byly zvolené geodetiky před impulsem ztotožněny
-s geodetikami za impulsem. Integrací rovnice geodetiky na oblastech před a za impulsem zvlášť pak obdržíme celé geodetiky v prostoročasu s
+s~geodetikami za impulsem. Integrací rovnice geodetiky na oblastech před a za impulsem zvlášť pak obdržíme celé geodetiky v prostoročasu s
 impulsní vlnou. Pro účel vizualizace geodetik v těchto prostoročasech autor této práce vytvořil balíček GRImpulsiveWaves pro jazyk Python,
 tento open-source balíček je volně dostupný na platformě GitHub (https://github.com/DSroD/GRImpulsiveWaves) a na Python Package Index pod názvem
 GRImpulsiveWaves. Instalaci tedy lze provést přímo přes balíčkovací instalátor pip, příkazem \textit{pip install GRImpulsiveWaves}. V následujících podsekcích
-představíme vizualizace pro tato vybraná řešení, pro různé parametry a počáteční podmínky geodetik.
+představíme vizualizace pro tato vybraná řešení, pro různé parametry a počáteční podmínky geodetik. Všechny zde představené vizualizace lze jednoduše reprodukovat
+pomocí kódu uveřejněného v~repozitáři na platformě GitHub, kde se kromě statických obrázků generují i interaktivní grafy, kde lze měnit úhel pohledu a přesně odečítat
+hodnoty souřadnic na geodetikách, včetně vlastního času od průchodu vlnoplochou.
 
 \subsection{Impulsní gravitační vlna generovaná nehmotnými částicemi s multipólovou strukturou s $\Lambda=0$}
 
@@ -566,7 +568,7 @@ odpovídají derivacím ve směru $X$ a $Y$ vystupujícím v refrakčních rovni
 
 
 Příklad nulových geodetik procházejících impulsem s jediným nenulovým členem pro $m=1$ je na obrázku \ref{fig:DipoleHZ}, pro časupodobné geodetiky dostáváme totožné
-chování (obrázek )
+chování (obrázek \ref{fig:DipoleAxialTimelike})
 
 \begin{figure}[ht]
     \centering
@@ -608,8 +610,8 @@ chování (obrázek )
         \filldraw[white] (9.1,2) circle (9pt);
         \node[text width=9pt] at (9.1,2) {\small{$\matu$}};
     \end{tikzpicture}    
-    \caption{Nulové geodetiky ($\dot \matu^-=0.5$, $\dot \matv^-=1$, $\dot \eta^-=0$) v axiálně symetrickém uspořádání ($\rho=1$) na $\mathcal{M}^-$ procházející impulsní nadplochou vlny generované částicí s dipólovou strukturou,
-    s parametrem $b_1=0.2$.}
+    \caption{Časupodobné geodetiky ($\dot \matu^-=0.5$, $\dot \matv^-=1$, $\dot \eta^-=0$) v axiálně symetrickém uspořádání ($\rho=1$) na $\mathcal{M}^-$ procházející impulsní nadplochou vlny generované částicí s dipólovou strukturou,
+    s parametrem $b_1=0.4$.}
     \label{fig:DipoleAxialTimelike}
 \end{figure}
 \clearpage
@@ -625,7 +627,7 @@ metriku \eqref{eq:5DDistributionalWaveMetric}. V případě ryze gravitačních 
     \left(\Delta + \frac{2}{3} \Lambda \right)\mathcal{H} = 0,
 \end{equation}
 
-kde $\Delta$ je laplaceův operátor působící na impulsní nadploše. Při parametrizaci 
+kde $\Delta$ je Laplaceův operátor působící na impulsní nadploše. Při parametrizaci 
 
 \begin{equation}
     \begin{split}
@@ -635,7 +637,7 @@ kde $\Delta$ je laplaceův operátor působící na impulsní nadploše. Při pa
     \end{split}
 \end{equation}
 
-kde $\left|z\right| \leq 1$ pokud je $\Lambda > 0$ a nebo $\left|z\right| \geq 1$ pokud je $\Lambda < 0$,
+kde $\left|z\right| \leq 1$, pokud je $\Lambda > 0$, a nebo $\left|z\right| \geq 1$, pokud je $\Lambda < 0$,
 nabývá funkce $\mathcal{H}(z, \phi)$ tvaru
 \begin{equation}
     \mathcal{H}(z, \phi) = b_0 Q_1(z) + \sum_{m=1}^\infty b_0 Q_1^m(z) \cos [m(\phi - \phi_m)],
@@ -652,8 +654,8 @@ První člen
 \end{equation}
 představuje axiálně symetrické Hottovo-Tanakovo řešení \cite{Hotta_1993}, které odpovídá boostu Schwarzschildova-(anti-)de Sitterova
 prostoročasu, jde o analogii Aichelburg-Sexlova řešení v (anti-)de Sitterově prostoročasu se singulární hmotou generující vlnu v $z=1$. V případě de Sitterova prostoročasu je impulsní nadplocha
-neexpandující sféra generovaná dvěma nehmotnými částicemi, které letí v opačném směru. V anti-de Sitterově prostoročasu je impulsní plochou nadplocha hyperboloidální
-plochou, generovanou částicí, která se (díky tomu, že se jedná o nakrytí $\mathbb{R}^4$ s topologií $\mathbb{S}^1 \times \mathbb{R}^3$) periodicky pohybuje mezi prostorovými nekonečny,
+neexpandující sféra generovaná dvěma nehmotnými částicemi, které letí v opačném směru. V anti-de Sitterově prostoročasu je impulsní nadplocha hyperboloidální
+plochou generovaná částicí, která se (díky tomu, že se jedná o nakrytí $\mathbb{R}^4$ s topologií $\mathbb{S}^1 \times \mathbb{R}^3$) periodicky pohybuje mezi prostorovými nekonečny,
 z jedné strany na druhou.
 
 Na obrázku \ref{fig:funkceHhodnotyvADS} vidíme hodnoty funkce $\mathcal{H}(Z_2, Z_3, Z_4)$ Hotta-Tanakova řešení na vlnoploše v (a)-dS prostoročasu (s $|\Lambda | = 1$).
@@ -675,18 +677,10 @@ Na obrázku \ref{fig:funkceHhodnotyvADS} vidíme hodnoty funkce $\mathcal{H}(Z_2
         \end{tikzpicture}
         \caption{anti-de Sitterův prostoročas}
     \end{subfigure}
-    \caption{Funkce $\mathcal{H}$ má v de Sitterově prostoročasu singulární body na pólech sféry, odpovídající vlnoploše ($Z_4 = \pm a$), v anti-de Sitterově
+    \caption{Funkce $\mathcal{H}$ má v de Sitterově prostoročasu singulární body na pólech sféry odpovídající vlnoploše ($Z_4 = \pm a$), v anti-de Sitterově
     prostoročase singularity leží na vrcholech hyperboloidálních vlnoploch.}
     \label{fig:funkceHhodnotyvADS}
 \end{figure}
-
-Začněme geodetickým pohybem v Hottově-Tanakově řešení v nadploše $y=0$ (to znamená, že souřadnice $\eta$ je reálná). Díky axiální symetrii tak zároveň prozkoumáme
-vlastnosti nulových geodetik ve všech nadplochách obsahujících osu této symetrie.
-Případ $b_0 = 1$ v konformně plochých souřadnicích je  na obrázku \ref{fig:HottaTanakaNullY0}.
-
-Pro nulové částice nenacházející se na nadploše obsahující osu symetrie dostáváme očekávané strhnutí k
-ose symetrie Hottova-Tanakova řešení, k $\eta=0$.
-
 
 Geodetický pohyb nulových částic je v konformně plochých souřadnicích
 nezávislý na hodnotě kosmologické konstanty, chování na impulsní ploše se pak liší pouze podle tvaru funkce $H(\eta, \bar{\eta})$, která má v případě Hottova-Tanakova řešení
@@ -694,10 +688,12 @@ v konformně plochých souřadnicích tvar
 \begin{equation}
     H(\eta, \bar{\eta}) = \frac{1}{24} b_0 \left((\Lambda \eta \bar{\eta} + 6) \log \left(\left| \frac{6}{\Lambda \eta \bar{\eta} }\right| \right)+2 (\Lambda \eta \bar{\eta} - 6)\right),
 \end{equation}
-\textcolor{red}{podle několika výpočtů v Mathematice to tak je, ale nelíbí se mi chování pro $\eta \to \infty$}
+\textcolor{red}{podle několika výpočtů na papíře i v Mathematice to tak je, ale nelíbí se mi chování pro $\eta \to \infty$}
  a její derivaci ve směru $\eta$, resp. $\bar{\eta}$.
 
- 
+První ukážeme pohyb nulových částic v nadploše $y=0$ (to znamená, že souřadnice $\eta$ je reálná). Díky axiální symetrii tak zároveň prozkoumáme
+vlastnosti nulových geodetik ve všech nadplochách obsahujících osu této symetrie.
+Tento pohyb je pro řešení s $b_0 = 1$ zobrazen v konformně plochých souřadnicích  na obrázku \ref{fig:HottaTanakaNullY0}.
 
 \begin{figure}[ht]
     \centering
@@ -733,8 +729,11 @@ v konformně plochých souřadnicích tvar
         \caption{$\Lambda = -1,5$}
     \end{subfigure}
     \caption{Geodetický pohyb nulové částice ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) v nadploše $y = 0$ v Hottově-Tanakově řešení s parametrem $b_0 = 1$.}
-\label{fig:HottaTanakaNullY0}
+    \label{fig:HottaTanakaNullY0}
 \end{figure}
+
+Pro nulové částice nenacházející se na nadploše obsahující osu symetrie dostáváme očekávané strhnutí k
+ose symetrie Hottova-Tanakova řešení, k $\eta=0$ (viz. \ref{fig:HottaTanakaNullYsqrt2}). 
 
 \begin{figure}[ht]
     \centering
@@ -753,22 +752,60 @@ v konformně plochých souřadnicích tvar
         \end{tikzpicture}
         \caption{$\Lambda = -1$}
     \end{subfigure}
+    \caption{Geodetický pohyb nulové částice ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) v nadploše $y = \sqrt{2}$ v Hottově-Tanakově řešení s parametrem $b_0 = 1$.}
+    \label{fig:HottaTanakaNullYsqrt2}
+\end{figure}
 
+Pro porovnání efektu impulsní vlny na časupodobné testovací částice v konformně plochých souřadnicích byly vykresleny případy geodetického pohybu v prostoročasu bez vlny
+a v prostoročasu s impulsní vlnou s parametrem $b_0=3$.
+
+\begin{figure}[ht]
+    \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \begin{tikzpicture}
             \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-            {\includegraphics[width=.95\textwidth, clip]{../img/kap02/HT_y-1__x-y-U_mu1_lmb1,2.pdf}};
+            {\includegraphics[width=.95\textwidth, clip]{../img/kap02/HT1_ring_matter__x-y-U_mu0_lmb1.pdf}};
         \end{tikzpicture}
-        \caption{$\Lambda = 1,2$}
+        \caption{de Sitter $(\Lambda = 1)$}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \begin{tikzpicture}
             \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-            {\includegraphics[width=.95\textwidth, clip]{../img/kap02/HT_y-1__x-y-U_mu1_lmb-1,5.pdf}};
+            {\includegraphics[width=.95\textwidth, clip]{../img/kap02/HT2_ring_matter__x-y-U_mu3_lmb1.pdf}};
         \end{tikzpicture}
-        \caption{$\Lambda = -1,5$}
+        \caption{Hotta-Tanaka$(\Lambda = 1)$}
     \end{subfigure}
-    \caption{Geodetický pohyb nulové částice ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) pohybující se před průchodem impulsní plochou v nadploše $y = \sqrt{2}$ v Hottově-Tanakově řešení s parametrem $b_0 = 1$.}
-\label{fig:HottaTanakaNullYsqrt2}
+
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\includegraphics[width=.95\textwidth, clip]{../img/kap02/HT3_ring_matter__x-y-U_mu0_lmb-1.pdf}};
+        \end{tikzpicture}
+        \caption{Anti-de Sitter $(\Lambda = -1)$}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\includegraphics[width=.95\textwidth, clip]{../img/kap02/HT4_ring_matter__x-y-U_mu3_lmb-1.pdf}};
+        \end{tikzpicture}
+        \caption{Hotta-Tanaka $(\Lambda = -1)$}
+    \end{subfigure}
+    \caption{Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2N}$, $\dot \matv^-=-\frac{1}{N}$, $\dot \eta^-=0$), kde $N$ je normalizační faktor, v (a)-dS a Hottově-Tanakově řešení s parametrem $b_0 = 3$.}
+    \label{fig:HottaTanakaMatter}
+\end{figure}
+
+Dále vizualizujeme efekt refrakce geodetik v 5 dimenzionálním formalismu. Nulové geodetiky tvoří generátory (a)-dS hyperboloidu, protože při refrakci nedochází
+ke změně kauzálního charakteru, po refrakci zůstává geodetika generátorem hyperboloidu, ale, jak vyplývá z refrakčních rovnic, v jiné nadploše - dochází k refrakci
+ve všech směrech, kromě směru normály na vlnoplochu. Případ refrakce nulových částic na de Sitterově prostoročasu je na vizualizován na obrázku \ref{fig:HottaTanaka5D}.
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+        {\includegraphics[width=.95\textwidth, clip]{../img/kap02/HT1_x1_null__Z0-Z1-Z4_mu1_lmb1.pdf}};
+    \end{tikzpicture}
+    \caption{Geodetický pohyb nulové částice ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) procházející vlnoplochou $\Lambda=1$ Hottova-Tanakova řešení s parametrem $b_0 = 1$ v~$\eta=1,5$ a různých časech (tedy v různých hodnotách souřadnice $\matv$) vyobrazený ve vnoření do $\mathbb{E}^{1,4}$.}
+    \label{fig:HottaTanaka5D}
 \end{figure}
