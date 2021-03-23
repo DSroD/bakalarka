@@ -1,9 +1,6 @@
 \chapter{Neexpandující gravitační vlny s gyratonovými členy}
 Distribuční vyjádření metriky impulsní vlny \eqref{eq:nonexp_distr_metric_omega} není nejobecnější metrikou popisující
-impulsní vlny. V roce 1925 odvodil Brinkmann tvar metriky 
-\begin{equation}
-    \rmd s^2 = \delta_{ij} \rmd x^i \rmd x^j + ...
-\end{equation}
+impulsní vlny. Lze jí rozšířit o mimodiagonální členy do tvaru
 \begin{equation}
     \label{eq:nonexp_gyra_distrib_metric_omega}
     \begin{split}
@@ -13,15 +10,18 @@ impulsní vlny. V roce 1925 odvodil Brinkmann tvar metriky
         +2\overline{J}\left(\eta, \bar{\eta}, \mathcal{U}\right) \mathrm{d}\bar{\eta}~\mathrm{d}\mathcal{U}}{\left[1+\frac{1}{6}\Lambda(\eta \bar{\eta}-\mathcal{U}\mathcal{V})\right]^2}.
     \end{split}
 \end{equation}
-Obvyklým postupem je odstranění členů s funkcí $J$ vhodnou souřadnicovou transformací, to ale vede k odstranění
-možného rotačního charakteru zdroje gravitační vlny, taková transformace pak není globální, dochází k
-zanedbání topologických vlastností celého prostoročasu.
+Tvar metriky s mimodiagonálními členy odpovídající gravitační vlně byl uvažován už v Brinkmannově studii \cite{Brinkmann1925} Einsteinových prostoročasů svázaných konformními transformacemi.
+
+Obvyklým postupem je odstranění členů s funkcí $J$ vhodnou souřadnicovou transformací (Brinkmannova forma metriky pp-vln \textcolor{red}{tady bude reference} se také běžně uvádí už bez mimodiagonálních členů), to ale vede k odstranění
+možného rotačního charakteru zdroje gravitační vlny, taková transformace pak není globální a dochází ke změně topologických vlastností celého prostoročasu.
+V této kapitole budeme studovat a vizualizovat vliv nediagonálních prvků metriky.
 
 \section{Zobecnění impulsních vln na prostoročasy s gyratonovými členy}
-Konstrukce neexpandujících gracitačních vln s gyratonovými členy je obdobná případu bez gyratonových
-členů. Opět můžeme využít Penroseovu "cut and paste"\ metodu, v případě gyratonických prostoročasů ale bude
-konstrukce totožná s konstrukcí popsanou v \eqref{sec:cut_and_paste_konstrukce1} a jak je ukázáno v článku \cite{Podolsky_2017}, Penroseovy lepící podmínky 
-v přítomnosti gyratonů nabývají tvaru \eqref{eq:lepici_podminky}. \textcolor{red}{(přeformulovat něják lépe...)},
+Konstrukce neexpandujících gracitačních vln s mimodagonálními gyratonovými členy je obdobná konstrukci prostoročasů bez gyratonů z minulé kapitoly, popíšeme ji formalismem spojitých souřadnic
+použitým v \cite{Podolsky_2017}, kde jsou také odvozeny refrakční rovnice, pomocí kterých budeme vizualizovat geodetický pohyb procházející impulsní vlnoplochou.
+
+Penroseova "cut and paste"\ konstrukce vede i v případě gyratonických prostoročasů na Penroseovy lepící podmínky ve tvaru \eqref{eq:lepici_podminky}, začneme tedy rovnou zobecněním
+spojitého tvaru metriky z předchozí kapitoly.
 
 \subsection{Zobecnění spojitého tvaru metriky}
 Tvar spojité metriky pro gyratonové neexpandující impulsní vlny obdržíme zobecněním transformace \eqref{eq:nonexp_cont_full_transform},
@@ -73,12 +73,46 @@ Volba $J=0$ dovoluje řešení $F = W = 0$, přičemž se metrika \eqref{eq:spoj
 \eqref{eq:spojita_gyratonova_metrika} je spojitá v případě, že $\underline{\rmd}F$ a $\underline{\rmd}W$ jsou funkce spojité v $U$ a $\underline{\rmd}F$
 jde v $U=0$ k nule. V tomto případě je metrika lokálně lipschitzovská a lze využít formalismu Filippových řešení, jako v předchozí kapitole.
 
-\subsection{Impulsní vlna s gyratonickým členem $J \propto \Theta(\matu)$}
 
+\subsection{Frolovův-Fursaevův gyraton}
+Uvažovat metriku \refeq{eq:nonexp_gyra_distrib_metric_omega} s
+\begin{equation}
+    J(\eta, \matu) = \frac{\chi}{2 i \eta} \Theta(\matu), \Lambda = 0,
+\end{equation}
+kde $\chi$ je konstantní. Rovnice \refeq{eq:podminky_F_a_W} lze zintegrovat do tvaru
+\begin{equation}
+    \label{eq:zintegrovane1}
+    \begin{split}
+        F &= \frac{\chi}{2(Z H_{,Z}-\bar{Z}H_{,\bar{Z}})} \log \frac{Z\bar{Z}+U_{+}\bar{Z}H_{,\bar{Z}}}{Z\bar{Z}+U_{+}ZH_{,Z}}, \\
+        W = \frac{\chi}{2}F,
+    \end{split}
+\end{equation}
+kde uvažujeme hlavní větev logaritmu (aby se zachovala rovnost $\eta = Z$ pro $U \leq 0$).
 
+V případě, že $Z H_{,Z} - \bar{Z}H_{,\bar{Z}}=0 \equiv \log \frac{Z \bar{Z} + U_{+}\bar{Z}H_{,\bar{Z}}}{Z\bar{Z}+U_{+}ZH_{,Z}}=0$,
+tvar \eqref{eq:zintegrovane1} není platný. Diferenciální operátor působící na funkci $H$ v levé části ekvivalence
+lze (díky $Z = \frac{1}{\sqrt{2}} \rho \exp(i \phi)$) zapsat jako $Z \partial_Z - \bar{Z}\partial_{\bar{Z}} = - i \partial_\phi$,
+jedná se tedy o generátor rotace kolem osy $Z = 0$. Tento případ tedy nastává ve všech axiálně symetrických prostoročasech, kde
+funkce $H$ závisí pouze na $\rho^2 = 2 Z \bar{Z}$, včetně Aichelburg-Sexlova řešení
+$H = b_0 \log(2\eta \bar{\eta}) = b_0 \log (2Z \bar{Z})$, kterým se budeme dále zabývat.
+Funkce $F$ a $W$ lze volit ve tvaru
+\begin{equation}
+    \begin{split}
+        F &= -\frac{\chi}{2} \frac{U_{+}}{Z \bar{Z} + b_0 U_{+}}, \\
+        W = \frac{\chi}{2}F,
+    \end{split}
+\end{equation}
+spojitá metrika nabývá tvaru z třídy Frolovových-Fursaevových gyratonů \cite{Frolov2005}
+\begin{equation}
+    \rmd s^2 = 2 \left| \rmd Z + U_{+} (i \frac{\chi}{2}\frac{\bar{Z}\rmd Z + Z \rmd \bar{Z}}{\bar{Z}\left(Z \bar{Z} + b_0 U_{+}\right)} - b_0 \frac{d\bar{Z}}{\bar{Z}^2}) \right|^2
+    - \frac{\chi^2}{2}U_{+}\frac{\bar{Z} \rmd Z \rmd U + Z \rmd \bar{Z} \rmd U}{\left(Z \bar{Z} + b_0 U_{+}\right)^2} - 2 \rmd U \rmd V.
+\end{equation}
+reprezentujících zobecnění
+originální Aichelburg-Sexlovy metriky \cite{Aichelburg_1971} na impulsní vlnu generovanou částicí s
+nenulovým vnitřním momentem hybnosti - $\chi \Theta(\matu)$ odpovídá hustotě momentu hybnosti gyratonu \cite{Podolsky2014}.
+Při absenci gyratonu ($\chi=0$) se metrika redukuje na standardní Aichelburg-Sexlovo řešení.
 
-
-\section{Interakce gyratonů s testovacími částicemi}
+\section{Interakce s testovacími časticemi}
 \subsection{Refrakční rovnice}
 \textcolor{red}{Stejná struktura jako předchozí kapitola, stačí přepsat a trochu okomentovat
 (např. "delty" ve skocích v čtyřrychlosti - započítat metrické členy s J)}
