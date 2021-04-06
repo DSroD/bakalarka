@@ -46,6 +46,7 @@
 			    % (čtverečky, hvězdičky, tužtičky, nůžtičky, ...)
 \usepackage{bm}             % tučné symboly (příkaz \bm)
 \usepackage{graphicx}       % vkládání obrázků
+\usepackage{grffile}        % fix na přípony souborů v graphicx
 \usepackage{fancyvrb}       % vylepšené prostředí pro strojové písmo
 \usepackage{indentfirst}    % zavede odsazení 1. odstavce kapitoly
 \usepackage{natbib}         % zajištuje možnost odkazovat na literaturu
@@ -65,7 +66,6 @@
 \usepackage{tikz}			% tikz
 
 \makeatletter
-\AtBeginDocument{\let\mathaccentV\AMS@mathaccentV}
 \makeatother
 
 %%% Údaje o práci
