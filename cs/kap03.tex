@@ -114,7 +114,52 @@ originální Aichelburg-Sexlovy metriky \cite{Aichelburg_1971} na impulsní vlnu
 nenulovým vnitřním momentem hybnosti - $\chi \Theta(\matu)$ odpovídá hustotě momentu hybnosti gyratonu \cite{Podolsky2014}.
 Při absenci gyratonu ($\chi=0$) se metrika redukuje na standardní Aichelburg-Sexlovo řešení.
 
-\section{Interakce s testovacími časticemi}
-\subsection{Refrakční rovnice}
-\textcolor{red}{Stejná struktura jako předchozí kapitola, stačí přepsat a trochu okomentovat
-(např. "delty" ve skocích v čtyřrychlosti - započítat metrické členy s J)}
+\subsection{Frolovův-Fursaevův gyraton s kosmologickou konstantou}
+
+\section{Vizualizace geodetik v impulsních gyratonových prostoročasech}
+\subsection{Refrakční rovnice pro Frolovův-Fursaevův gyraton}
+Stejně jako v případě bez gyratonových členů v předchozí kapitole, i zde k vizualizaci geodetik využijeme refrakčních rovnic,
+které byly pro impulsní neexpandující gyratonové prostoročasy odvozeny z limity souřadnic \eqref{eq:spojita_gyratonova_metrika}
+v $\matu = 0$ v článku \cite{Podolsky_2017}, napojovací podmínky prostorových poloh jsou ve tvaru \textcolor{red}{jak upozornit na chybu ve článku?}
+\begin{equation}
+    \begin{split}
+        \matu_{i}^{+} &= \matu_{i}^{-}, \\
+        \matv_{i}^{+} &= \matv_{i}^{-} + H_{i}, \\
+        \eta_{i}^{+} &= \eta_{i}^{-},
+    \end{split}
+\end{equation}
+což odpovídá Penroseovým napojovacím podmínkám \eqref{eq:lepici_podminky},
+jejichž tvar nezávisí na přítomnosti gyratonických členů. Co se bude lišit od
+výsledků popsaných v minulé kapitole jsou refrakční rovnice pro rychlosti,
+\begin{equation}
+    \label{eq:refrakcni_rovnice_gyra_rychlosti}
+    \begin{split}
+        \dot{\matu}_{\rmi}^{+} &= \dot{\matu}_{\rmi}^{-}, \\
+        \dot{\matv}_{\rmi}^{+} &= \dot{\matv}_{\rmi}^{-} + H_{\rmi, Z} \dot{\eta}_{\rmi}^{-} + H_{\rmi, \bar{Z}} \dot{\bar{\eta}}_{\rmi}^{-} + \left(H_{\rmi, Z} H_{\rmi, \bar{Z}} - \frac{\chi^2}{4 \eta_{\rmi}^{-} \bar{\eta}_{\rmi}^{-}}\right) \dot{\matu}_{\rmi}^{-} \\
+        \dot{\eta}_{\rmi}^{+} &= \dot{\eta}_{\rmi}^{-} + \left(H_{\rmi, \bar{Z}} - \frac{i \chi}{2 \bar{\eta}_{\rmi}^{-}}\right) \dot{\matu}_{\rmi}^{-},
+    \end{split} 
+\end{equation}
+kde gyratonové členy s $\chi$ přispívají ke skoku ve složkách $\dot{\matv}_{\rmi}$ a $\dot{\eta}_{\rmi}$ členy
+\begin{equation}
+    \Delta \dot{\matv}_{\rmi} = -\frac{\chi^2}{4 \eta_{\rmi}^{-} \bar{\eta}_{\rmi}^{-}} \dot{\matu}_{\rmi}^{-}, ~~~~~~ \Delta \dot{\eta}_{\rmi} = -\frac{i \chi}{2 \bar{\eta}_{\rmi}^{-}} \dot{\matu}_{\rmi}^{-}.
+\end{equation}
+Tyto skoky navíc se díky $C^1-$regularitě geodetik a spojitosti metriky kompenzují -- normalizace čtyřrychlosti musí být zachována a platí
+\begin{equation}
+    \Delta \dot{\eta}_{\rmi} \Delta \dot{\bar{\eta}}_{\rmi} = - \dot{\matu}_{\rmi} \Delta \dot{\matv}_{\rmi}.
+\end{equation}
+Tyto skoky pro $\eta_{\rmi}^{-} \to 0$ rostou nad všechny meze, toto chování ale očekáváme -- v $\eta_{\rmi} = 0$ se nachází bodový zdroj.
+Pro $\chi \to 0$ se tyto rovnice redukují na rovnice \eqref{eq:refraction_nonexpanding_velocities} z minulé kapitoly.
+
+Obdobně jako v předchozí kapitole, refrakční rovnice \eqref{eq:refrakcni_rovnice_gyra_rychlosti} můžeme také zapsat v reálných
+polárních souřdnicích jako
+\begin{equation}
+    \begin{split}
+    \dot{\matv}_{\rmi}^{+} &= \dot{\matv}_{\rmi}^{-} + \halfsqrt \left(e^{i \varphi_{\rmi}^{-}} H_{\rmi, Z} + e^{-i \varphi_{\rmi}^{-}} H_{\rmi, \bar{Z}}\right) \dot{\rho}_{\rmi}^{-} +
+    \frac{i}{\sqrt{2}} \left( e^{i \varphi_{\rmi}^{-}} H_{\rmi, Z} - e^{-i \varphi_{\rmi}^{-}} H_{\rmi, \bar{Z}} \right) \rho_{\rmi}^{-} \dot{\varphi}_{\rmi}^{-} \\
+    &~~~+ \left(H_{\rmi, Z} H_{\rmi, \bar{Z}} - \frac{\chi^2}{2(\rho_{\rmi}^{-})^2}\right)\dot{\matu}_{\rmi}^{-}, \\
+    \dot{\rho}_{\rmi}^{+} &= \dot{\rho}_{\rmi}^{-} + \halfsqrt \left(e^{-i \varphi_{\rmi}^{-}} H_{\rmi, \bar{Z}} + e^{i \varphi_{\rmi}^{-}} H_{\rmi, Z} \right), \\
+    \dot{\varphi}_{\rmi}^{+} &= \dot{\varphi}_{\rmi}^{-} + \left[ \frac{i}{\sqrt{2} \rho_{\rmi}^{-}} \left(e^{i \varphi_{\rmi}^{-}} H_{\rmi, Z} - e^{-i \varphi_{\rmi}^{-}} H_{\rmi, \bar{Z}} \right) - \frac{\chi}{(\rho_{\rmi}^{-})^2}\right] \dot{\matu}_{\rmi}^{-}.
+    \end{split}
+\end{equation}
+Z tohoto tvaru vidíme, že přítomnost gyraonických členů nemá vliv na radiální složku $\dot{\rho}$, přispívá ale k další změně v
+axiální složce $\dot{\varphi_{\rmi}}$ členem $-\frac{\chi}{(\rho_{\rmi})^2}$.
