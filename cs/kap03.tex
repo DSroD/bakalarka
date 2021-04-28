@@ -66,8 +66,19 @@ Dosazením \eqref{eq:gyraton_cont_transformation} do \eqref{eq:nonexp_gyra_distr
 dostaneme metriku ve spojitém tvaru
 \begin{equation}
     \label{eq:spojita_gyratonova_metrika}
-    \rmd s^2 = \frac{2 \left|\underline{\rmd} \zeta + i \zeta \underline{\rmd}F\right|^2 + 2 \left[i \Theta\left(\zeta H_{,Z} - \bar{\zeta} H_{,\bar{Z}}\right) \underline{\rmd}F - \underline{\rmd}W\right] \rmd U - 2\rmd U \rmd V}{\left[1+\frac{1}{6}\Lambda\left(Z \bar{Z} - UV - U_{+}G\right)\right]^2}.
+    \rmd s^2 = \frac{2 \left|\underline{\rmd} \zeta + i \zeta \underline{\rmd}F\right|^2 + 2 \left[i \Theta\left(\zeta H_{,Z} - \bar{\zeta} H_{,\bar{Z}}\right) \underline{\rmd}F - \underline{\rmd}W\right] \rmd U - 2\rmd U \rmd V}{\left[1+\frac{1}{6}\Lambda\left(Z \bar{Z} - UV - U_{+}G\right)\right]^2},
 \end{equation}
+kde byla zavedena funkce
+\begin{equation}
+    G \left( Z, \bar{Z}, U \right) = H - Z H_{,Z} - \bar{Z} H_{,\bar{Z}} + W.
+\end{equation}
+
+Oproti minulé kapitole se ve funkci $G$ vyskytuje člen $W$. Aplikací transformace \eqref{eq:gyraton_cont_transformation}
+na konformní faktor $1 + \frac{1}{6} \Lambda (\eta \bar{\eta} - \matu \matv)$ dostáváme po použití pravidel násobení distribucí v nelineární teorii
+\begin{equation}
+    1 + \frac{1}{6} \Lambda \left(Z \bar{Z} - UV - U_+ (H - Z H_{,Z} \bar{Z} H_{,\bar{Z}}) - UW \right).
+\end{equation}
+V případě že $W = 0$ pro $U \leq 0$, platí $UW = U_+ W$. To je ale splněno v \eqref{eq:podminky_F_a_W} a tvar funkce $G$ je tedy ospravedlněn.
 
 Volba $J=0$ dovoluje řešení $F = W = 0$, přičemž se metrika \eqref{eq:spojita_gyratonova_metrika} redukuje na \eqref{eq:nonexp_continuous_metric}.
 \eqref{eq:spojita_gyratonova_metrika} je spojitá v případě, že $\underline{\rmd}F$ a $\underline{\rmd}W$ jsou funkce spojité v $U$ a $\underline{\rmd}F$
@@ -77,29 +88,30 @@ jde v $U=0$ k nule. V tomto případě je metrika lokálně lipschitzovská a lz
 \subsection{Frolovův-Fursaevův gyraton}
 Dále budeme uvažovat metriku \eqref{eq:nonexp_gyra_distrib_metric_omega} s
 \begin{equation}
-    J(\eta , \matu) = \frac{\chi}{2 i \eta} \Theta( \matu ), \Lambda = 0,
+    J(\eta , \matu) = \frac{\chi}{2 i \eta} \Theta( \matu ),~~~ \Lambda = 0,
 \end{equation}
 kde $\chi$ je konstantní. Rovnice \eqref{eq:podminky_F_a_W} lze zintegrovat do tvaru
 \begin{equation}
     \label{eq:zintegrovane1}
     \begin{split}
         F &= \frac{\chi}{2(Z H_{,Z}-\bar{Z}H_{,\bar{Z}})} \log \frac{Z\bar{Z}+U_{+}\bar{Z}H_{,\bar{Z}}}{Z\bar{Z}+U_{+}ZH_{,Z}}, \\
-        W = \frac{\chi}{2}F,
+        W &= \frac{\chi}{2}F,
     \end{split}
 \end{equation}
 kde uvažujeme hlavní větev logaritmu (aby se zachovala rovnost $\eta = Z$ pro $U \leq 0$).
 
-V případě, že $Z H_{,Z} - \bar{Z}H_{,\bar{Z}}=0 \equiv \log \frac{Z \bar{Z} + U_{+}\bar{Z}H_{,\bar{Z}}}{Z\bar{Z}+U_{+}ZH_{,Z}}=0$,
-tvar \eqref{eq:zintegrovane1} není platný. Diferenciální operátor působící na funkci $H$ v levé části ekvivalence
+V případě že $Z H_{,Z} - \bar{Z}H_{,\bar{Z}}=0 \iff \log \frac{Z \bar{Z} + U_{+}\bar{Z}H_{,\bar{Z}}}{Z\bar{Z}+U_{+}ZH_{,Z}}=0$
+není tvar \eqref{eq:zintegrovane1} platný. Diferenciální operátor působící na funkci $H$ v levé části ekvivalence
 lze (díky $Z = \frac{1}{\sqrt{2}} \rho \exp(i \phi)$) zapsat jako $Z \partial_Z - \bar{Z}\partial_{\bar{Z}} = - i \partial_\phi$,
 jedná se tedy o generátor rotace kolem osy $Z = 0$. Tento případ tedy nastává ve všech axiálně symetrických prostoročasech, kde
 funkce $H$ závisí pouze na $\rho^2 = 2 Z \bar{Z}$, včetně Aichelburg-Sexlova řešení
 $H = b_0 \log(2\eta \bar{\eta}) = b_0 \log (2Z \bar{Z})$, kterým se budeme dále zabývat.
 Funkce $F$ a $W$ lze volit ve tvaru
 \begin{equation}
+    \label{eq:zintegrovane2}
     \begin{split}
         F &= -\frac{\chi}{2} \frac{U_{+}}{Z \bar{Z} + b_0 U_{+}}, \\
-        W = \frac{\chi}{2}F,
+        W &= \frac{\chi}{2}F,
     \end{split}
 \end{equation}
 spojitá metrika nabývá tvaru z třídy Frolovových-Fursaevových gyratonů \cite{Frolov2005} 
@@ -114,14 +126,21 @@ originální Aichelburg-Sexlovy metriky \cite{Aichelburg_1971} na impulsní vlnu
 nenulovým vnitřním momentem hybnosti - $\chi \Theta(\matu)$ odpovídá hustotě momentu hybnosti gyratonu \cite{Podolsky2014}.
 Při absenci gyratonu ($\chi=0$) se metrika redukuje na standardní Aichelburg-Sexlovo řešení.
 
-\subsection{Frolovův-Fursaevův gyraton s kosmologickou konstantou}
+Díky tomu, že pracujeme v konformně plochých souřadnicích, nejsou výše uvedené závěry závislé na kosmologické konstantě.
+Za funkci $H$ pak můžeme uvažovat například Hottovo-Tanakovo řešení \eqref{eq:Hotta_Tanaka_H_conf_flat_coords}. Pro toto řešení nebudeme explicitně odvozovat
+spojitý tvar metriky, později ale využijeme formalismus refrakčních rovnic pro vykreslení geodetického pohybu gyratonického zdroje na (anti-)de Sitterově prostoročasu
+s výše uvedenou funkcí $J$ a funkcí $H$ odpovídající právě Hottově-Tanakově řešení. Zmíníme ale, že ekvivalence znemožňující integraci funkcí $F$ a $W$ do tvaru
+\eqref{eq:zintegrovane1} neplatí ani v tomto případě, jedná se také o axiálně symetrické řešení.
 
-\section{Vizualizace geodetik v impulsních gyratonových prostoročasech}
-\subsection{Refrakční rovnice pro Frolovův-Fursaevův gyraton}
+
+\section{Refrakční rovnice v impulsních gyratonických prostoročasech}
 Stejně jako v případě bez gyratonových členů v předchozí kapitole, i zde k vizualizaci geodetik využijeme refrakčních rovnic,
-které byly pro impulsní neexpandující gyratonové prostoročasy odvozeny z limity souřadnic \eqref{eq:spojita_gyratonova_metrika}
-v $\matu = 0$ v článku \cite{Podolsky_2017}, napojovací podmínky prostorových poloh jsou ve tvaru \textcolor{red}{jak upozornit na chybu ve článku?}
+které byly pro impulsní neexpandující gyratonové prostoročasy s funkcemi $F$ a $W$ ve tvaru
+\eqref{eq:zintegrovane1}, resp. \eqref{eq:zintegrovane2}, odvozeny z limity souřadnic \eqref{eq:spojita_gyratonova_metrika}
+v $\matu = 0$ v článku \cite{Podolsky_2017}.
+Napojovací podmínky prostorových poloh jsou v tomto případě ve tvaru
 \begin{equation}
+    \label{eq:refrakcni_rovnice_gyra_polohy}
     \begin{split}
         \matu_{i}^{+} &= \matu_{i}^{-}, \\
         \matv_{i}^{+} &= \matv_{i}^{-} + H_{i}, \\
@@ -161,5 +180,267 @@ polárních souřdnicích jako
     \dot{\varphi}_{\rmi}^{+} &= \dot{\varphi}_{\rmi}^{-} + \left[ \frac{i}{\sqrt{2} \rho_{\rmi}^{-}} \left(e^{i \varphi_{\rmi}^{-}} H_{\rmi, Z} - e^{-i \varphi_{\rmi}^{-}} H_{\rmi, \bar{Z}} \right) - \frac{\chi}{(\rho_{\rmi}^{-})^2}\right] \dot{\matu}_{\rmi}^{-}.
     \end{split}
 \end{equation}
-Z tohoto tvaru vidíme, že přítomnost gyraonických členů nemá vliv na radiální složku $\dot{\rho}$, přispívá ale k další změně v
-axiální složce $\dot{\varphi_{\rmi}}$ členem $-\frac{\chi}{(\rho_{\rmi})^2}$.
+Tento tvar potvrzuje interpretaci gyratonových členů jako interního momentu hybnosti částice generující impuls -- 
+přítomnost gyraonických členů nemá vliv na radiální složku $\dot{\rho}$, přispívá ale k další změně v
+axiální složce $\dot{\varphi_{\rmi}}$ členem $\frac{\chi}{(\rho_{\rmi})^2}$.
+
+\section{Vizualizace geodetik v neexpandujících impulsních gyratonových prostoročasech}
+\subsection{Geodetický pohyb v přítomnosti Frolova-Fursaevova gyratonu}
+
+Stejně jako v minulé kapitole využijeme refrakční rovnice \eqref{eq:refrakcni_rovnice_gyra_polohy}, \eqref{eq:refrakcni_rovnice_gyra_rychlosti}
+k vizualizaci interakce impulsního Frolova-Fursaevova gyratonu s geodetikami na prostoročasech tvořících pozadí impulsní vlny.
+V případě gyratonu je pozadí odlišné, pro $\Lambda = 0$ je prostoročas $\mathcal{M}^{-}$ (před impulsní vlnou) Minkowského prostoročas,
+za impulsní vlnou je ale pozadí $\mathcal{M}^+$ popsáno metrikou
+\begin{equation}
+    \rmd s^2 = - 2 \rmd \matu ~ \rmd \matv + 2 \rmd \eta ~ \rmd \bar{\eta} + i \chi \rmd \matu \left(\frac{\rmd \bar{\eta}}{\bar{\eta}} - \frac{\rmd \eta}{\eta}\right),
+\end{equation}
+jediné nenulové Christoffelovy symboly jsou
+\begin{equation}
+    \Gamma^{\matv}_{\eta \eta} = - \frac{i \chi}{2 \eta^2} ~~~~~ \Gamma^{\matv}_{\bar{\eta}\bar{\eta}} = \frac{i \chi}{2 \bar{\eta}^2}.
+\end{equation}
+
+Rotující charakter prostoročasu na pozadí za vlnou je také dobře vidět při parametrizaci reálnými souřadnicemi \eqref{eq:complex_coordinates},
+kde metrika nabývá tvaru
+\begin{equation}
+    \label{eq:gyra_plus_uv_metric}
+    \rmd s^2 = -2 \rmd \matu ~ \rmd \matv + \rmd x^2 + \rmd y^2 + \frac{2 \chi \rmd \matu (x~\rmd y - y~\rmd x)}{x^2 + y^2}.
+\end{equation}
+Transformací do standardních polárních souřadnic $x = r \sin{\varphi}, y = r \cos{\varphi}$ přechází metrika \eqref{eq:gyra_plus_uv_metric} do tvaru
+\begin{equation}
+    \rmd s^2 = \rmd r^2 + r^2 \rmd \varphi^2 - 2 \rmd \matu (\rmd \matv + \chi \rmd \varphi).
+\end{equation}
+\textcolor{red}{diskuze kauzálních vlastností? při pohybu proti souřadnici $\phi$ se lze pohyovat proti "souřadnicovému" času $\matu + \matv$}
+
+Na následujících vizualizacích je znázorněno chování nejprve nulových a následně časupodobných geodetik pro různé parametry $\chi$, procházející impulsní plochou v
+axiálně symetrickém uspořádání kolem gyratonového zdroje na nadploše $\matu = 0, \matv=0$ v různé vzdálenosti $\rho$ od osy symetrie.
+
+\subsubsection{Nulové geodetiky v přítomnosti Frolova-Fursaevova gyratonu}
+Na obrázku \ref{fig:gyra_flat_null_b1_chi1_2} jsou pro hodnoty $\chi = \pi, 2\pi$ vizualizovány geodetiky procházející nadplochou $\matu = 0$ s
+čtyřrychlostí $\dot{\matu} = 1, \dot{\matv} = 0, \dot{\eta} = 0$, oproti negyratonickému řešení, vizualizovanému v předchozí kapitole, dochází
+nejen ke strhnutí geodetik k ose symetrie, ale i k vychýlení vlivem rotačního charakteru prostoročasu. V této vizualizaci se
+přítomnost gyratonu projevuje pouze refrakcí na impulsní nadploše -- jediné nenulové Christoffelovy symboly vstupují do geodetické rovnice pro $\matv$.
+S rostoucím parametrem $\chi$ je strhávání silnější.
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_gyraton_ring__r_2__mu_1__chi_1pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=\pi, \rho=\sqrt{2}$} 
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_gyraton_ring__r_3__mu_1__chi_1pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=\pi, \rho=\frac{3}{\sqrt{2}}$} 
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}},width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_gyraton_ring__r_2__mu_1__chi_2pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=2\pi, \rho=\sqrt{2}$} 
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_gyraton_ring__r_3__mu_1__chi_2pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=2\pi, \rho=\frac{3}{\sqrt{2}}$} 
+    \end{subfigure}
+    \caption{Nulové geodetiky procházející impulsní plochou gyratonu.}
+    \label{fig:gyra_flat_null_b1_chi1_2}
+\end{figure}
+
+Vliv gyratonického charakteru prostoročasu za impulsní plochou je vidět při vizualizaci souřadnice $\matv$ (obrázek \ref{fig:gyra_flat_null_b1_chi1_2_vxy}),
+při refrakci ve vizualizovaném případě kladná složka $\dot{\matv}$ přechází v zápornou, vlivem gyratonu je ale vynucováno kladné zrychlení a
+geodetika se ve směru $\matv$ obrací.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_gyraton_ring__r_1__mu_1__chi_2pi_vxy.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0=1, \chi=2\pi, \rho=1$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_gyraton_ring__r_2__mu_1__chi_2pi_vxy.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0=1, \chi=2\pi, \rho=\sqrt{2}$} 
+    \end{subfigure}
+    \caption{Nulové geodetiky po průchodu impulsní plochou gyratonu.}
+    \label{fig:gyra_flat_null_b1_chi1_2_vxy}
+\end{figure}
+
+Na obrázku \ref{fig:gyra_skewed_flat_null_b1_chi2} pak vidíme nulové geodetiky procházející impulsní nadplochou
+s čtyřrychlostí $\dot{\matu} = 1, \dot{\matv} = 1, \dot{\eta} = 1$, před průchodem $\matu=0$ se v Minkowského části
+prostoročasu jednotlivé geodetiky pohybují na nadploše $t, x$.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{1\textwidth}
+        \begin{subfigure}[b]{0.48\textwidth}
+            \begin{tikzpicture}
+                \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+                {\adjincludegraphics[trim={{.14\width} {.15\height} {.15\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_skewed_gyraton_ring__r_1__mu_1__chi_2pi_uxy.pdf}};
+            \end{tikzpicture}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.48\textwidth}
+            \begin{tikzpicture}
+                \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+                {\adjincludegraphics[trim={{.12\width} {.1\height} {.15\width} {.18\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_skewed_top_gyraton_ring__r_1__mu_1__chi_2pi_uxy.pdf}};
+            \end{tikzpicture}
+        \end{subfigure}
+        \caption{$b_0=1, \chi=2\pi, \rho=1$, vykreslené souřadnice $\matu, x, y$} 
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{1\textwidth}
+        \begin{subfigure}[b]{0.48\textwidth}
+            \begin{tikzpicture}
+                \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+                {\adjincludegraphics[trim={{.14\width} {.15\height} {.15\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_skewed_gyraton_ring__r_1__mu_1__chi_2pi_vxy.pdf}};
+            \end{tikzpicture}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.48\textwidth}
+            \begin{tikzpicture}
+                \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+                {\adjincludegraphics[trim={{.12\width} {.10\height} {.15\width} {.18\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/null/null_skewed_top_gyraton_ring__r_1__mu_1__chi_2pi_vxy.pdf}};
+            \end{tikzpicture} 
+        \end{subfigure}
+        \caption{$b_0=1, \chi=2\pi, \rho=1$, vykreslené souřadnice $\matv, x, y$}
+    \end{subfigure}
+    \caption{Nulové geodetiky procházející impulsní plochou gyratonu, pro zřetelnost vykresleno z různých úhlů pohledu.}
+    \label{fig:gyra_skewed_flat_null_b1_chi2}
+\end{figure}
+
+\subsubsection{Časupodobné geodetiky v přítomnosti Frolova-Fursaevova gyratonu}
+Časupodobné geodetiky byly vyzualizovány v několika uspořádáních, nejprve v případě kdy impulsní
+vlnoplochu protínají s tečným vektorem normovaným na jednotku \textcolor{red}{(ono je to vlastně normované na -1, ale to tu asi není podstatné)}
+ve směru $\dot{\matu}=\frac{1}{2}, \dot{\matv} = 1, \dot{\eta}=0$, tato vizualizace je zobrazena na
+obrázcích \ref{fig:gyra_flat_timelike_b1_chi1_2} a \ref{fig:gyra_flat_timelike_b1_chi2_vxy} a obdobně jako u
+nulových geodetik pozorujeme vliv gyratonu strháváním geodetiky ve smyslu rotace.
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/gyraton_ring__r_2__mu_1__chi_1pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=\pi, \rho=\sqrt{2}$} 
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/gyraton_ring__r_3__mu_1__chi_1pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=\pi, \rho=\frac{3}{\sqrt{2}}$} 
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}},width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/gyraton_ring__r_2__mu_1__chi_2pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=2\pi, \rho=\sqrt{2}$} 
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/gyraton_ring__r_3__mu_1__chi_2pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=2\pi, \rho=\frac{3}{\sqrt{2}}$} 
+    \end{subfigure}
+    \caption{Časupodobné geodetiky procházející impulsní plochou gyratonu.}
+    \label{fig:gyra_flat_timelike_b1_chi1_2}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/gyraton_ring__r_1__mu_1__chi_2pi_vxy.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0=1, \chi=2\pi, \rho=1$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/gyraton_ring__r_2__mu_1__chi_2pi_vxy.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0=1, \chi=2\pi, \rho=\sqrt{2}$} 
+    \end{subfigure}
+    \caption{Časupodobné geodetiky procházející impulsní plochou gyratonu, částice před impulsem (znázorněné přerušovanou čarou)
+    letí ve směru rostoucí souřadnice $\matv$, po impulsu jsou refraktovány zpět a složka čtyřrychlosti $\dot{\matv}$ vlivem refrakce přechází do záporných hodnot.}
+    \label{fig:gyra_flat_timelike_b1_chi2_vxy}
+\end{figure}
+
+Ve vizualizaci na obrázcích \ref{fig:gyra_flat_timelike_b1_chi1_2_skewed} a \ref{fig:gyra_flat_timelike_b1_chi1_2_vxy_skewed} protínají geodetiky impulsní plochu s tečným vektorem
+ve směru $\dot{\matu} = 0,5, \dot{\matv} = 1, \dot{\eta} = 0,5$.
+
+\textcolor{red}{DOPLNIT OBRÁZKY, TYTO JSOU ŠPATNĚ :)}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/skewed_gyraton_ring__r_1__mu_1__chi_1pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=\pi, \rho=1$} 
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/skewed_gyraton_ring__r_2__mu_1__chi_1pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=\pi, \rho=\sqrt{2}$} 
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}},width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/skewed_gyraton_ring__r_1__mu_1__chi_2pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=2\pi, \rho=1$} 
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/skewed_gyraton_ring__r_2__mu_1__chi_2pi_uxy.pdf}};
+        \end{tikzpicture}
+         \caption{$b_0=1, \chi=2\pi, \rho=\sqrt{2}$} 
+    \end{subfigure}
+    \caption{Časupodobné geodetiky procházející impulsní plochou gyratonu.}
+    \label{fig:gyra_flat_timelike_b1_chi1_2_skewed}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/skewed_gyraton_ring__r_1__mu_1__chi_2pi_vxy.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0=1, \chi=2\pi, \rho=1$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \begin{tikzpicture}
+            \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
+            {\adjincludegraphics[trim={{.17\width} {.2\height} {.17\width} {.22\height}}, width=1\textwidth, clip]{../img/kap03/flat_gyraton/timelike/skewed_gyraton_ring__r_2__mu_1__chi_2pi_vxy.pdf}};
+        \end{tikzpicture}
+        \caption{$b_0=1, \chi=2\pi, \rho=\sqrt{2}$} 
+    \end{subfigure}
+    \caption{Časupodobné geodetiky procházející impulsní plochou gyratonu.}
+    \label{fig:gyra_flat_timelike_b1_chi1_2_vxy_skewed}
+\end{figure}
