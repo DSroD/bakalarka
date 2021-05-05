@@ -209,7 +209,7 @@ Transformací do standardních polárních souřadnic $x = r \sin{\varphi}, y = 
 \begin{equation}
     \rmd s^2 = \rmd r^2 + r^2 \rmd \varphi^2 - 2 \rmd \matu (\rmd \matv + \chi \rmd \varphi).
 \end{equation}
-\textcolor{red}{diskuze kauzálních vlastností?}
+\textcolor{red}{diskuze nestacionarity?}
 
 Na následujících vizualizacích je znázorněno chování nejprve nulových a následně časupodobných geodetik pro různé parametry $\chi$, procházející impulsní plochou v
 axiálně symetrickém uspořádání kolem gyratonového zdroje na nadploše $\matu = 0, \matv=0$ v různé vzdálenosti $\rho$ od osy symetrie.
@@ -219,7 +219,7 @@ Na obrázku \ref{fig:gyra_flat_null_b1_chi1_2} jsou pro hodnoty $\chi = \pi, 2\p
 nejen ke strhnutí geodetik k ose symetrie, ale i k vychýlení vlivem rotačního charakteru zdroje. V této vizualizaci se
 přítomnost gyratonu projevuje pouze refrakcí na impulsní nadploše -- jediné nenulové Christoffelovy symboly vstupují do geodetické rovnice pro $\matv$.
 S rostoucím parametrem $\chi$ je strhávání silnější.
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
@@ -254,11 +254,7 @@ S rostoucím parametrem $\chi$ je strhávání silnější.
     \label{fig:gyra_flat_null_b1_chi1_2}
 \end{figure}
 
-Vliv gyratonického charakteru prostoročasu za impulsní plochou je vidět při vizualizaci souřadnice $\matv$ (obrázek \ref{fig:gyra_flat_null_b1_chi1_2_vxy}),
-při refrakci ve vizualizovaném případě kladná složka $\dot{\matv}$ přechází v zápornou, vlivem gyratonu je ale vynucováno kladné zrychlení a
-geodetika se ve směru $\matv$ obrací.
-
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
@@ -278,11 +274,15 @@ geodetika se ve směru $\matv$ obrací.
     \label{fig:gyra_flat_null_b1_chi1_2_vxy}
 \end{figure}
 
+Vliv gyratonického charakteru prostoročasu za impulsní plochou je vidět při vizualizaci souřadnice $\matv$ (obrázek \ref{fig:gyra_flat_null_b1_chi1_2_vxy}),
+při refrakci ve vizualizovaném případě kladná složka $\dot{\matv}$ přechází v zápornou, vlivem gyratonu je ale vynucováno kladné zrychlení a
+geodetika se ve směru $\matv$ obrací.
+
 Na obrázku \ref{fig:gyra_skewed_flat_null_b1_chi2} pak vidíme nulové geodetiky procházející impulsní nadplochou
 s čtyřrychlostí $\dot{\matu} = 1, \dot{\matv} = 1, \dot{\eta} = 1$, před průchodem $\matu=0$ se v Minkowského části
 prostoročasu jednotlivé geodetiky pohybují na nadploše $t, x$.
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{1\textwidth}
         \begin{subfigure}[b]{0.48\textwidth}
@@ -327,7 +327,7 @@ ve směru $\dot{\matu}=\frac{1}{2}, \dot{\matv} = 1, \dot{\eta}=0$, tato vizuali
 obrázcích \ref{fig:gyra_flat_timelike_b1_chi1_2} a \ref{fig:gyra_flat_timelike_b1_chi2_vxy} a obdobně jako u
 nulových geodetik pozorujeme vliv gyratonu strháváním geodetiky ve smyslu rotace.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
@@ -362,7 +362,7 @@ nulových geodetik pozorujeme vliv gyratonu strháváním geodetiky ve smyslu ro
     \label{fig:gyra_flat_timelike_b1_chi1_2}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
@@ -386,7 +386,7 @@ nulových geodetik pozorujeme vliv gyratonu strháváním geodetiky ve smyslu ro
 Ve vizualizaci na obrázcích \ref{fig:gyra_flat_timelike_b1_chi1_2_skewed} a \ref{fig:gyra_flat_timelike_b1_chi1_2_vxy_skewed} protínají geodetiky impulsní plochu s jednotkovým tečným vektorem
 ve směru $\dot{\matu} = 0,5, \dot{\matv} = 1, \dot{\eta} = 0,5$.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
@@ -421,7 +421,7 @@ ve směru $\dot{\matu} = 0,5, \dot{\matv} = 1, \dot{\eta} = 0,5$.
     \label{fig:gyra_flat_timelike_b1_chi1_2_skewed}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
@@ -451,7 +451,7 @@ Geodetiky procházejí, stejně jako v případě $\Lambda = 0$, v různých vzd
 Opět se k efektu způsobenému impulsní vlnou, který strhne geodetiky směrem k (resp. směrem od, pro opačné znaménko parametru $b_0$ v případě Hottova-Tanakova řešení) ose symetrie, přidává efekt gyratonu,
 který geodetiky strhne v rotačním smyslu.
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
@@ -488,7 +488,7 @@ který geodetiky strhne v rotačním smyslu.
     \label{fig:gyra_ht_null_b1_chi12_lmb1}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
@@ -528,7 +528,7 @@ který geodetiky strhne v rotačním smyslu.
 Jako poslední byly vizualizovány časupodobné geodetiky procházející impulsní nadplochou s čtyřrychlostí (normovanou na -1) ve směru $\dot \matu = 0,5,~ \dot \matv = 1, \dot \eta = 0$ (obrázek \ref{fig:gyra_ht_timelike_b1_chi1}) a dále, pro úplnost, časupodobné
 geodetiky procházející $\matu = 0$ s (opět normovanou) čtyřrychlostí ve směru $\dot \matu = 0.5, \dot \matv = 1, \dot \eta = 0.3$ (obrázek \ref{fig:skewed_gyra_ht_timelike_b1_chi1}).
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
@@ -565,7 +565,7 @@ geodetiky procházející $\matu = 0$ s (opět normovanou) čtyřrychlostí ve s
     \label{fig:gyra_ht_timelike_b1_chi1}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \begin{tikzpicture}
