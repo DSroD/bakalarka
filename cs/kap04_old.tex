@@ -1,0 +1,252 @@
+\newcommand{\Ab}{{\boldsymbol{A}}}
+\newcommand{\Bb}{{\boldsymbol{B}}}
+\newcommand{\Cb}{{\boldsymbol{C}}}
+\newcommand{\Db}{{\boldsymbol{D}}}
+
+\chapter{Spinorový popis expandujících gravitačních vln}
+V této kapitole se budeme zabývat popisu expandujících impulsních vln v řeči $SL(2, \mathbb{C})$ spinorů.
+S běžným popisem expandujících gravitačních vln se lze seznámit např. v
+\cite{Podolsky_1999}, \cite{Podolsky:2016mqg}, \textcolor{red}{další...}.
+Nejprve se budeme věnovat samotnému zavedení spinorového formalismu. Tento formalismus budeme budovat geometrickým přístupem,
+který je pro použití v relativitě příhodnější, než přístup teorie reprezentací (např. \cite{fecko_2006}). S geometrickou konstrukcí
+$SL(2, \mathbb{C})$ spinorů se lze podrobně seznámit např. v publikacích \cite{penrose_rindler_1984}, \cite{doi:10.1142/5222}.
+Druhá ze zmíněných publikací je hlavní referencí pro následující sekci.
+
+\section{Formalismus $SL(2, \mathbb{C})$ spinorů v teorii relativity}
+\subsection{Geometrický koncept 2-spinorů}
+Definujme zde Minkowského prostor $\mathbb{M}$ jako čtyřdimenzionální vektorový prostor nad $\mathbb{R}$ s Lorentzovskou metrikou
+$\eta_{\mu \nu} = diag(1, -1, -1, -1)$. V každém bodě prostoru $\mathbb{R}^4$ existuje množina bázových vektorů z $\mathbb{M}$ kterou
+nazýváme tetrádou.
+Vezměme světelný kužel v $\mathbb{M}$, tedy úplný podprostor, kde pro každý vektor platí
+\begin{equation}
+    \eta_{\mu \nu} x^\mu x^\nu = 0.
+\end{equation}
+
+Každému časupodobnému nebo světelnému vektoru v prostoročasu přiřazujeme orientaci vůči počátku světelného
+kužele, může mířit do minulosti nebo do budoucnosti, světelný kužel tak rozdělíme na budoucí a minulý.
+Průnikem svetelného kuželu s plochou konstantního času dostaneme sféru v $\mathbb{R}^3$. Pokud leží nadplocha
+konstantního času v souřadnici $x^0 = t =1$, představuje vzniklá sféra tzv. Riemannovu sféru $\Sigma^+$ pro kterou
+platí rovnice
+\begin{equation}
+    x^2 + y^2 + z^2 = 1
+\end{equation} 
+Body na $\Sigma^+$ představují budoucí nulové směry z počátku. Pokud bychom volili řez plochou $t = -1$, dostali bychom
+všechny minulé nulové směry ležící na sféře $\Sigma^-$, $\Sigma^+$ a $\Sigma^-$ lze ztotožnit invariantní transformací, která
+zobrazuje vektor $v$ ve směru ležícím na $\Sigma^-$ na $-v$, který je ve směru ležícím na $\Sigma^+$.
+
+Stereografickou projekcí pak můžeme ztotožnit sféru $\Sigma^+$ s rozšířenou komplexní rovinou $\tilde{\mathbb{C}}$
+(tedy $\mathbb{C} \cup \{\infty\}$) a body $x$, $y$ a $z$ na sféře můžeme popsat jednou komplexní souřadnicí,
+které se obvykle říká stereografická souřadnice,
+\begin{equation}
+    \xi = \frac{x + iy}{1-z},
+\end{equation}
+případně v polárních souřadnicích $(\theta, \phi)$
+\begin{equation}
+    \xi = e^{i \phi} \cos \frac{\theta}{2}.
+\end{equation}
+Inverzní vztahy jsou pak
+\begin{equation}
+    x=\frac{\xi+\bar{\xi}}{\xi \bar{\xi}+1},~~~y=\frac{\bar{\xi}-\xi}{\xi \bar{\xi}+1},~~~z=\frac{\xi\bar{\xi}-1}{\xi\bar{\xi}+1}.
+\end{equation}
+
+Dále zavedeme projektivní (homogenní) komplexní souřadnice $(\zeta, \eta)$ jako
+\begin{equation}
+    \label{eq:zavedeni_slozek_spinoru_z_stereograf_souradnice}
+    \xi = \frac{\zeta}{\eta},
+\end{equation}
+vyhneme se tak nekonečné hodnotě stereografické souřadnice pro horní (severní) pól Riemannovy sféry,
+$(\zeta, \eta)$ a $(\lambda \zeta, \lambda \eta)$ pro $\lambda \in \mathbb{C}$ nenulové reprezentují stejný bod na $\Sigma^+$. Uvidíme, že tyto dvě
+komplexní čísla odpovídají komponentám 2-spinoru.
+Pomocí těchto souřadnic lze popsat libovolný bod $(t, x, y, z)$ na světelném kuželu jako
+\begin{equation}
+    \label{eq:inverse_spinor_souradnicove}
+    \begin{split}
+        t &= \frac{1}{\sqrt{2}} \left( \zeta\bar{\zeta} + \eta\bar{\eta} \right) \\
+        x &= \frac{1}{\sqrt{2}} \left( \zeta\bar{\eta} + \eta\bar{\zeta} \right) \\
+        y &= \frac{1}{\sqrt{2}} \left( \bar{\zeta}\eta - \eta\bar{\zeta} \right) \\
+        z &= \frac{1}{\sqrt{2}} \left( \zeta\bar{\zeta} - \eta\bar{\eta} \right).
+    \end{split}
+\end{equation}
+
+Tyto rovnice již nejsou invariantní vůči škálování $(\zeta, \eta) \mapsto (r\zeta, r\eta)$, $r \in \mathbb{R}$,
+jsou ale nezávislé na fázi $(\zeta, \eta) \mapsto (e^{i \theta} \zeta, e^{i \theta} \eta)$, $\theta \in \mathbb{R}$.
+
+Uvažujme Möbiovu transformaci $(\zeta, \eta) \mapsto(a \zeta + b \eta, c \zeta + d \eta))$. Pomocí stereografické souřadnice
+můžeme psát
+\begin{equation}
+    \label{eq:mobius_transform}
+    \xi \mapsto \frac{a \xi + b}{c \xi + d}.
+\end{equation}
+Tyto transformace tvoří projektivní grupu $PGL(2, \mathbb{C})$.
+Pokud navíc splňují podmínku $ad - bc = 1$ (unimodularita), nazýváme jí spin transformací ve smyslu
+relace $\xi$ k nulovým vektorům v Minkowského prostoru. Tyto transformace tvoří grupu $SL(2, \mathbb{C})$,
+jedná se o dvojí pokrytí omezené Lorentzovy grupy. Zároveň každá taková transformace, která je navíc unitární, odpovídá
+jedné vlastní rotaci $\Sigma^+$ (a jedna taková rotace odpovídá dvěma unitárním spinovým transformacím, lišícím se o znaménko).
+Unitární spinovou transformací se zde myslí spinová transformace, která navís splňuje podmínku unitarity matice $\begin{pmatrix}
+    a & b \\ c & d
+\end{pmatrix}$.
+
+Komplexní čísla $(\zeta, \eta)$ nám nyní slouží jako souřadnice budoucích nulových vektorů, po transformaci
+fáze $\zeta \mapsto e^{i \theta} \zeta, \eta e^{i \theta} \eta$ ale odpovídají stále stejnému vektoru. Naším cílem
+nyní bude přidat další geometrickou strukturu, která zachová pouze invarianci vůči změně znaménka - \emph{nulovou vlajku}.
+
+Vezmeme-li budoucí nulový vektor $v^\mu$, který bude popsán projektivními komplexními souřadnicemi $\zeta, \eta$, až na fázi.
+K tomuto vektoru přidáme "vlajku\", která bude reprezentovat fázi. K realizaci podmínky na invarianci vůči změně
+znaménka, při změně fázového úhlu o $\theta$ se vlajka otočí o $2 \theta$.
+
+\textcolor{red}{vlajky... až pak algebra...}
+
+
+
+
+Na prostoru spinorů se dále zavádí 2-forma $[ \cdot , \cdot ]$, která je
+\begin{enumerate}[(1)]
+    \item antisymetrická,
+    \item bilineární a
+    \item nedegenerovaná.
+\end{enumerate}
+Všimněme si, že kombinací prvních dvou podmínek dostaneme pro dva lineárně závislé spinory
+(tedy pro dvojici $(\xi^\Ab, \kappa^\Ab)$ takové, že $\kappa^\Ab = \lambda \xi^\Ab$,
+$\lambda \in \mathbb{C}$)
+\begin{equation}
+    [\xi^\Ab, \kappa^\Ab] = 0.
+\end{equation}
+Z třetí podmínky ale máme
+\begin{equation}
+    [\xi^\Ab, \eta^\Ab] \neq 0
+\end{equation}
+pro všechny $\xi^\Ab$, $\eta^\Ab$ z prostoru spinorů.
+
+Tuto 2-formu obvykle zapisujeme symbolem $\epsilon_{\Ab \Bb}$, jedná se o tzv. Levi-Civitův spinor a na prostoru
+spinorů zavádí skalární součin
+\begin{equation}
+    \label{eq:pusobeni_levicivitova_symbolu_na_spinory1}
+    \epsilon_{\Ab \Bb} \xi^\Ab \eta^\Bb = \xi_\Bb \eta^\Bb = -\xi^\Ab\eta_\Ab
+\end{equation}
+a zastává tedy funkci obdobnou metrickému tenzoru. Zápis \eqref{eq:pusobeni_levicivitova_symbolu_na_spinory1} lze
+také vyjádřit jako
+\begin{equation}
+    \label{eq:pusobeni_levicivitova_symbolu_na_spinory2}
+    \xi^\Ab = \epsilon^{\Ab\Bb} \xi_\Bb, ~~~~ \xi_\Ab = \epsilon_{\Bb\Ab} \xi^\Bb,
+\end{equation}
+kde platí
+\begin{equation}
+    \epsilon^{\Ab\Cb} \epsilon_{\Bb\Cb} = \delta_\Bb^\Ab.
+\end{equation}
+Dále se zavádí spin-báze $(o^\Ab, \iota^\Ab)$ tak, aby platilo
+\begin{equation}
+    \label{eq:noramlizacni_podminky_spinorove_baze}
+    [o^\Ab, \iota^\Ab] = -[\iota^\Ab, o^\Ab] = 1.
+\end{equation}
+
+Tak formálně propojíme souřadnicový zápis $\xi^A$ se samotným spinorem $\xi^\Ab$
+\begin{equation}
+    \xi^\Ab = \xi^0 o^\Ab + \xi^1 \iota^\Ab
+\end{equation}
+
+Z prvků báze lze pomocí dyadického součinu sestrojit Levi-Civitův spinor. S využitím normalizačních podmínek
+\eqref{eq:noramlizacni_podminky_spinorove_baze} a vlastnosti \eqref{eq:pusobeni_levicivitova_symbolu_na_spinory2}
+dostaneme vztah
+\begin{equation}
+    \epsilon_{\Ab\Bb} = o_\Ab \iota_\Bb - o_\Bb \iota_\Ab.
+\end{equation}
+
+V transformaci spinorových složek na reálné souřadnice \eqref{eq:inverse_spinor_souradnicove} máme komplexně
+sdružené složky spinorů, operace komplexního sdružení ale není uzavřená na prostor spinorů, což lze jednoduše
+ukázat když sečteme složky spinoru se složkami komplexně sdruženého - výsledný objekt má reálné složky.
+Operace komplexního sdružení tedy zobrazuje spinory na prostor komplexně sdružených spinorů a píšeme
+\begin{equation}
+    \overline{\xi^\Ab} = \bar{\xi}^{\Ab'}.
+\end{equation}
+Komplexním sdružením spinorové báze dostáváme bázi prostoru komplexně sdružených spinorů
+\begin{equation}
+    \overline{o^\Ab} = \bar{o}^{\Ab'} = o^{\Ab'}, ~~ \overline{\iota^{\Ab}} = \bar{\iota}^{\Ab'} = \iota^{\Ab'}.
+\end{equation}
+U Levi-Civitova spinoru je stejně jako u složek spin-báze konvence psát $\overline{\epsilon_{\Ab\Bb}} = \epsilon_{\Ab'\Bb'}$ a ne 
+$\bar{\epsilon}_{\Ab'\Bb'}$ jak bychom mohli očekávat.
+
+Nejobecnějším typem spinoru je pak spinor s tzv. valencí $(p, q; r, s)$ který zapisujeme jako
+\begin{equation}
+    \chi^{\Ab\dots \Cb ~\boldsymbol{S}'\dots \boldsymbol{U}'}_{~~~~~~~~~~~\Db\dots \boldsymbol{F}~ \boldsymbol{W}'\dots \boldsymbol{Y}'},
+\end{equation}
+
+který má $p$ kontravariantních nečárkovaných indexů, $q$ kontravariantních čárkovaných indexů, $r$
+kovariantních nečárkovaných indexů a $s$ kovariantních čarkovaných indexů. Obecně platí
+\begin{equation}
+    \chi^{\Ab\Bb'}_{~~~~\Cb\Db'} = \chi^{\Bb'\Ab}_{~~~~\Db'\Cb} = \chi^{\Ab~~\Bb'}_{~~\Cb~~\Db'},
+\end{equation}
+tedy čárkované indexy můžeme libovolně prohazovat s něčárkovanými, musí ale zůstat pozice čárkovaných mezi sebou
+a nečárkovaných mezi sebou.
+
+Nyní jsme kompletně vybaveni k přepsání vztahů \eqref{eq:inverse_spinor_souradnicove} do zápisu čistě pomocí spinorů.
+Využijeme k tomu Infield-van der Waerdenovy symboly $\sigma_\mu^{\Ab\Ab'}$. Ty můžeme v Minkowského prostoru reprezentovat
+čtyřmi hermitovskými maticemi
+\begin{equation}
+    \begin{split}
+        &\sigma_0^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{matrix}
+            1 & 0 \\
+            0 & 1
+        \end{matrix}\right)~,~~~ \sigma_1^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{matrix}
+            0 & 1 \\
+            1 & 0
+        \end{matrix}\right)~,\\
+        &\sigma_2^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{matrix}
+            0 & -i \\
+            i & 0
+        \end{matrix}\right)~,~~~ \sigma_3^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{matrix}
+            1 & 0 \\
+            0 & -1
+        \end{matrix}\right).
+    \end{split}
+\end{equation}
+
+Tyto symboly nám dávají propojení mezi \textcolor{red}{world-tensory (překlad)} a spinory. Komponenty
+\eqref{eq:inverse_spinor_souradnicove} vektoru ležícího na světelném kuželu pomocí spinoru se
+složkami $\xi^A=(\zeta, \eta)$ zapíšeme jako
+\begin{equation}
+    x^\mu = \bar{\xi}^{A'} \sigma_{AA'}^\mu \xi^A.
+\end{equation}
+
+Dále zavedeme spinorovou formu vektoru $x^\mu$
+\begin{equation}
+    x^{AA'} = \sigma_\mu^{AA'} x^\mu = \frac{1}{\sqrt{2}} \begin{pmatrix}
+        t + z & x - iy \\
+        x + iy & t - z
+    \end{pmatrix}.
+\end{equation}
+\textcolor{red}{Je tohle správně? Je to jen speciální případ na Minkowského PČ - spinová
+struktura na varietě $\mathcal{M}$ je ekvivariantní lift frame bandlu - rozmyslet jak ten
+funguje}
+Z Levi-Civitových spinorů a Infield-van der Waerdenových symbolů můžeme zkonstruovat metriku
+\begin{equation}
+    g_{\mu \nu} = \epsilon_{AB} \epsilon_{A'B'} \sigma_\mu^{AA'} \sigma_\nu^{BB'}.
+\end{equation}
+Obecně můžeme s pomocí těchto symbolů vyjádřit spinory libovolné valence jako tenzory a
+naopak.
+
+Ve výpočtech se obvykle Infield-van der Waerdenovy symboly vynechávají a rovnou se píše
+\begin{equation}
+    g_{\mu \nu} = \epsilon_{AB}\epsilon_{A'B'}.
+\end{equation}
+Z tvaru Infield-van der Waerdenových symbolů je vidět korespondence mezi tenzorovými a spinorovými indexy,
+každému tenzorovému indexu odpovídají dva spinorové.
+
+Pomocí spinorové báze můžeme zavést světelnou (nulovou) tetrádu vztahy
+\begin{equation}
+    \begin{split}
+        l^a &= o^A o^{A'}, \\
+        n^a &= \iota^A \iota^{A'}, \\
+        m^a &= o^A \iota^{A'}, \\
+        \bar{m}^a &= \iota^A o^{A'}
+    \end{split}
+\end{equation}
+kde $l^a, n^a, m^a$ a $\bar{m}^a$ jsou normalizované světelné vektory tvořící bázi.
+
+
+
+\section{Expandující gravitační vlny}
+
+
+
+
+\subsection{Refrakční rovnice}

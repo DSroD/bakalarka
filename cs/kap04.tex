@@ -1,155 +1,127 @@
-\newcommand{\Ab}{{\boldsymbol{A}}}
-\newcommand{\Bb}{{\boldsymbol{B}}}
-\newcommand{\Cb}{{\boldsymbol{C}}}
-\newcommand{\Db}{{\boldsymbol{D}}}
-
 \chapter{Spinorový popis expandujících gravitačních vln}
-V této kapitole zavedeme spinorový formalismus na Minkowského prostoročase, následně jej použijeme k popisu expandujících
-impulsních gravitačních vln. S běžným popisem expandujících gravitačních vln se lze seznámit např. v
-\cite{Podolsky_1999}, \cite{Podolsky:2016mqg}, \textcolor{red}{další...}.
-Spinorový formalismus vybudujeme na základě geometrického přístupu i přes široce uznávaný názor, že
-nejpřirozenější popis spinorů je v řeči teorie reprezentací (např. \cite{fecko_2006}). Geometrická konstrukce spinorů je ale pro použití v relativitě jakožto geometrické teorii,
-příhodnější a tohoto přístupu pak využívají právě práce zabývající se čistě relativistickým využitím spinorů, například
-\cite{penrose_rindler_1984}, \cite{doi:10.1142/5222}.
-\section{Spinorový formalismus}
-\subsection{Krátký úvod do 2-spinorů}
-Definujme zde Minkowského prostor $\mathbb{M}$ jako čtyřdimenzionální vektorový prostor nad $\mathbb{R}$ s Lorentzovskou metrikou
-$\eta_{\mu \nu} = diag(1, -1, -1, -1)$. V každém bodě prostoru $\mathbb{R}^4$ existuje množina bázových vektorů z $\mathbb{M}$ kterou
-nazýváme tetrádou.
-Vezměme světelný kužel v $\mathbb{M}$, tedy úplný podprostor, kde pro každý vektor platí
+V této kapitole se budeme zabývat popisu expandujících impulsních vln v řeči $SL(2, \mathbb{C})$ spinorů.
+S běžným popisem expandujících gravitačních vln se lze seznámit např. v
+\cite{Podolsky_1999} nebo \cite{Podolsky:2016mqg}.
+
+Spinorová pole jsou v obecné relativitě konstruována zejména pomocí tetrádového formalismu,
+který je úzce spojen s Lorentzovskou invariancí tečných prostorů jednotlivých bodů v prostoročase.
+V tomto formalismu vycházíme ze čtyř nulových vektorů -- nulové tetrády $(l^a, n^a, m^a, \bar{m}^a)$,
+která je lokálně determinována \emph{spin-bází} $(o^A, \iota^A)$ podle relací
 \begin{equation}
-    \eta_{\mu \nu} x^\mu x^\nu = 0.
+    \label{eq:tetrad-spinor-basis-relation}
+    l^\mu = o^A o^{A'}, ~~ m^\mu = o^A \iota^{A'}, ~~ \bar{m}^\mu = \iota^A o^{A'}, ~~ n^\mu = \iota^A \iota^{A'},
+\end{equation}
+kde velké písmeno v indexu označuje spinorový index. Pro spinorové objekty zavádíme dva prostory,
+jednomu z nich odpovídá nečárkovaný index, druhému z nich čárkované prostory. Operace komplexního sdružení
+mapuje spinory z nečárkovaného spin-prostoru na čárkovaný a naopak.
+
+Mezi spin-bázemi nečárkovaného a čárkovaného prostoru platí relace $\bar{o^A} = \bar{o}^{A'} = o^{A'}$, $\bar{\iota^A} = \bar{\iota}^{A'} = \iota^{A'}$ --
+u spinorů z komplexně sdruženého prostoru explicitně nepíšeme operaci komplexního sdružení, čárkovaný index sám o sobě značí,
+že se jedná o objekt v daném indexu komplexně sdružený ke svému nečárkovanému protějšku.
+
+Formalismem dvoukomponentových spinorů v obecné teorii relativity se blíže zabývají publikace
+\cite{penrose_rindler_1984}, \cite{doi:10.1142/5222}, případně původní práce Leopolda Infelda \cite{zbMATH03005509},
+který se dvoukomponentovými spinory v obecné relativitě zabýval jako jeden z prvních. Na spinory se také běžně
+nahlíží jako na prvky v lineárních reprezentacích Cliffordových algeber, v tomto smyslu se s nimi lze seznámit např. v \cite{fecko_2006}.
+
+\section{Expandující impulsní gravitační vlny}
+Pro popis expandujících gravitačních vln vycházíme zejména z poznámek Martina Scholtze \cite{scholtz_notes}, kde konstrukce následuje článek
+Penrose a Nutku \cite{PenroseNutku1992} a článek \cite{Aliev2001}, ve kterém je řešení zobecněno na impulsivní limitu Robinon--Trautmanových řešení typu N.
+Druhý zmíněný článek dále pokračuje zobecněním na řešení se zrychlením, kde vychází z ploché limity C-metriky, ve kterém konstruují impulsní vlnu metodou cut and paste.
+V této kapitole se budeme věnovat pouze tzv. nulovému případu, kdy je Robinson-Trautmanův parametr $k=0$.
+Nejprve zavedeme Schwarzovu derivaci, která se ukáže být vhodná pro efektivní zápis spojité metriky expandujících impulsních vln,
+dále se budeme věnovat samotnému popisu -- pomocí cut and paste metody vygenerujeme impulsní nadplochu a následně pomocí spinorového
+formalismu přejdeme ke spojité metrice.
+\subsection{Schwarzova derivace}
+Nejobecnější bijektivní transformací $\mathbb{C} \to \mathbb{C}$ je Möbiova transformace
+\begin{equation}
+    \zeta \mapsto \frac{\alpha \zeta + \beta}{\gamma \zeta + \delta},
+\end{equation}
+která odpovídá projektivní grupě $PGL(2, \mathbb{C})$. Definujme Schwarzovu derivaci funkce $h(\zeta)$ jako
+\begin{equation}
+    \{h; \zeta\} = -\frac{1}{2}\left(\frac{h^{'''}}{h^{'}} - \frac{3}{2} \frac{h^{''2}}{h^{'2}}\right),
+\end{equation}
+tato konstrukce způsobuje anihilaci funkcí, které odpovídají Möbiově transformaci, tedy
+\begin{equation}
+    \left\{ \frac{\alpha \zeta + \beta}{\gamma \zeta + \delta}; \zeta \right\} = 0,
+\end{equation}
+a i naopak, jakákoliv funkce s nulovou Schwarzovou derivací je Möbiova transformace.
+
+Dále je Schwarzova derivace vůči $PGL(2, \mathbb{C})$ invariantní, tedy
+\begin{equation}
+    \left\{ \frac{\alpha h(\zeta) + \beta}{\gamma h(\zeta) + \delta} ; \zeta \right\} = \left\{ h(\zeta); \zeta \right\}.
 \end{equation}
 
-Každému časupodobnému nebo světelnému vektoru v prostoročasu přiřazujeme orientaci vůči počátku světelného
-kužele, může mířit do minulosti nebo do budoucnosti, světelný kužel tak rozdělíme na budoucí a minulý.
-Průnikem svetelného kuželu s plochou konstantního času dostaneme sféru v $\mathbb{R}^3$. Pokud leží nadplocha
-konstantního času v souřadnici $x^0 = t =1$, představuje vzniklá sféra tzv. Riemannovu sféru $\Sigma$ pro kterou
-platí rovnice
-\begin{equation}
-    x^2 + y^2 + z^2 = 1
-\end{equation} 
+Je vhodné zmínit, že pokud k Möbiově transformaci přidáme podmínku unimodularity (tedy $\alpha \delta - \beta \gamma = 1$),
+bude se jednat o tzv. spin-transformace, které lze zapsat pomocí matic reprezentujícíh grupu $SL(2,\mathbb{C})$, která je dvojlistým nakrytím
+omezené Lorentzovy grupy. Samotná unimodulární Möbiova transformace tvoří grupu $PSL(2, \mathbb{C})$.
 
-Stereografickou projekcí pak můžeme ztotožnit sféru $\Sigma$ s rozšířenou komplexní rovinou $\tilde{\mathbb{C}}$
-(tedy $\mathbb{C} \cup \{\infty\}$) a body $x$, $y$ a $z$ na sféře můžeme popsat jednou komplexní souřadnicí,
-které se obvykle říká stereografická souřadnice,
+\subsection{Cut and paste metoda}
+Obdobně jako v případě neexpandujících impulsů začneme s metrikou Minkowského prostoročasu, ale s opačnou signaturou,
 \begin{equation}
-    \xi = \frac{x + iy}{1-z},
+    \rmd s^2 = \rmd t^2 - \rmd x^2 - \rmd y^2 - \rmd z^2.
 \end{equation}
-případně v polárních souřadnicích $(\theta, \phi)$
+Transofrmací \eqref{eq:retarded_coordinates} a \eqref{eq:complex_coordinates} přejdeme
+k metrice
 \begin{equation}
-    \xi = e^{i \phi} \cos \frac{\theta}{2}.
-\end{equation}
-Inverzní vztahy jsou pak
-\begin{equation}
-    x=\frac{\xi+\bar{\xi}}{\xi \bar{\xi}+1},~~~y=\frac{\bar{\xi}-\xi}{\xi \bar{\xi}+1},~~~z=\frac{\xi\bar{\xi}-1}{\xi\bar{\xi}+1}.
+    \rmd s^2 = 2 \rmd \matu \rmd \matv - 2 \rmd \eta \rmd \bar{\eta}.
 \end{equation}
 
-Dále zavedeme složky spinoru $\xi^\Ab$, $\xi^A = (\zeta, \eta)$, jako
+Pro popis expandujících impulsů jsou vhodné souřadnice, které popisují nulový kužel s
+vrcholem v kartézském počátku jako plochu konstantní souřadnice. Zavedeme tedy
+souřadný systém $(v, u, \zeta, \bar{\zeta})$ jako
 \begin{equation}
-    \label{eq:zavedeni_slozek_spinoru_z_stereograf_souradnice}
-    \xi = \frac{\zeta}{\eta},
+    \label{eq:expanding_null_tetrad}
+    \matu = u,~~~ \matv = v + u \zeta \bar{\zeta}, ~~~ \eta = u \zeta, ~~~ \bar{\eta} = u \bar{\zeta},
 \end{equation}
-vyhneme se tak nekonečné hodnotě stereografické souřadnice pro horní (severní) pól Riemannovy sféry. Nyní
-potřebujeme udělat jistou formalizaci indexové notace.
-Pokud je horní (a později i dolní) index tučný, jedná se o tzv. abstraktní index, který není svázaný se
-spinorovou bází, kterou zavedeme dále, ale pouze naznačuje strukturu objektu. Pokud index není tučný, jedná
-se přímo o souřadnicový index, který nabývá hodnot $1, 2$ a je svázaný s bází. Je zřejmé, že spinor $\xi^\Ab$
-a stereografická souřadnice $\xi$ jsou i přes použití podobného značení
-dva odlišné objekty.
-Pomocí komponent spinoru lze popsat libovolný bod $(t, x, y, z)$ na světelném kuželu jako
+nulový kužel s vrcholem v kartézském počátku je pak dán jako plocha $v=0$. Metrika má v těchto souřadnicích tvar
 \begin{equation}
-    \label{eq:inverse_spinor_souradnicove}
-    \begin{split}
-        t &= \frac{1}{\sqrt{2}} \left( \zeta\bar{\zeta} + \eta\bar{\eta} \right) \\
-        x &= \frac{1}{\sqrt{2}} \left( \zeta\bar{\eta} + \eta\bar{\zeta} \right) \\
-        y &= \frac{1}{\sqrt{2}} \left( \bar{\zeta}\eta - \eta\bar{\zeta} \right) \\
-        z &= \frac{1}{\sqrt{2}} \left( \zeta\bar{\zeta} - \eta\bar{\eta} \right).
-    \end{split}
+    \rmd s^2 = 2 \rmd u ~ \rmd v - 2 u^2 \rmd \zeta ~ \rmd \bar{\zeta}
 \end{equation}
-Na prostoru spinorů se dále zavádí 2-forma $[ \cdot , \cdot ]$, která je
-\begin{enumerate}[(1)]
-    \item antisymetrická,
-    \item bilineární a
-    \item nedegenerovaná.
-\end{enumerate}
-Všimněme si, že kombinací prvních dvou podmínek dostaneme pro dva lineárně závislé spinory
-(tedy pro dvojici $(\xi^\Ab, \kappa^\Ab)$ takové, že $\kappa^\Ab = \lambda \xi^\Ab$,
-$\lambda \in \mathbb{C}$)
-\begin{equation}
-    [\xi^\Ab, \kappa^\Ab] = 0.
-\end{equation}
-Z třetí podmínky ale máme
-\begin{equation}
-    [\xi^\Ab, \eta^\Ab] \neq 0
-\end{equation}
-pro všechny $\xi^\Ab$, $\eta^\Ab$ z prostoru spinorů.
+a inverzní transformace ke kartézským souřadnicím jsou
+\begin{align}
+    t = \frac{1}{\sqrt{2}} \left(u + v + u \zeta \bar{\zeta}\right) & z = \frac{1}{\sqrt{2}} \left(v + u \zeta \bar{\zeta} - u\right) \\
+    x = \frac{u}{\sqrt{2}} (\zeta + \bar{\zeta}) & y = \frac{u}{i \sqrt{2}} (\zeta - \bar{\zeta}).
+\end{align}
 
-Tuto 2-formu obvykle zapisujeme symbolem $\epsilon_{\Ab \Bb}$, jedná se o tzv. Levi-Civitův spinor a na prostoru
-spinorů zavádí skalární součin
+Světelný kužel $v=0$ nazveme $N$, metrika na této nadploše je
 \begin{equation}
-    \label{eq:pusobeni_levicivitova_symbolu_na_spinory1}
-    \epsilon_{\Ab \Bb} \xi^\Ab \eta^\Bb = \xi_\Bb \eta^\Bb = -\xi^\Ab\eta_\Ab
-\end{equation}
-a zastává tedy funkci obdobnou metrickému tenzoru. Zápis \eqref{eq:pusobeni_levicivitova_symbolu_na_spinory1} lze
-také vyjádřit jako
-\begin{equation}
-    \label{eq:pusobeni_levicivitova_symbolu_na_spinory2}
-    \xi^\Ab = \epsilon^{\Ab\Bb} \xi_\Bb, ~~~~ \xi_\Ab = \epsilon_{\Bb\Ab} \xi^\Bb,
-\end{equation}
-kde platí
-\begin{equation}
-    \epsilon^{\Ab\Cb} \epsilon_{\Bb\Cb} = \delta_\Bb^\Ab.
-\end{equation}
-Dále se zavádí spin-báze $(o^\Ab, \iota^\Ab)$ tak, aby platilo
-\begin{equation}
-    \label{eq:noramlizacni_podminky_spinorove_baze}
-    [o^\Ab, \iota^\Ab] = -[\iota^\Ab, o^\Ab] = 1.
+    \label{eq:null_cone_metric}
+    \rmd s_N^2 = -2 u^2 \rmd \zeta ~ \rmd \bar{\zeta}.
 \end{equation}
 
-Tak formálně propojíme souřadnicový zápis $\xi^A$ se samotným spinorem $\xi^\Ab$
+Podél této nadplochy provedeme řez, obdržíme dvě části prostoročasu. Jako $M^+$ označíme vnitřek
+svetelného kuželu, jako $M^-$ označíme zbytek prsotoročasu a souřadnice na $M^-$ budeme označovat jako $(\hat{u}, \hat{v}, \hat{\zeta}, \hat{\bar{\zeta}})$.
+Tyto dvě části budeme chtít na nadploše $N$ zpětně slepit s \emph{warpem} - identifikací bodu $(v=0, u, \zeta, \bar{\zeta})$ na $N \subset M^+$
+s bodem $(v = 0, \hat{u}, \hat{\zeta}, \hat{\bar{\zeta}})$, kde $\hat{\zeta}$ je holomorfní transformací $\zeta$,
 \begin{equation}
-    \xi^\Ab = \xi^0 o^\Ab + \xi^1 \iota^\Ab
+    \label{eq:zeta_holomorfni_h}
+    \hat{\zeta} = h(\zeta).
 \end{equation}
 
-Z prvků báze lze pomocí dyadického součinu sestrojit Levi-Civitův spinor. S využitím normalizačních podmínek
-\eqref{eq:noramlizacni_podminky_spinorove_baze} a vlastnosti \eqref{eq:pusobeni_levicivitova_symbolu_na_spinory2}
-dostaneme vztah
+Z požadavku spojitosti metriky na $N$ po slepení platí
 \begin{equation}
-    \epsilon_{\Ab\Bb} = o_\Ab \iota_\Bb - o_\Bb \iota_\Ab.
+    -2 u^2 \rmd \zeta ~ \rmd \bar{\zeta} = -2 \hat{u}^2 \rmd \hat{\zeta} ~ \rmd \hat{\bar{\zeta}}.
 \end{equation}
 
-V transformaci spinorových složek na reálné souřadnice \eqref{eq:inverse_spinor_souradnicove} máme komplexně
-sdružené složky spinorů, operace komplexního sdružení ale není uzavřená na prostor spinorů, což lze jednoduše
-ukázat když sečteme složky spinoru se složkami komplexně sdruženého - výsledný objekt má reálné složky.
-Operace komplexního sdružení tedy zobrazuje spinory na prostor komplexně sdružených spinorů a píšeme
+Z toho plyne podmínka na transformaci souřadnice $u$,
 \begin{equation}
-    \overline{\xi^\Ab} = \bar{\xi}^{\Ab'}.
+    \label{eq:u_podminka_spojitosti}
+    \hat{u} = \frac{u}{\left| h^{'}(\zeta) \right|},
 \end{equation}
-Komplexním sdružením spinorové báze dostáváme bázi prostoru komplexně sdružených spinorů
+kde $h^{'}(\zeta) = h_{,\zeta}(\zeta)$ je derivace funkce $h(\zeta)$.
+Obdrželi jsme lepící podmínky
 \begin{equation}
-    \overline{o^\Ab} = \bar{o}^{\Ab'} = o^{\Ab'}, ~~ \overline{\iota^{\Ab}} = \bar{\iota}^{\Ab'} = \iota^{\Ab'}.
-\end{equation}
-U Levi-Civitova spinoru je stejně jako u složek spin-báze konvence psát $\overline{\epsilon_{\Ab\Bb}} = \epsilon_{\Ab'\Bb'}$ a ne 
-$\bar{\epsilon}_{\Ab'\Bb'}$ jak bychom mohli očekávat.
-
-Nejobecnějším typem spinoru je pak spinor s tzv. valencí $(p, q; r, s)$ který zapisujeme jako
-\begin{equation}
-    \chi^{\Ab\dots \Cb ~\boldsymbol{S}'\dots \boldsymbol{U}'}_{~~~~~~~~~~~\Db\dots \boldsymbol{F}~ \boldsymbol{W}'\dots \boldsymbol{Y}'},
+    \label{eq:exp_penrose_lepici_podminky}
+    (0, u, \zeta)_+ = \left(0, \frac{u}{\left| h^{'}(\zeta)\right|}, h(\zeta)\right)_{-}.
 \end{equation}
 
-který má $p$ kontravariantních nečárkovaných indexů, $q$ kontravariantních čárkovaných indexů, $r$
-kovariantních nečárkovaných indexů a $s$ kovariantních čarkovaných indexů. Obecně platí
-\begin{equation}
-    \chi^{\Ab\Bb'}_{~~~~\Cb\Db'} = \chi^{\Bb'\Ab}_{~~~~\Db'\Cb} = \chi^{\Ab~~\Bb'}_{~~\Cb~~\Db'},
-\end{equation}
-tedy čárkované indexy můžeme libovolně prohazovat s něčárkovanými, musí ale zůstat pozice čárkovaných mezi sebou
-a nečárkovaných mezi sebou.
+\subsection{Spojitý tvar metriky}
 
-Nyní jsme kompletně vybaveni k přepsání vztahů \eqref{eq:inverse_spinor_souradnicove} do zápisu čistě pomocí spinorů.
-Využijeme k tomu Infield-van der Waerdenovy symboly $\sigma_\mu^{\Ab\Ab'}$. Ty můžeme v Minkowského prostoru reprezentovat
-čtyřmi hermitovskými maticemi
+Pro přechod ke spinorovému popisu použijeme Infeld-Van der Waerdenovy symboly, které pro kartézskou
+vektorovou bázi odpovídají hermitovským maticím
 \begin{equation}
+    \label{eq:infeld-van-der-waerden}
     \begin{split}
         &\sigma_0^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{matrix}
             1 & 0 \\
@@ -164,57 +136,233 @@ Využijeme k tomu Infield-van der Waerdenovy symboly $\sigma_\mu^{\Ab\Ab'}$. Ty 
         \end{matrix}\right)~,~~~ \sigma_3^{AA'}=\frac{1}{\sqrt{2}}\left(\begin{matrix}
             1 & 0 \\
             0 & -1
-        \end{matrix}\right).
+        \end{matrix}\right),
     \end{split}
 \end{equation}
 
-Tyto symboly nám dávají propojení mezi \textcolor{red}{world-tensory (překlad)} a spinory. Komponenty
-\eqref{eq:inverse_spinor_souradnicove} vektoru ležícího na světelném kuželu pomocí spinoru se
-složkami $\xi^A=(\zeta, \eta)$ zapíšeme jako
+spinorový ekvivalent vektoru se složkami $x^\mu = (t, x, y, z)$ je
 \begin{equation}
-    x^\mu = \bar{\xi}^{A'} \sigma_{AA'}^\mu \xi^A.
-\end{equation}
-
-Dále zavedeme spinorovou formu vektoru $x^\mu$
-\begin{equation}
-    x^{AA'} = \sigma_\mu^{AA'} x^\mu = \frac{1}{\sqrt{2}} \begin{pmatrix}
+    \label{eq:spinor_vektor}
+    x^{AA'} = \frac{1}{\sqrt{2}} \begin{pmatrix}
         t + z & x - iy \\
         x + iy & t - z
+    \end{pmatrix} = \begin{pmatrix}
+        v + u \zeta \bar{\zeta} & u \zeta \\
+        u \bar{\zeta} & u
+    \end{pmatrix} = \begin{pmatrix}
+        \matv & \eta \\
+        \bar{\eta} & U
     \end{pmatrix}.
 \end{equation}
-\textcolor{red}{Je tohle správně? Je to jen speciální případ na Minkowského PČ - spinová
-struktura na varietě $\mathcal{M}$ je ekvivariantní lift frame bandlu - rozmyslet jak ten
-funguje}
-Z Levi-Civitových spinorů a Infield-van der Waerdenových symbolů můžeme zkonstruovat metriku
-\begin{equation}
-    g_{\mu \nu} = \epsilon_{AB} \epsilon_{A'B'} \sigma_\mu^{AA'} \sigma_\nu^{BB'}.
-\end{equation}
-Obecně můžeme s pomocí těchto symbolů vyjádřit spinory libovolné valence jako tenzory a
-naopak.
 
-Ve výpočtech se obvykle Infield-van der Waerdenovy symboly vynechávají a rovnou se píše
+Spinor \eqref{eq:spinor_vektor} lze zapsat ve formě
 \begin{equation}
-    g_{\mu \nu} = \epsilon_{AB}\epsilon_{A'B'}.
+    \label{spinor_position}
+    x^{AA'} = u \xi^A \xi^{A'} + v \mu^A \mu^{A'},
 \end{equation}
-Z tvaru Infield-van der Waerdenových symbolů je vidět korespondence mezi tenzorovými a spinorovými indexy,
-každému tenzorovému indexu odpovídají dva spinorové.
+kde jednotlivé spinory (resp. spin-vektory) mají složky
+\begin{align}
+    \label{eq:xi_mu_explicitne_v_bazi}
+    \xi^A = \begin{pmatrix}
+        \zeta \\ 1
+    \end{pmatrix}, ~~~~~~ \mu^A = \begin{pmatrix}
+        1 \\ 0
+    \end{pmatrix}
+\end{align}
+ve spin-bázi $(o^A, \iota^A)$ svázané se souřadnicemi \eqref{eq:expanding_null_tetrad} přes příslušnou
+nulovou tetrádu podle \eqref{eq:tetrad-spinor-basis-relation}.
 
-Pomocí spinorové báze můžeme zavést světelnou (nulovou) tetrádu vztahy
+Kovariantní zápis nulového vektoru $k^\mu$ pomocí spinorů je pak
+\begin{equation}
+    k^\mu = \xi^{A'} \sigma^\mu_{AA'} \xi^{A},
+\end{equation}
+kde $\sigma^\mu_{AA'}$ je soldering forma -- izomorfismus mezi prostory spinorů a tečným prostorem -- která
+odpovídá Infeld-van der Waerdenovým symbolům \eqref{eq:infeld-van-der-waerden}.
+
+Penroseovy lepící podmínky \eqref{eq:exp_penrose_lepici_podminky} v řeči 2-spinorů můžeme zapsat jako
+identifikaci bodů na nulovém kuželu $x^\mu = u \xi^A \xi^{A'}$ a $\hat{x}^\mu = u \hat{\xi}^A \hat{\xi}^{A'}$,
+kde z \eqref{eq:zeta_holomorfni_h} a \eqref{eq:u_podminka_spojitosti} platí
+\begin{equation}
+    \label{eq:xi_transformace}
+    \hat{\xi}^A = \frac{1}{\sqrt{h'}} \begin{pmatrix}
+        h \\ 1
+    \end{pmatrix}.
+\end{equation}
+
+Pro stručnost píšeme $h(\zeta) = h$, $h'(\zeta) = h'$.
+
+Metrika na $N$ lze zapsat jako
+\begin{equation}
+    \rmd s_N^2 = - 2 u^2 \left| \xi_A \rmd \xi^A \right|^2,
+\end{equation}
+
+kde ke snížení indexu u $\xi_A$ používáme Levi-Civitův spinor, který odpovídá
+antisymetrické bilineární nedegenerované 2-formě na prostoru spinorů (a jeho komplexním sdružení),
+\begin{equation}
+    \xi_A = \varepsilon_{AB} \xi^B.
+\end{equation}
+Objekt $\xi_A$ je pak lineárním funkcionálem na prostoru spin-vektorů, považujeme ho za kovariantní spin-vektor.
+
+Dále v souřadnicích \eqref{eq:expanding_null_tetrad} platí
+\begin{equation}
+    \xi_A \rmd \xi^A = \begin{pmatrix}
+        -1 & \zeta
+    \end{pmatrix}
+    \begin{pmatrix}
+        \rmd\zeta \\ 0
+    \end{pmatrix} = -\rmd\zeta.
+\end{equation}
+Také pro transformovaný spinor $\hat{\xi^A}$ platí
+\begin{equation}
+    \hat{\xi}_A \rmd \hat{\xi}^A = \frac{1}{\sqrt{h'}} \begin{pmatrix}
+        -1 & h
+    \end{pmatrix}  \left( \rmd (h')^{-1/2} \begin{pmatrix}
+        h \\ 1
+    \end{pmatrix} + \frac{1}{\sqrt{h'}} \begin{pmatrix}
+        h' \\ 0
+    \end{pmatrix} \rmd \zeta \right) = -\rmd \zeta,
+\end{equation}
+
+forma $\xi_A \rmd \xi^A$ je invariantní vůči transformaci odpovídající
+Penroseovým lepícím podmínkám. Invarianci této formy lze chápat jako
+manifestaci spojitosti metriky procházející impulsní nadplochou $N$.
+
+Dále ještě požadujeme, aby afinní parametr nulových generátorů $N$ nabýval stejné
+hodnoty, nezávisle na tom jestli jej bereme z $M^+$ nebo $M^-$. Metrika celého
+prostoročasu lze zapsat pomocí spinorů $\xi^A$ a $\mu^A$ pomocí relace \cite{doi:10.1142/5222}
+\begin{equation}
+    \varepsilon_{AB} \varepsilon_{A'B'} \sigma_{\mu}^{AA'} \sigma_{\nu}^{BB'} = g_{\mu \nu}
+\end{equation}
+jako
+\begin{equation}
+    \rmd s^2 = g_{\mu \nu} \rmd x^\mu \rmd x^\nu = \varepsilon_{AB} \varepsilon_{A'B'} \rmd x^{AA'} \rmd x^{BB'},
+\end{equation}
+
+kde po dosazení za $x^{AA'}$, resp. $x^{BB'}$ dostáváme
 \begin{equation}
     \begin{split}
-        l^a &= o^A o^{A'}, \\
-        n^a &= \iota^A \iota^{A'}, \\
-        m^a &= o^A \iota^{A'}, \\
-        \bar{m}^a &= \iota^A o^{A'}
+        \rmd s^2 &= 2 \rmd u ~ \rmd v - 2 u^2 ~ \left| \xi_A \rmd \xi^A \right|^2 + 4 \Re(\xi_A \rmd \mu^A)(u \rmd v - v \rmd u) \\
+        &+ 4 u ~v ~ (\Re(\rmd \mu_A \rmd \xi^A) - \left|\mu_A \rmd \xi^A \right|^2) - 2 v^2 \left|\mu_A \rmd \mu^A \right|^2.
     \end{split}
 \end{equation}
-kde $l^a, n^a, m^a$ a $\bar{m}^a$ jsou normalizované světelné vektory tvořící bázi.
 
+Jedná podmínka, kterou na spinory pokládáme je podmínka normalizace
+\begin{equation}
+    \mu_A \xi^A = 1.
+\end{equation}
+Spinory $\mu^A$ a $\xi^A$ tedy tvoří spin-bázi a pokud za ně explicitně dosadíme podle
+\eqref{eq:xi_mu_explicitne_v_bazi}, metrika nabyde tvaru \eqref{eq:null_cone_metric}
 
+Položíme-li $v=0$, restringujeme se na impulsní nadplochu $N$ a metrika se redukuje na tvar
+\begin{equation}
+    \rmd s^2 = 2 \rmd u ~\rmd v - 2 u^2 ~\left| \xi^A \rmd \xi^A \right|^2 + 4 \Re(\xi_A \rmd \mu^A) ~u~ \rmd v.
+\end{equation}
 
-\section{Expandující gravitační vlny}
+Z tohoto tvaru pro zajištění spojitosti metriky vyeliminovat člen s $\Re(\xi_A \rmd \mu^A)$. Oba spinory
+$\xi^A, \mu^A$ jsou díky holomorfnosti funkce $h(\zeta)$, udávající\emph{warp}, také holomorfní. Aby tedy reálná část
+funkce $\xi_A \rmd \mu^A$ byla nulová, musí být nulová celá funkce. Uvidíme, že triviální možnost konstantní funkce i přes svou holomorfnost
+nebude vyhovovat, Schwarzova derivace konstanty je 0 a nepředstavuje \emph{warp} generující impulsní vlnu.
 
+Splnění podmínek 
+\begin{equation}
+    \label{eq:podminky_na_kontinuitu}
+    \xi_A \rmd \xi^A = \text{invariant}, ~~~~ \mu_a \xi^A = 1,~~~~ \xi_A \rmd \mu^A = 0
+\end{equation}
+nám zajišťuje spojitost celé metriky při průchodu impulsní nadplochou.
 
+Už víme, že spinor $\xi^A$ se průchodem přes impulsní plochu transformuje jako $\xi^A \mapsto \frac{1}{\sqrt{h'}} \begin{pmatrix}
+    h \\ 1
+\end{pmatrix}$. Dále potřebujeme transformaci spinoru $\mu^A$ ve tvaru, ve kterém splňuje \eqref{eq:podminky_na_kontinuitu}.
+Takový tvar je odvozen v \cite{scholtz_notes}, případně v \cite{Aliev2001} (s normalizací na $-1$),
+\begin{equation}
+    \label{eq:mu_transformace}
+    \hat{\mu^A} = \sqrt{h'} \begin{pmatrix}
+        1 - \frac{h ~h''}{2 h'^2} \\ ~ \\ - \frac{h''}{2 h'^2}
+    \end{pmatrix}
+\end{equation}
 
+Dosazením těchto výsledků do \eqref{eq:spinor_vektor} za využití \eqref{spinor_position} obdržíme
+transformaci
+\begin{equation}
+    \begin{split}
+        V &= u \frac{\left|h\right|^2}{\left|h'\right|} + v \left| h' \right| \left| 1 - \frac{h ~ h''}{2 h'} \right|^2 \\
+        U &= \frac{u}{\left|h'\right|} + \frac{v}{4} \left| \frac{h''^2}{h'^3}\right| \\
+        Z &= \frac{u ~ h}{ \left| h' \right|} - v ~ \left| h' \right| \left(1 - \frac{h ~ h''}{2 h'^2} \right) \frac{\bar{h}''}{2 \bar{h}'^2}.
+    \end{split}
+\end{equation}
 
-\subsection{Refrakční rovnice}
+Ve spinorovém zápisu má metrika, splňující podmínky \eqref{eq:podminky_na_kontinuitu} tvar
+\begin{equation}
+    \rmd s^2 = 2 \rmd u ~ \rmd v - 2 u^2 \left| \xi_A \rmd \xi^A \right|^2 + 4 u~v~ \Re(\rmd \mu_A \rmd \xi^A) - 2 v^2 \left|\mu_A \rmd \mu^A\right|^2.
+\end{equation}
+
+Diferenciály spinorů lze z \eqref{eq:xi_transformace} a \eqref{eq:mu_transformace} vyjádřit pomocí Schwarzovy derivace jako
+\begin{equation}
+    \rmd \hat{\xi}^A = \hat{\mu}^A \rmd \zeta, ~~~~~~ \rmd \hat{\mu}^A = \{h; \zeta\} \hat{\xi}^A \rmd \zeta,
+\end{equation}
+na $M^+$ má metrika tvar
+\begin{equation}
+    \rmd s_+^2 = 2 \rmd u ~ \rmd v - 2 \left| u ~ \rmd \hat{\zeta} + v \{h; \zeta \} \rmd \zeta \right|^2
+\end{equation}
+a na $M^-$ tvar
+\begin{equation}
+    \rmd s_+^2 = 2 \rmd u ~ \rmd v - 2 u^2 ~ \rmd \zeta ~ \rmd \hat{\zeta}
+\end{equation}
+
+S použitím Heavisideovy theta funkce můžeme zapsat kompletní spojitou metriku
+jako
+\begin{equation}
+    \rmd s^2 = 2 \rmd u ~ \rmd v - 2 \left| u ~ \rmd \bar{\zeta} + v ~ \Theta(v) \{h;\zeta\} ~ \rmd \zeta \right|^2.
+\end{equation}
+
+Z tohoto tvaru je pak zřejmé, že funkce $h$ představující Möbiovu transformaci negenerují impulsní vlnu,
+Schwarzova derivace ji anihiluje a metrika přechází na plochý tvar.
+
+\subsection{Geometrie impulsní nadplochy}
+
+Impulsní nadplocha $N$ je nulová plocha rozdělující celý prostoročas na dva regiony, $M^-$ a $M^+$.
+Tyto regiony jsou slepeny zpět s \emph{warpem} -- jsou identifikovány odlišné body a na $N$ dochází k
+nespojitosti. Penrose zavádí tři typy geometrie na $N$.
+První typ geometrie (Penroseův typ I) zajišťuje existenci takové metriky na $N$, že metriky indukované z $M^+$ a $M^-$
+se s tou na $N$ shodují.
+
+Penroseův II. typ geometrie navíc předpokládá, že pro všechny nulové generátory $\gamma$ nadplochy $N$
+je afinní parametr stejný, nehledě na to, jestli $N$ uvažujeme jako hranici $M^+$ nebo $M^-$.
+V geometrii II. typu lze zadefinovat paralelní transport vektorů tečných ke $\gamma$.
+
+Penroseův III. typ geometrie pak umožňuje paralelní transport libovolného vektoru z libovolného tečného prostoru
+na $N$ podél generátorů $\gamma$. V tomto typu geometrie tedy lze paralelně přenášet celá vektorová pole.
+
+Nejprve se zaměříme na nejslabší geometrii I. typu. Mějme vektor $l^\mu$ tečný ke generátoru
+nulové nadplochy $N$,
+\begin{equation}
+    l^\mu = o^A o^{A'},
+\end{equation}
+kde předpokládáme hladkost $o^A$ na $N$.
+
+Ve volbě spinoru $o^A$ máme kalibrační volnost $o^A \mapsto \lambda o^A$, kde $\lambda$ je libovolná komplexní funkce.
+Objekt, který se transformuje jako
+\begin{equation}
+    \eta \mapsto \lambda^p \bar{\lambda}^q \eta
+\end{equation}
+nazveme objektem typu $(p, q)$. V geometrii I. typu můžeme hladce roznést $o^A$ do
+$M^+$ i $M^-$, obecně ale $o^A$ nebude hladký na $M^+ \cup M^-$. Na $M^+$ a $M^-$ máme
+metrické a symetrické (ve smyslu afinní konexe) kovariantní derivace $\stackrel{+}{\nabla}_\mu$ a $\stackrel{-}{\nabla}_\mu$. Symbolem
+$\stackrel{\pm}{\nabla}_\mu$ je myšlena kovariantní derivace na příslušeném prostoru $M^+$ nebo $M^-$.
+Derivace ve směru tečném na $N$ je pak
+\begin{equation}
+    k^\mu \stackrel{\pm}{\nabla}_\mu,
+\end{equation}
+kde $k^\mu = \xi^A o^{A'} + \xi^{A'} o^A$ je libovolný vektor tečný k $N$.
+
+Kovariantní derivací můžeme přes příslušnou soldering formu působit na spinory,\textcolor{red}{Zeptat se na GM II}
+všechny derivace ve směru tečném k $N$ jsou lineárními kombinacemi
+\begin{equation}
+    o^A \stackrel{\pm}{\nabla}_{AA'}, ~~~ o^{A'} \stackrel{\pm}{\nabla}_{AA'}.
+\end{equation}
+
+Afinní konexe (a tedy kovariantní derivace) na $M^+$ a $M^-$ lze sjednotit do jedné kovariantní derivace
+\begin{equation}
+    \nabla_\mu = \Theta(v) \stackrel{+}{\nabla}_\mu + (1-\Theta(v)) \stackrel{-}{\nabla}_\mu.
+\end{equation}
+
