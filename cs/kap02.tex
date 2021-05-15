@@ -81,9 +81,15 @@ jejich geometrické vlastnosti jsou shrnuty v \cite{Podolsky:1997ri}, kde je tak
     \centering
     \begin{tikzpicture}
          \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
-        {\adjincludegraphics[trim={{.2\width} {.2\height} {.25\width} {.3\height}}, width=.7\textwidth, clip]{../img/kap02/CutAndPaste_only_past_gen.pdf}};
-        \node[text width=5cm, rotate=45, anchor=north] at (7.6,8.3) {\tiny\textcolor{gray}{$\matu = \pm \infty$}};
-        \node[text width=5cm, rotate=45, anchor=north] at (5.6,6.75) {\tiny$\matu = 0$};
+        {\adjincludegraphics[trim={{.2\width} {.18\height} {.2\width} {.25\height}}, width=.8\textwidth, clip]{../img/kap02/CutAndPaste_only_past_gen.pdf}};
+        \node[text width=5cm, rotate=45, anchor=north] at (7.6,8.6) {\tiny\textcolor{gray}{$\matu = \pm \infty$}};
+        \node[text width=5cm, rotate=45, anchor=north] at (5.6,7.2) {\tiny$\matu = 0$};
+        \filldraw[white] (0.05,5.4) circle (8pt);
+        \node[text width=14pt] at (0.05,5.4) {\normalsize{$Z_0$}};
+        \filldraw[white] (4.52,0.5) circle (9pt);
+        \node[text width=14pt] at (4.52,0.5) {\normalsize{$Z_1$}};
+        \filldraw[white] (10.7,2.2) circle (9pt);
+        \node[text width=14pt] at (10.7,2.2) {\normalsize{$Z_4$}};
     \end{tikzpicture}
     \caption{Nulové geodetiky procházející impulzem nacházejícím se v $\matu=0$ (černá čára) v AdS prostoročase jsou podle "cut and paste"\ konstrukce posunuty
     v~souřadnici $\matv$ a dochází k refrakci. Ve spodní polovině jsou vykresleny nulové generátory anti--de Sitterova hyperboloidu.}
@@ -204,7 +210,7 @@ impulzní plocha má v těchto souřadnicích tvar
 $Z_2^2 + Z_3^2 + \epsilon Z_4^2 = \epsilon a^2,$
 a odpovídá tedy, jak již bylo zmíněno, 2-sféře pro $\epsilon=1$ a 2-hyperboloidu pro $\epsilon=-1$.
 
-\section{$\mathcal{C}^1$-matching a refrakční rovnice}
+\section{\texorpdfstring{$\mathcal{C}^1$}{C1}-matching a refrakční rovnice}
 Dále budeme explicitně modelovat geodetiky na prostoročasech s neexpandujícími impulzními vlnami v souřadnicích
 \eqref{eq:nonexp_distr_metric_omega}. V těchto souřadnicích není řešení rovnice geodetiky dobře definované v
 klasické teorii distribucí. Pro neexpandující impulzní vlny na Minkowského prostoročasu byla rovnice geodetiky
@@ -351,6 +357,12 @@ To má za následek, že se nulové generátory (A)--dS hyperboloidu po refrakci
         {\adjincludegraphics[trim={{.2\width} {.2\height} {.25\width} {.3\height}}, width=.7\textwidth, clip]{../img/kap02/CutAndPaste_NOSUP.pdf}};
         \node[text width=5cm, rotate=45, anchor=north] at (7.6,8.3) {\tiny\textcolor{gray}{$\matu = \pm \infty$}};
         \node[text width=5cm, rotate=45, anchor=north] at (5.6,6.75) {\tiny$\matu = 0$};
+        \filldraw[white] (0.2,5.2) circle (9pt);
+        \node[text width=14pt] at (0.2,5.2) {\normalsize{$Z_0$}};
+        \filldraw[white] (4.5,0.3) circle (9pt);
+        \node[text width=14pt] at (4.5,0.3) {\normalsize{$Z_1$}};
+        \filldraw[white] (9.9,1.6) circle (9pt);
+        \node[text width=14pt] at (9.9,1.6) {\normalsize{$Z_4$}};
     \end{tikzpicture}
     \caption{Nulové geodetiky procházející impulzem nacházejícím se v $\matu=0$ (černá čára) v AdS prostoročase s impulzní vlnou.
     Geodetiky jsou po refrakci opět nulovými generátory AdS na $\matu > 0$, neleží už ale v $\eta = 0$, a proto
@@ -371,7 +383,7 @@ představíme vizualizace pro tato vybraná řešení, pro různé parametry a p
 pomocí kódu uveřejněného v~repozitáři na výše zmíněné platformě, kde se kromě statických obrázků generují i interaktivní grafy, kde lze měnit úhel pohledu a přesně odečítat
 hodnoty souřadnic na geodetikách, včetně vlastního času od průchodu vlnoplochou.
 
-\subsection{Impulzní gravitační vlna generovaná nehmotnými částicemi s multipólovou strukturou s $\Lambda=0$}
+\subsection{Impulzní gravitační vlna generovaná nehmotnými částicemi s multipólovou strukturou s \texorpdfstring{$\Lambda=0$}{Lambda=0}}
 
 Řešení impulzní vlny generované nulovými částicemi s multipólovou strukturou v Minkowského prostoročase odvodili
 Griffiths a Podolský v \cite{Griffiths_1997}. Polní rovnice se pro tento případ redukují na
@@ -446,7 +458,7 @@ zatímco geodetiky vykreslené plnou čarou jsou v oblasti $\matu > 0$ a po refr
      \label{fig:Null_UV_AichelburgSexl_parameters}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \begin{tikzpicture}
@@ -700,7 +712,7 @@ chování (viz obrázek \ref{fig:DipoleAxialTimelike})
 \end{figure}
 \clearpage
 
-\subsection{Impulzní gravitační vlna generovaná nehmotnými částicemi s multipólovou strukturou s $\Lambda\neq 0$}
+\subsection{Impulzní gravitační vlna generovaná nehmotnými částicemi s multipólovou strukturou s \texorpdfstring{$\Lambda\neq 0$}{Lambda =/= 0}}
 
 V prostoročasech s nenulovou konstantou odvodili Griffiths a Podolský \cite{Podolsky1997} tvar řešení obdobný \eqref{eq:multipole_minkowski},
 tedy případ impulzních vln generovaných nulovými částicemi s multipólovou strukturou. Vyšli z redukce Einsteinových rovnic pro distribuční
