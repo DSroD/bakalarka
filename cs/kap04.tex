@@ -81,6 +81,7 @@ souřadný systém $(v, u, \zeta, \bar{\zeta})$ jako
 \end{equation}
 nulový kužel s vrcholem v kartézském počátku je pak dán jako plocha $v=0$. Metrika má v těchto souřadnicích tvar
 \begin{equation}
+    \label{eq:metric_stereographic_null}
     \rmd s^2 = 2 \rmd u ~ \rmd v - 2 u^2 \rmd \zeta ~ \rmd \bar{\zeta}
 \end{equation}
 a inverzní transformace ke kartézským souřadnicím jsou
@@ -149,7 +150,7 @@ vektorovou bázi odpovídají hermitovským maticím
     \end{split}
 \end{equation}
 
-spinorový ekvivalent vektoru se složkami $x^\mu = (t, x, y, z)$ je
+spinorový ekvivalent "polohového"\ vektoru se složkami $x^\mu = (t, x, y, z)$ je
 \begin{equation}
     \label{eq:spinor_vektor}
     x^{AA'} = \frac{1}{\sqrt{2}} \begin{pmatrix}
@@ -157,19 +158,19 @@ spinorový ekvivalent vektoru se složkami $x^\mu = (t, x, y, z)$ je
         x + iy & t - z
     \end{pmatrix} = \begin{pmatrix}
         \matv & \eta \\
-        \bar{\eta} & U
+        \bar{\eta} & \matu
     \end{pmatrix} = \begin{pmatrix}
         v + u \zeta \bar{\zeta} & u \zeta \\
         u \bar{\zeta} & u
     \end{pmatrix}.
 \end{equation}
 
-Spinor \eqref{eq:spinor_vektor} lze zapsat ve formě
+Spinor \eqref{eq:spinor_vektor} lze zapsat pomocí spinorovýh polí $\xi^A$ a $\mu^A$ jako
 \begin{equation}
-    \label{spinor_position}
+    \label{eq:spinor_position}
     x^{AA'} = u \xi^A \xi^{A'} + v \mu^A \mu^{A'},
 \end{equation}
-kde jednotlivé spinory (resp. spin--vektory) mají složky
+kde jednotlivé spinory mají složky
 \begin{align}
     \label{eq:xi_mu_explicitne_v_bazi}
     \xi^A = \begin{pmatrix}
@@ -255,19 +256,19 @@ kde po dosazení za $x^{AA'}$, resp. $x^{BB'}$ dostáváme
     \end{split}
 \end{equation}
 
-Jedná podmínka, kterou na spinory pokládáme je podmínka normalizace
+Jedná podmínka, kterou zatím na spinory pokládáme, je podmínka normalizace
 \begin{equation}
     \mu_A \xi^A = 1.
 \end{equation}
 Spinory $\mu^A$ a $\xi^A$ tedy tvoří spin--bázi a pokud za ně explicitně dosadíme podle
-\eqref{eq:xi_mu_explicitne_v_bazi}, metrika nabyde tvaru \eqref{eq:null_cone_metric}
+\eqref{eq:xi_mu_explicitne_v_bazi}, metrika nabyde tvaru \eqref{eq:metric_stereographic_null}.
 
 Položíme-li $v=0$, restringujeme se na impulzní nadplochu $N$ a metrika se redukuje na tvar
 \begin{equation}
     \rmd s^2 = 2 \rmd u ~\rmd v - 2 u^2 ~\left| \xi^A \rmd \xi^A \right|^2 + 4 \Re(\xi_A \rmd \mu^A) ~u~ \rmd v.
 \end{equation}
 
-Z tohoto tvaru pro zajištění spojitosti metriky vyeliminovat člen s $\Re(\xi_A \rmd \mu^A)$. Oba spinory
+Z tohoto tvaru je třeba pro zajištění spojitosti metriky vyeliminovat člen s $\Re(\xi_A \rmd \mu^A)$. Oba spinory
 $\xi^A, \mu^A$ jsou díky holomorfnosti funkce $h(\zeta)$, udávající\emph{warp}, také holomorfní. Aby tedy reálná část
 funkce $\xi_A \rmd \mu^A$ byla nulová, musí být nulová celá funkce. Uvidíme, že triviální možnost konstantní funkce i přes svou holomorfnost
 nebude vyhovovat, Schwarzova derivace konstanty je 0 a nepředstavuje \emph{warp} generující impulzní vlnu.
@@ -275,7 +276,7 @@ nebude vyhovovat, Schwarzova derivace konstanty je 0 a nepředstavuje \emph{warp
 Splnění podmínek 
 \begin{equation}
     \label{eq:podminky_na_kontinuitu}
-    \xi_A \rmd \xi^A = \text{invariant}, ~~~~ \mu_a \xi^A = 1,~~~~ \xi_A \rmd \mu^A = 0
+    \xi_A \rmd \xi^A = \text{invariant}, ~~~~ \mu_A \xi^A = 1,~~~~ \xi_A \rmd \mu^A = 0
 \end{equation}
 nám zajišťuje spojitost celé metriky při průchodu impulzní nadplochou.
 
@@ -290,13 +291,14 @@ Takový tvar je odvozen v \cite{scholtz_notes}, případně v \cite{Aliev2001} (
     \end{pmatrix}
 \end{equation}
 
-Dosazením těchto výsledků do \eqref{eq:spinor_vektor} za využití \eqref{spinor_position} obdržíme
+Dosazením těchto výsledků do \eqref{eq:spinor_vektor} za využití \eqref{eq:spinor_position} obdržíme na $M^+$
 transformaci
 \begin{equation}
+    \label{eq:refraction_spinor}
     \begin{split}
-        V &= u \frac{\left|h\right|^2}{\left|h'\right|} + v \left| h' \right| \left| 1 - \frac{h ~ h''}{2 h'} \right|^2 \\
-        U &= \frac{u}{\left|h'\right|} + \frac{v}{4} \left| \frac{h''^2}{h'^3}\right| \\
-        Z &= \frac{u ~ h}{ \left| h' \right|} - v ~ \left| h' \right| \left(1 - \frac{h ~ h''}{2 h'^2} \right) \frac{\bar{h}''}{2 \bar{h}'^2}.
+        \matv &= u \frac{\left|h\right|^2}{\left|h'\right|} + v \left| h' \right| \left| 1 - \frac{h ~ h''}{2 h'} \right|^2 \\
+        \matu &= \frac{u}{\left|h'\right|} + \frac{v}{4} \left| \frac{h''^2}{h'^3}\right| \\
+        \eta &= \frac{u ~ h}{ \left| h' \right|} - v ~ \left| h' \right| \left(1 - \frac{h ~ h''}{2 h'^2} \right) \frac{\bar{h}''}{2 \bar{h}'^2}.
     \end{split}
 \end{equation}
 
@@ -311,7 +313,7 @@ Diferenciály spinorů lze z \eqref{eq:xi_transformace} a \eqref{eq:mu_transform
 \end{equation}
 na $M^+$ má metrika tvar
 \begin{equation}
-    \rmd s_+^2 = 2 \rmd u ~ \rmd v - 2 \left| u ~ \rmd \hat{\zeta} + v \{h; \zeta \} \rmd \zeta \right|^2
+    \rmd s_+^2 = 2 \rmd u ~ \rmd v - 2 \left| u ~ \rmd \bar{\zeta} + v \{h; \zeta \} \rmd \zeta \right|^2
 \end{equation}
 a na $M^-$ tvar
 \begin{equation}
@@ -324,9 +326,37 @@ jako
     \rmd s^2 = 2 \rmd u ~ \rmd v - 2 \left| u ~ \rmd \bar{\zeta} + v ~ \Theta(v) \{h;\zeta\} ~ \rmd \zeta \right|^2.
 \end{equation}
 
-Z tohoto tvaru je pak zřejmé, že funkce $h$ představující Möbiovu transformaci negenerují impulzní vlnu,
-Schwarzova derivace ji anihiluje a metrika přechází na plochý tvar.
+Z tohoto tvaru je pak zřejmé, že funkce $h$ ve tvaru Möbiovy transformace negenerují impulzní vlnu,
+Schwarzova derivace je anihiluje a metrika v takovém případě přechází na plochý tvar.
 
+\subsection{Refrakční rovnice pro geodetický pohyb}
+Jelikož jsou souřadnice $u, v, \zeta$ globálně definované a spojité, můžeme je využít pro odvození refrakčních rovnic
+geodetického pohybu při průchodu impulzní nadplochou $N$ odpovídající $v = 0$.
+Porovnáním \eqref{eq:refraction_spinor} s  \eqref{eq:expanding_null_tetrad} za podmínky $v=0$ dostáváme sadu refrakčních rovnic pro
+polohy v souřadnicích pozadí $\matu, \matv, \eta$
+\begin{align}
+    \matv^+_\rmi &= \left| \frac{h_\rmi}{\zeta_\rmi}\right|^2 \frac{\matv^-_\rmi}{\abs{h_\rmi'}}, & \matu^+_\rmi &= \frac{\matu^-_\rmi}{\abs{h_\rmi'}}, & \eta^+_\rmi &= \frac{h_\rmi}{\zeta_\rmi} \frac{\eta^-_\rmi}{\abs{h'_\rmi}}.
+\end{align}
+Používáme zde obdobné značení jako v kapitolách \ref{chap:kap02} a \ref{chap:kap03},
+veličina s indexem $\rmi$ je vyčíslená na impulzní nadploše $N$, $h_\rmi = h(\zeta_\rmi)$ a horní index $\pm$ znamená příslušnost k souřadnicím na $M^\pm$.
+
+Pro sadu refrakčních rovnic pro čtyřrychlost je třeba provést derivaci spojitých souřadnic podle afinního parametru a provést jednostranné limity $v \to 0$.
+Jejich porovnáním obdržíme sadu rovnic lineárních ve složkách rychlostí,
+\begin{equation}
+    \begin{split}
+        \dot{\matv}_\rmi^+ &= a_\matv \dot{\matv}_\rmi^- + b_\matv \dot{\matu}_\rmi^- + c_\matv \dot{\eta}_\rmi^- + \bar{c}_\matv \dot{\bar{\eta}}_\rmi^-, \\
+        \dot{\matu}_\rmi^+ &= a_\matu \dot{\matv}_\rmi^- + b_\matu \dot{\matu}_\rmi^- + c_\matu \dot{\eta}_\rmi^- + \bar{c}_\matu \dot{\bar{\eta}}_\rmi^-, \\
+        \dot{\eta}_\rmi^+ &= a_\eta \dot{\matv}_\rmi^- + b_\eta \dot{\matu}_\rmi^- + c_\eta \dot{\eta}_\rmi^- + \bar{c}_\eta \dot{\bar{\eta}}_\rmi^-,
+    \end{split}
+\end{equation}
+koeficienty $a_i, b_i, c_i, d_i$ pro stručnost neuvádíme. Tento výpočet explicitně provedli Podolský, Sämann, Steinbauer a Švarc v
+\cite{Podolsky:2016mqg} pro obecnější třídu prostoročasů, kde také ukazují, že $C^1$-matching je ve smyslu Filippovových řešení (viz. kapitola \ref{chap:kap02})
+matematicky korektní technika konstrukce geodetik i v prostoročasech s expandujícími vlnami.
+Zajímavou možností pro budoucí studie je odvození refrakčních rovnic pomocí spinorového formalismu.
+
+
+\textcolor{red}{Zde asi konec, nepříjde mi, že by další sekce přinesla větší náhled, jen může zformalizovat proč klademe
+příslušné podmínky na spinory při odvození}
 \subsection{Geometrie impulzní nadplochy}
 
 Impulzní nadplocha $N$ je nulová plocha rozdělující celý prostoročas na dva regiony, $M^-$ a $M^+$.
@@ -375,3 +405,4 @@ Afinní konexe (a tedy kovariantní derivace) na $M^+$ a $M^-$ lze sjednotit do 
     \nabla_\mu = \Theta(v) \stackrel{+}{\nabla}_\mu + (1-\Theta(v)) \stackrel{-}{\nabla}_\mu.
 \end{equation}
 
+Jelikož je $\Theta$ konstantní na $N$, platí $l^a \nabla_a \Theta = 0$ a můžeme 
