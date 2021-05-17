@@ -22,7 +22,8 @@ Jedná se o 10 nelineárních parciálních diferenciálních rovnic druhého ř
 je takzvaná kosmologická konstanta. Tenzor energie a hybnosti $T_{\mu \nu}$ na pravé straně pak dává spojení geometrických objektů s fyzikálním modelem, představuje rozložení hmoty,
 energie a jejich toky a hybnosti. Tyto rovnice tedy říkají, jak hmota ovlivňuje geometrii prostoročasu a jak geometrie prostoročasu udává dynamiku fyzikálního obsahu prostoročasu.
 Obecně je řešení této soustavy velmi obtížný problém, získání přesných řešení vyžaduje řadu zjednodušujících předpokladů, jako například
-předpoklady symetrie, viz \cite{griffiths_podolsky_2009}, \cite{stephani2003}.
+předpoklady symetrie, viz \cite{griffiths_podolsky_2009}, \cite{stephani2003}. Běžně se k řešení těchto rovnic využívá poruchových metod a metod
+numerické relativity. Přesná řešení však hrají důležitou roli na cestě k detailnímu porozumění obecné relativitě.
 
 
 Pomocí metrického tenzoru prostoročasové varietě zavádíme při metrickou a symetrickou (beztorzní) lineární konexi, Levi-Civitovu konexi. Pro její složky v lokálních souřadnicích platí
@@ -38,10 +39,25 @@ odpovídá $\tau$ \emph{vlastnímu času}. Geodetiky splňují rovnici geodetick
 \end{equation}
 
 
-\section*{Impulsní gravitační vlny}
+\section*{Impulzní gravitační vlny}
 V této práci se budeme zabývat impulzními gravitačními vlnami. Jedná se o přesná řešení Einsteinových rovnic s křivostí úměrnou $\delta$-funkci lokalizované
 na nulové nadploše (ve smyslu teorie distribucí) na které se fyzikálně nachází infinitezimálně krátký pulz silného gravitačního záření.
+Mezi nejzkoumanější prostoročasy s impulzními vlnami se řadí jednoduché modely z Robinson-Trautmanovy třídy expandujících vln a z Kundtovy třídy
+neexpandujících vln, respektive jejich impulzní limity, kde se profil vlny limitně blíží k $\delta$-fukci.
+V případě expandujících i neexpandujících vln se jedná o vlny šířící se na prostorech konstantní křivosti až na nadplochu představující impulz.
+Právě na ploše impulzu dochází k fyzikálně zajímavým efektům - v souřadnicích pozadí dochází ke skoku v polohách a čtyřrychlostech
+procházejících tetovacích částic.
 
+Hlavním cílem této práce je vizualizovat a blíže popsat tuto interakci testovacích částic s impulzní gravitační vlnou. Zaměříme se
+zejména na neexpandující impulzní vlny Kundtovy třídy, kterým se věnuje kapitola \ref{chap:kap02}, dále v kapitole \ref{chap:kap03} na zobecnění na impulzní vlny generované
+gyratonovým zdrojem, kde má prostoročas za impulzní vlnou dodatečné mimodiagonální členy.
+
+K vizualizacím geodetického pohybu využijeme
+formalismus refrakčních rovnic, které udávají podmínky napojení geodetik před průchodem impulsní plochou a po průchodu.
+Samotná vizualizace bude provedená za pomoci vlastního balíčku \emph{GRImpulsiveWaves} pro jazyk Python, který numericky řeší rovnici geodetiky na
+částech prostoročasů před a za vlnou a následně vytváří statické i interaktivní zobrazení geodetického pohybu.
+V příloze \ref{chap:kap04} nakonec přiblížíme možnost konstrukce impulsních expandujících vln pomocí spinorového popisu a představíme některé základní
+dosažené výsledky studia expandujících vln spinorovým i klasickým popisem.
 
 
 \clearpage
