@@ -1,7 +1,7 @@
 \chapter{Neexpandující impulzní gravitační vlny}
 \label{chap:kap02}
-V této kapitole se budeme věnovat neexpandujícím impulzním gravitačním vlnám propagujícím se na pozadí Minkowského a (anti--)de Sitterova
-prostoročasu. Popíšeme matematickou konstrukci prostoročasů, která vede k takzvaným refrakčním rovnícím pro geodetiky a které dále využijeme k vizualizaci účinku
+V této kapitole se budeme věnovat neexpandujícím impulzním gravitačním vlnám propagujícím se na pozadí Minkowského a (anti-)de Sitterova
+prostoročasu. Popíšeme matematickou konstrukci prostoročasů, která přímočaře vede k takzvaným refrakčním rovnícím pro geodetiky a které dále využijeme k vizualizaci účinku
 impulzních řešení a k interpretaci jejich působení na různé konfigurace testovacích částic.
 
 
@@ -9,7 +9,7 @@ impulzních řešení a k interpretaci jejich působení na různé konfigurace 
 Nejprve intuitivně popíšeme konstrukci prostoročasů s neexpandujícími impulzními gravitačními vlnami
 pomocí Penroseovy geometrické metody \cite{Penrose:1972xrn} označované jako "cut and paste". Následně zavedeme souřadnice, ve
 kterých je metrika spojitá, a dále se budeme věnovat přirozenému distribučnímu popisu prostoročasů s impulzními gravitačními
-vlnami. Tento přístup byl detailně popsán a prozkoumán v \cite{Podolsky:2014ysa}.
+vlnami. Tento přístup byl detailně popsán a prozkoumán v \cite{Podolsky:2014ysa}, kde je rovněž možné nalézt detailní přehled původních výsledků.
 
 \subsection{"Cut and paste"\ metoda}
 \label{sec:cut_and_paste_konstrukce1}
@@ -53,14 +53,14 @@ světelné nadplochy $\mathcal{N}$, kde bude výsledná implulzní vlna lokalizo
 \draw[color=black] (3.6976110719064135,1.5885414801305562) node {$P^-$};
 \end{scriptsize}
 \end{tikzpicture}
-\caption{Princip geometrické konstrukce neexpandující impulzní gravitační vlny pomocí metody "cut and paste", 
+\caption{Princip geometrické konstrukce neexpandující impulzní gravitační vlny pomocí metody "cut and paste": 
 podél nadplochy $\mathcal{N}$ dojde k rozdělení prostoročasu na dvě části $\mathcal{M}^+$ a $\mathcal{M}^-$ 
-a opětovnému ztotožnění bodů na hranici obou částí se specifickým posunem.}
+a k opětovnému ztotožnění bodů na hranici obou částí se specifickým posunem.}
 \label{obr01:geomkonstrukt}
 \end{figure}
 
 Pro světelnou nadplochu $\mathcal{N}$ danou podmínkou $\mathcal{U}=0$ v adaptovaných souřadnicích pak tato konstrukce odpovídá Penroseovým 
-napojovacím (lepícím) podmínkám
+napojovacím (lepícím) podmínkám ve tvaru
 
 \begin{equation}
     \label{eq:lepici_podminky}
@@ -71,7 +71,7 @@ kde $H(\eta, \bar{\eta})$ je holomorfní funkcí souřadnic příčného prostor
 jsou v tenzoru křivosti reprezentovány členy proporciálními Diracově delta distribuci $\delta(\mathcal{U})$.
 V Minkowského pozadí je nadplocha $\mathcal{U}=0$ rovina a řešení spadá do rodiny takzvancýh impulzních \emph{pp}-vln, tedy
 rovnoběžně se propagujících rovinných vln (viz například \cite{griffiths_podolsky_2009}). Obecně na pozadích konstantní křivosti platí stejné napojovací podmínky
-\eqref{eq:lepici_podminky},viz \cite{Podolsky:2014ysa}, a nadplocha $\mathcal{U}=0$ +dstavuje plochu konstantní Gaussovské křivosti 
+\eqref{eq:lepici_podminky},viz \cite{Podolsky:2014ysa}, přičemž nadplocha $\mathcal{U}=0$ představuje plochu konstantní Gaussovské křivosti 
 $K=\frac{1}{3}\Lambda$, která je popsána metrikou $d\sigma^2=2(1+\frac{1}{6}\Lambda \eta \bar{\eta})^{-2} 
 d\eta~d\bar{\eta}$. V případě $\Lambda \neq 0$ se tedy jedná buďto o sféru
 ($\Lambda > 0$), nebo o hyperbolickou plochu ($\Lambda < 0$). Popis těchto nadploch konstatní křivostsi v (A)dS prostoročasech a
@@ -92,15 +92,15 @@ jejich geometrické vlastnosti jsou shrnuty v \cite{Podolsky:1997ri}, kde je tak
         \filldraw[white] (10.7,2.2) circle (9pt);
         \node[text width=14pt] at (10.7,2.2) {\normalsize{$Z_4$}};
     \end{tikzpicture}
-    \caption{Nulové geodetiky procházející impulzem nacházejícím se v $\matu=0$ (černá čára) v AdS prostoročase jsou podle "cut and paste"\ konstrukce posunuty
-    v~souřadnici $\matv$ a dochází k refrakci. Ve spodní polovině jsou vykresleny nulové generátory anti--de Sitterova hyperboloidu.}
+    \caption{Nulové geodetiky interagující s impulzem nacházejícím se v $\matu=0$ (černá čára) v AdS prostoročase budou podle "cut and paste"\ konstrukce posunuty
+    v~souřadnici $\matv$ a dochází k jejich refrakci. Ve spodní polovině jsou vykresleny nulové generátory anti-de Sitterova hyperboloidu.}
 \end{figure}
 
 \subsection{Spojitý tvar metriky}
 Metoda "cut and paste"\ nám dává identifikaci bodů prostoročasu na obou stranách impulzní vlny, a tedy část\footnote{Jedná se pouze o podmínky napojení poloh, napojení rychlostí
 je potřeba diskutovat detailněji, viz \cite{Podolsky:2014ysa}.} napojovacích podmínek
 pro geodetiky, nic ale neříká o podobě metriky kompletního prostoročasu s impulzní vlnou. Potřebujeme tedy najít vhodný
-souřadnicový systém, ve kterém bude metrika spojitá přes rozhraní $\mathcal{U}=0$. Toho dosáhneme postupem použitým např. v
+souřadnicový systém, ve kterém bude metrika spojitá přes rozhraní $\mathcal{U}=0$. Toho dosáhneme postupem shrnutým např. v
 \cite{Podolsky:2014ysa}, kde z metriky prostoročasu pozadí \eqref{eq:konfmetric}, tedy
 \begin{equation}
     \label{eq:null_background_metric}
@@ -125,13 +125,13 @@ uvažujeme pouze pro $U>0$, zatímco na $U<0$ provedeme ztotožnení souřadnic
 \begin{equation}
     \label{eq:transformation_just_rename}
     \begin{split}
-        &\mathcal{U} = U \\
-        &\mathcal{V} = V \\
-        &\eta = Z
+        &\mathcal{U} = U, \\
+        &\mathcal{V} = V, \\
+        &\eta = Z,
     \end{split}
 \end{equation}
 a uvažujeme metriku vzniklou právě touto transformací.
-Definováním takzvané kink funkce jako
+Definováním takzvané "kink"\ funkce jako
 \begin{equation}
     \label{eq:kink_function}
     U_+ \equiv U_+(U) = \begin{cases}
@@ -139,7 +139,7 @@ Definováním takzvané kink funkce jako
         U & \text{pro } U \geq 0
     \end{cases}
 \end{equation}
-můžeme výslednou metriku zapsat jako
+můžeme výslednou metriku celého prostoročasu zapsat jako
 \begin{equation}
     \label{eq:nonexp_continuous_metric}
     \mathrm{d} s^{2}=\frac{2\left|\mathrm{d} Z+U_+\left(H_{, Z \bar{Z}} 
@@ -147,18 +147,18 @@ můžeme výslednou metriku zapsat jako
     \mathrm{d} V}{\left[1+\frac{1}{6} \Lambda(Z \bar{Z}-U V-U_+ G)\right]^{2}}.
 \end{equation}
 Transformace \eqref{eq:nonexp_cont_transform} a \eqref{eq:transformation_just_rename} spojující separátně pro $\mathcal{U}>0$ a $\mathcal{U}<0$ metriku \eqref{eq:null_background_metric}
-s metrikou \eqref{eq:nonexp_continuous_metric} lze pomocí Heavisideovy skokové funkce $\Theta(U)$ přepsat do tvaru 
+s~metrikou \eqref{eq:nonexp_continuous_metric} lze pomocí Heavisideovy skokové funkce $\Theta(U)$ přepsat do tvaru 
 \begin{equation}
     \label{eq:nonexp_cont_full_transform}
     \mathcal{U}=U,~~~~ \mathcal{V}=V+\Theta(U) H + U_+ H_{,Z}H_{,\bar{Z}},~~~~ \eta=Z+ U_+ H_{,\bar{Z}}.
 \end{equation}
 Stále je ale nutné provádět transformaci separátně pro $\mathcal{U}>0$ a $\mathcal{U}<0$, Heavisideova funkce
 má při transformaci metriky \eqref{eq:null_background_metric} pro všechna $\matu$ za následek vznik členů proporcionálních delta funkci -- formálně tak generuje impulzní tvar metriky. Je také nutné podotknout,
-že toto vyjádření je pak ve smyslu distribucí.
-Tato transformace spojuje distribuční vyjádření metriky \eqref{eq:nonexp_distr_metric_omega}, které bude zavedeno dále,
+že toto vyjádření je pak již ve smyslu distribucí.
+Správnější pohled je, že tato transformace spojuje distribuční vyjádření metriky \eqref{eq:nonexp_distr_metric_omega}, které bude zavedeno dále,
 se spojitým tvarem metriky \eqref{eq:nonexp_continuous_metric}, ve kterém se distribuční členy metriky a členy vzniké transformací kompenzují.
 Transformace \eqref{eq:nonexp_cont_full_transform} zároveň obsahuje Penroseovy spojovací podmínky \eqref{eq:lepici_podminky} v $U=0$, kde
-vzniká nespojitost v souřadnici $\mathcal{V}$. Tato metoda konstrukce, ve smyslu distribucí, tedy představuje explicitní realizaci "cut and paste"\ přístupu.
+vzniká nespojitost v souřadnici $\mathcal{V}$. Tato metoda konstrukce, ve smyslu distribucí, tedy představuje zcela explicitní realizaci "cut and paste"\ přístupu.
 
 
 \subsection{Distribuční tvar metriky}
@@ -169,7 +169,6 @@ Výsledná metrika nabývá tvaru
 \begin{equation}
     \rmd s^2 = 2~ \rmd \xi \rmd \bar{\xi} - 2 \rmd u \rmd v + H(\xi, \bar{\xi}) \delta\left( u\right) \rmd u^2,
 \end{equation}
-
 přičemž $\delta(\matu)$ nahrazuje obecný sandwichový profil vlny.
 Distribuční tvar metriky také dostaneme dosazením invezní transformace k \eqref{eq:nonexp_cont_full_transform} do spojité metriky 
 \eqref{eq:nonexp_continuous_metric}. Vzhledem k nespojitosti v transformaci toto dosazení nemůže být provedeno
@@ -207,30 +206,30 @@ Funkce $H$ a $\mathcal{H}$ v metrikách \eqref{eq:nonexp_distr_metric_omega} a \
     \mathcal{H} = \frac{2H}{1+\frac{1}{6}\Lambda \eta \bar{\eta}}.
 \end{equation}
 
-impulzní plocha má v těchto souřadnicích tvar
+Impulzní plocha má v těchto souřadnicích tvar
 $Z_2^2 + Z_3^2 + \epsilon Z_4^2 = \epsilon a^2,$
 a odpovídá tedy, jak již bylo zmíněno, 2-sféře pro $\epsilon=1$ a 2-hyperboloidu pro $\epsilon=-1$.
 
 \section{\texorpdfstring{$\mathcal{C}^1$}{C1}-matching a refrakční rovnice}
-Dále budeme explicitně modelovat geodetiky na prostoročasech s neexpandujícími impulzními vlnami v souřadnicích
-\eqref{eq:nonexp_distr_metric_omega}. V těchto souřadnicích není řešení rovnice geodetiky dobře definované v
+Dále budeme explicitně modelovat chování geodeticého pohybu na prostoročasech s neexpandujícími impulzními vlnami v souřadnicích
+\eqref{eq:nonexp_distr_metric_omega} jakožto přirozených souřadnicích pozadí. V těchto souřadnicích však není řešení rovnice geodetiky dobře definované v
 klasické teorii distribucí. Pro neexpandující impulzní vlny na Minkowského prostoročasu byla rovnice geodetiky
 a její řešení zkoumána v rámci teorie zobecněných funkcí ve smyslu Colombeaových algeber v článích \cite{Steinbauer_1998} a \cite{Kunzinger_1999},
-přičemž byla ukázána existence a jednoznačnost řešení v prostoru těchto funkcí a bylo ověřeno, že geodetiky na $\mathcal{M}^-$ a $\mathcal{M}^+$ odpovídají
-geodetikám na Minkowského pozadí se skokem v souřadnici $\matv$ při přechodu přes nadplochu $\matu=0$. V prostoročasech s
+přičemž byla ukázána existence a jednoznačnost řešení v~prostoru těchto funkcí a bylo ověřeno, že geodetiky na $\mathcal{M}^-$ a $\mathcal{M}^+$ odpovídají
+geodetikám na Minkowského pozadí se skokem v~souřadnici $\matv$ při přechodu přes nadplochu $\matu=0$. V prostoročasech s
 nenulovou kosmologickou konstantou lze využít přístup vnoření do pětidimenzionálního Minkowského prostoru, kde se v rovnici
 geodetiky nachází pouze výrazy jednoznačně definované v klasické teorii distribucí. Řešení rovnice geodetiky
-pro (anti--)de Sitterův prostoročas s impulzními neexpandujícími vlnami byly tímto způsobem odvozeny v \cite{Podolsk__2001}.
-V článku \cite{Podolsky:2014ysa} byla odvoena rovnice geodetiky ve spojitých souřadnicích \eqref{eq:nonexp_continuous_metric}.
+pro (anti-)de Sitterův prostoročas s impulzními neexpandujícími vlnami byly tímto způsobem odvozeny v \cite{Podolsk__2001}.
+V článku \cite{Podolsky:2014ysa} byla odvozena rovnice geodetiky ve spojitých souřadnicích \eqref{eq:nonexp_continuous_metric}.
 Odvozený tvar je v tomto případě analyzován ve smyslu Filippovových řešení (diferenciálních inkluzí) \cite{filippov1988differential}, což je zobecnění teorie obyčejných diferenciálních rovnic.
 V článku je ukázána existence a jednoznačnost takových řešení, dále autoři využívají metodou $\mathcal{C}^1$-matchingu,
 kde při splnění lokální lipschitzovskosti metriky lze řešení ve smyslu Filippovova přiřadit řešením rovnice geodetiky na jednotlivých částech prostoročasu
-("před "a "za" impulzem), bez nutné znalosti detailů teorie za Filippovovými řešeními. Prakticky pak pouze přecházíme od
+("před"\ a "za"\ impulzem), bez nutné znalosti detailů teorie stojící za Filippovovými řešeními. Prakticky pak pouze přecházíme od
 spojitého $C^1$ řešení k souřadnicím explicitně vyjadřujícím impulzní povahu vlny.
 
 Výsledkem $\mathcal{C}^1$-matchingu je sada refrakčních rovnic, které udávají jak skok v~souřadnici $\matv$,
 tak i změnu v rychlostech před a za impulzem. Geodetiku procházející impulzní plochou ve spojitých souřadnicích tedy
-ztotožníme transformací \eqref{eq:nonexp_cont_full_transform} (a její derivací), v oblastech $U > 0$ a $U < 0$ separátně, s geodetikami v souřadnicích prostoročasu na pozadí.
+ztotožníme transformací \eqref{eq:nonexp_cont_full_transform} (a její derivací), v oblastech $U > 0$ a $U < 0$ separátně, s~geodetikami v~souřadnicích prostoročasu na~pozadí.
 Pro polohy dostáváme limitou $U \to 0^+$ a $U \to 0^-$ rovnice
 \begin{equation}
     \label{eq:refraction_nonexpanding_positions}
@@ -240,7 +239,7 @@ Pro polohy dostáváme limitou $U \to 0^+$ a $U \to 0^-$ rovnice
         \eta^{+}_{\mathrm{i}} &= \eta^{-}_{\mathrm{i}},
     \end{split}
 \end{equation}
-což přesně odpovídá Penroseovým spojovacím podmínkám \eqref{eq:lepici_podminky} - geodetika je spojitá v $\matu$ a $\eta$ a dochází ke skoku ve $\matv$.
+což přesně odpovídá Penroseovým spojovacím podmínkám \eqref{eq:lepici_podminky} -- geodetika je spojitá v $\matu$ a $\eta$ a dochází ke skoku ve $\matv$.
 Pro rychlosti obdržíme stejnou limitou rovnice
 \begin{equation}
     \label{eq:refraction_nonexpanding_velocities}
@@ -254,9 +253,9 @@ Pro rychlosti obdržíme stejnou limitou rovnice
     \end{split}
 \end{equation}
 Index $\rmi$ zde znamená hodnotu na impulzní nadploše $\matu = 0$, složky označené znakem + jsou za impulzem ($\matu > 0$),
-složky označené znakem - jsou před impulzem ($\matu <0$).
+složky označené znakem $-$ jsou v oblasti před impulzem ($\matu <0$).
 
-Všimněme si, že při přechodu přes impulzní plochu platí $\eta_{\mathrm{i}} = Z_{\mathrm{i}}$, a tedy $ H_{\mathrm{i},Z} = \frac{\partial}{\partial \eta} H(\eta, \bar{\eta})\vert_{\matu = 0}$.
+Všimněme si, že při přechodu přes impulzní plochu platí $\eta_{\mathrm{i}} = Z_{\mathrm{i}}$, a tedy platí i rovnost $ H_{\mathrm{i},Z} = \frac{\partial}{\partial \eta} H(\eta, \bar{\eta})\vert_{\matu = 0}$.
 
 Bližším pohledem na refrakční rovnice také vidíme, že zachovávají kauzální charakter. Složka rychlosti $\dot \matu$ se
 nemění, ve složkách $\dot \matv$ a $\dot \eta$ dojde k refrakci tak, že nedochází ke změně normy čtyřrychlosti.
@@ -265,7 +264,7 @@ Dále uvedeme refrakční rovnice v reálných polárních prostorových souřad
 \begin{equation}
     \begin{split}
         \rho &= \sqrt{2} \left|Z + U_{+} H_{,\bar{Z}}\right|, \\
-        \varphi &= \frac{1}{2i} \log \frac{Z + U_+ H_{,\bar{Z}}}{\bar{Z} + U_+ H_{,Z}}
+        \varphi &= \frac{1}{2i} \log \frac{Z + U_+ H_{,\bar{Z}}}{\bar{Z} + U_+ H_{,Z}}.
     \end{split}
 \end{equation}
 Limitou $U \to 0^+$ a $U \to 0^-$ dostáváme
@@ -286,11 +285,11 @@ tedy radiální i úhlová složka jsou spojité. Pro složky rychlosti pak prov
         \end{split}
 \end{equation}
 
-Transformací
+Pokud provedeme ve spojitém tvaru metriky \eqref{eq:nonexp_continuous_metric} transformaci
 \begin{align}
-    Z &= \frac{1}{\sqrt{2}}\left(X + i Y\right) & \bar{Z} = \frac{1}{\sqrt{2}}\left(X - i Y\right)
+    Z &= \frac{1}{\sqrt{2}}\left(X + i Y\right), & \bar{Z} = \frac{1}{\sqrt{2}}\left(X - i Y\right),
 \end{align}
-můžeme odvodit refrakční rovnice v reálných souřadnicích $(\matu, \matv, x, y)$
+můžeme jako doplněk k \eqref{eq:refraction_nonexpanding_positions} a \eqref{eq:refraction_nonexpanding_velocities} odvodit refrakční rovnice v reálných souřadnicích $(\matu, \matv, x, y)$
 
 \begin{align}
     \label{eq:kartezske_refrakcni_rovnice}
@@ -315,14 +314,14 @@ $H_{i,X} = \frac{\partial}{\partial x} H\vert_{\matu=0}$, $H_{i,Y} = \frac{\part
 
 Díky tomu, že odvození rovnic \eqref{eq:refraction_nonexpanding_positions} a \eqref{eq:refraction_nonexpanding_velocities} bylo provedeno v konformně plochých souřadnicích,
 jejich tvar nezávisí na hodnotě kosmologické konstanty $\Lambda$ a jedná se o jednotné rovnice pro refrakci geodetik způsobenou impulzními vlnami propagujícími se v
-Minkowského, de Sitterově a anti--de Sitterově prostoročase.
+Minkowského, de Sitterově a anti-de Sitterově prostoročase.
 
-V de Sitterově a anti--de Sitterově prostoročase můžeme také využít pětidimenzionálního formalismu a odvodit refrakční rovnice v souřadnicích \eqref{eq:5DDistributionalWaveMetric}.
-Konformní faktor je na jednotlivých částech prostoročasu při "cut and paste"\ konstrukci daný jako $\Omega^{\pm}_{\mathrm{i}} = 1 + \frac{1}{6} \Lambda \eta^{\pm} \bar{\eta}^{\pm}$,
+V de Sitterově a anti-de Sitterově prostoročase můžeme také využít pětidimenzionálního formalismu a odvodit refrakční rovnice v souřadnicích \eqref{eq:5DDistributionalWaveMetric}.
+Konformní faktor je na jednotlivých částech impulzu při "cut and paste"\ konstrukci daný jako $\Omega^{\pm}_{\mathrm{i}} = 1 + \frac{1}{6} \Lambda \eta^{\pm} \bar{\eta}^{\pm}$,
 ze spojitosti $\eta, \bar{\eta}$ při přechodu přes $\matu=0$
 však plyne, že pro konformní faktor stačí psát $\Omega_{\mathrm{i}}$, jelikož při přechodu přes impulzní nadplochu nedochází k jeho změně.
 
-Z rovnic pro polohy \eqref{eq:kartezske_refrakcni_rovnice} dostáváme Penroseovu napojovací podmínku v 5--dimenzionálním formalismu
+Z rovnic pro polohy \eqref{eq:kartezske_refrakcni_rovnice} dostáváme Penroseovy napojovací podmínky v~5-dimenzionálním formalismu,
 \begin{align}
         \tilde{U}^{+}_\mathrm{i} &= 0 = \tilde{U}^{-}_\mathrm{i}, &
         \tilde{V}^{+}_\mathrm{i} &= \tilde{V}^{-}_\mathrm{i} + \frac{H_\mathrm{i}}{\Omega_\mathrm{i}}, \nonumber \\
@@ -348,8 +347,8 @@ kde
     p = \frac{1}{4} \left[(H_{\rmi, X})^2 + (H_{\rmi, Y})^2 - \frac{G_{\rmi}}{\epsilon a^2} \left(\tilde{V}_{\rmi}^+ - \frac{H_{\rmi}}{\Omega_{\rmi}}\right)\right].
 \end{equation}
 
-Vidíme, že i v 5--dimenzionálním formalismu dochází ke skoku na vlnoploše v~souřadnici $\tilde{V}$ a refrakce je ve všech směrech, kromě normály na vlnoplochu (tedy kromě směru $\dot{\tilde{U}}$).
-To má za následek, že se nulové generátory (A)--dS hyperboloidu po refrakci stávají generátory jiné nadplochy hyperboloidu (viz obrázek \ref{fig:jina_nadplocha}).
+Vidíme, že i v 5-dimenzionálním formalismu dochází ke skoku na vlnoploše v~souřadnici $\tilde{V}$ a refrakce je ve všech směrech, kromě normály na vlnoplochu (tedy kromě směru $\dot{\tilde{U}}$).
+To má za následek, že se nulové generátory (A-)dS hyperboloidu po refrakci stávají generátory jiné nadplochy hyperboloidu (viz obrázek \ref{fig:jina_nadplocha}).
 
 \begin{figure}[H]
     \centering
@@ -375,7 +374,7 @@ To má za následek, že se nulové generátory (A)--dS hyperboloidu po refrakci
 Refrakční rovnice jsou vhodným nástrojem k vizualizaci geodetik v souřadnicích prostoročasů na pozadí impulzní vlny.
 Pro vybrané funkce $H$, resp. $\mathcal{H}$ v~prostoročasech s $\Lambda \neq 0$, byly jejich užitím zvolené geodetiky (respektive odpovídající počáteční data) před impulzem ztotožněny
 s~geodetikami (daty) za impulzem. Integrací rovnice geodetiky na oblastech před a za impulzem zvlášť pak obdržíme celé geodetiky v prostoročasu s
-impulzní vlnou. Řešení rovnice geodetiky v maximálně symetrických prostoročasech je známé v analytické podobě, viz například \cite{Podolsk__2001}, my jsme se však
+impulzní vlnou. Řešení rovnice geodetiky v~maximálně symetrických prostoročasech je známé v analytické podobě, viz například \cite{Podolsk__2001}, my jsme se však
 rozhodli využít numerické řešení, sloužící jako základ pro diskuzi netriviálních gyratonických případů, kterým se věnuje kapitola~\ref{chap:kap03}.
 Pro účel vizualizace geodetik v těchto prostoročasech autor této práce vytvořil balíček GRImpulsiveWaves pro jazyk Python,
 tento open-source balíček je volně dostupný na platformě GitHub (\url{https://github.com/DSroD/GRImpulsiveWaves}) a na Python Package Index pod názvem
@@ -394,13 +393,12 @@ Griffiths a Podolský v \cite{Griffiths_1997}. Polní rovnice se pro tento pří
     \label{eq:podminka_na_H}
     \Delta H = 2 H_{,\eta \bar{\eta}} = 8 \pi T_{\matu \matu},
 \end{equation}
- 
 kde $T_{\matu \matu} = f(\eta, \bar{\eta}) \delta(\matu)$. Řešení částice s multipólovou strukturou pak odpovídá funkci $H$ v cylindrických prostorových souřadnicích ve tvaru
 \begin{equation}
     \label{eq:multipole_minkowski}
     H = -b_0 \log(\rho) + \sum_{m=1}^\infty b_m \rho^{-m} \cos\left[ m \left(\phi - \phi_m \right) \right],
 \end{equation}
-kde $b_m$, $\phi_m$ jsou konstanty. Monopólový, dipólový a kvadrupólový příspěvek k této funkci je vykreslen na obrázku \ref{fig:mono_di_kvadru}.
+kde $b_m$, $\phi_m$ jsou konstanty. Monopólový, dipólový a kvadrupólový příspěvek k~této funkci je vykreslen na obrázku \ref{fig:mono_di_kvadru}.
 
 Řešení s jedinou monopólovou částicí, tedy $b_m=0$ pro všechna $m \geq 1$, odpovídá Aichelburg--Sexlovu řešení (zkrácované jako AS) -- prostoročasu
 zkonstruovanému ultraboostem Schwarzschildova řešení \cite{Aichelburg_1971}.
@@ -430,7 +428,7 @@ zkonstruovanému ultraboostem Schwarzschildova řešení \cite{Aichelburg_1971}.
        \end{tikzpicture}
        \caption{}
      \end{subfigure}
-    \caption{Funkce $H$ v případě (a) AS řešení, impulzní vlny generované nulovou částicí s (b) dipólovou strukturou a s (c) kvadrupólovou strukturou.}
+    \caption{Funkce $H$ \eqref{eq:multipole_minkowski} v případě (a) AS řešení, impulzní vlny generované nulovou částicí s (b) dipólovou strukturou a s (c) kvadrupólovou strukturou.}
     \label{fig:mono_di_kvadru}
 \end{figure}
 
@@ -438,7 +436,7 @@ Na obrázku \ref{fig:Null_UV_AichelburgSexl_parameters} je vyobrazena refrakce v
 parametry $b_0$. Dochází ke skoku v souřadnici $\matv$, jak plyne z Penroseových napojovacích podmínek, a k refrakci.
 S rostoucí absolutní hodnotou parametru $b_0$ dochází k větší změně ve složce rychlosti $\dot \matv$.
 Skok ve složce $\dot \matv$ doprovází změna ve složce $\dot \eta$, pro kterou opět platí, že spolu s
-rostoucí absolutní hodnotou $b_0$ dochází k větší změně. To intuitivně odpovídá zachování 4--rychlosti.
+rostoucí absolutní hodnotou $b_0$ dochází k její větší změně. To intuitivně odpovídá zachování 4--rychlosti.
 Tato závislost je také vidět na obrázku \ref{fig:NullASRing01},
 kde vidíme geodetikcý pohyb v prostoru v závislosti na retardované souřadnici $\matu$, kterou v případě neexpandujících vln
 v Minkowského prostoročase můžeme použít jako afinní parametr. Geodetiky vykreslené přerušovanou čarou jsou v oblasti $\matu < 0$,
@@ -494,7 +492,7 @@ zatímco geodetiky vykreslené plnou čarou jsou v oblasti $\matu > 0$ a po refr
 \end{figure}
 
 Záporné hodnoty parametru $b_0$, použté na obrázcích \ref{fig:Null_UV_AichelburgSexl_parameters} a \ref{fig:NullASRing01}, byly vhodné pro přehlednější vizualizaci
-efektu impulzní vlny, nemají ale v originální konstrukci Aichelburg-Sexlova ultraboostu fyzikální význam. Parametr $b_0$
+efektu impulzní vlny, nemají ale v originální konstrukci Aichelburg--Sexlova ultraboostu fyzikální význam. Parametr $b_0$
 představuje v ultraboostové limitě $v \to 1, m \to 0$ konstantu, která splňuje $8m = b_0\sqrt{1-v^2}$, pro fyzikální systémy konstruované touto metodou
 tedy nabývá kladných hodnot. Příklady nulových geodetiky pro kladné hodnoty jsou na obrázku \ref{fig:ASNullFyzikalnejsi}, kde vidíme,
 že geodetiky jsou refraktovány směrem k $\rho=0$ -- jde tedy o přitažlivý efekt nulové částice generující impulzní vlnu.
@@ -570,7 +568,7 @@ Testovací částice s časupodobnými geodetikami se chovají stejným způsobe
 
 Refrakce je slabší s rostoucí vzdáleností od částice generující impulz. Na obrázku \ref{fig:AS_zavislost_na_rho} jsou znázorněny už
 refraktované časupodobné geodetiky pro různé vzdálenosti od osy symetrie. Před refrakcí se jedná o pohyb testovacích částic ve směru osy $z$.
-Takové chování odpovídá intuitivnímu očekávání při uvážení fyzikální podstaty zdroje v AS řešení.
+Takové chování odpovídá intuitivnímu očekávání při uvážení fyzikální podstaty zdroje impulzní vlny v AS řešení.
 
 \begin{figure}[H]
     \centering
@@ -589,7 +587,7 @@ Takové chování odpovídá intuitivnímu očekávání při uvážení fyziká
 \end{figure}
 
 
-Pro potěšení oka čtenáře jsou přiloženy další vizualizace geodetického pohybu v Aichelburg-Sexlově řešení. Na obrázku \ref{fig:AsMatter02} je systém časupodobných geodetik, které se před
+Pro potěšení oka čtenáře jsou přiloženy další vizualizace geodetického pohybu v Aichelburg--Sexlově řešení. Na obrázku \ref{fig:AsMatter02} je systém časupodobných geodetik, které se před
 průchodem impulzní vlnou šíří směrem od osy symetrie $z$. V (b) dochází k refrakci, která otáčí směr šíření směrem zpět k ose $z$.
 Na obrázku \ref{fig:AsMatterNonAxial} je pak zobrazení průchodu geodetik, které nejsou uspořádány axiálně symetricky.
 
@@ -642,12 +640,14 @@ Na obrázku \ref{fig:AsMatterNonAxial} je pak zobrazení průchodu geodetik, kte
     \caption{Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2}$, $\dot \matv^-=1$, $\dot \eta^-=0$) ve vybraném uspořádání procházející nadplochou $\matu = 0$.}
     \label{fig:AsMatterNonAxial}
 \end{figure}
-Pro $m>0$ závisí změna geodetického pohybu na prostorovém úhlu. Derivace profilové funkce $H_{i,Z}$, která vystupuje v refrakčních rovnicích, je pro jednotlivá $m$
+
+Pro $m>0$ závisí změna geodetického pohybu na prostorovém úhlu. Derivace profilové funkce $H_{i,Z}$, která vystupuje v refrakčních rovnicích, je pro jednotlivé hodnoty $m$
 \begin{equation}
     H_{i,Z}^{(m)}(\eta, \bar{\eta}) = -\frac{(\sqrt{2})^{m} b_m m}{\eta^{m+1}}.
 \end{equation}
 Speciálně pro $m=1$, tedy impulz generovaný částicí s dipólovou strukturou, je $H_{i,Z}^{(1)}$ vykreslena na obrázku \ref{fig:DipoleHZ}. Reálná část a imaginární část
-odpovídá derivacím ve směru $X$ a $Y$ vystupujícím v refrakčních rovnicích \eqref{eq:refraction_velocity_null_cart} - přímo tedy ukazují závislost změny čtyřrychlosti v těchto směrech na místě průchodu geodetiky vlnoplochou,
+odpovídá derivacím ve směru $X$ a $Y$ vystupujícím v refrakčních rovnicích \eqref{eq:refraction_velocity_null_cart} -- přímo tedy ukazují závislost změny čtyřrychlosti
+v~těchto směrech na místě průchodu geodetiky vlnoplochou,
 
 \begin{equation}
     \begin{split}
@@ -658,7 +658,7 @@ odpovídá derivacím ve směru $X$ a $Y$ vystupujícím v refrakčních rovnic�
 
 
 Příklad nulových geodetik procházejících impulzem s jediným nenulovým členem pro $m=1$ je na obrázku \ref{fig:DipoleAxial}, pro časupodobné geodetiky dostáváme totožné
-chování (viz obrázek \ref{fig:DipoleAxialTimelike})
+chování (viz obrázek \ref{fig:DipoleAxialTimelike}).
 
 \begin{figure}[ht]
     \centering
@@ -708,7 +708,7 @@ chování (viz obrázek \ref{fig:DipoleAxialTimelike})
         \node at (5.8,1.083) [rectangle,draw, white, fill=white] {$y$};
         \node[text width=7pt] at (5.8,1.13) {\small{$y$}};
     \end{tikzpicture}    
-    \caption{Časupodobné geodetiky ($\dot \matu^-=0.5$, $\dot \matv^-=1$, $\dot \eta^-=0$) v axiálně symetrickém uspořádání ($\rho=1$) na $\mathcal{M}^-$ procházející impulzní nadplochou vlny generované částicí s dipólovou strukturou,
+    \caption{Časupodobné geodetiky ($\dot \matu^-=0.5$, $\dot \matv^-=1$, $\dot \eta^-=0$) v axiálně symetrickém uspořádání ($\rho=1$) na $\mathcal{M}^-$ procházející impulzní nadplochou vlny generované částicí s dipólovou strukturou
     s parametrem $b_1=0.4$.}
     \label{fig:DipoleAxialTimelike}
 \end{figure}
@@ -745,13 +745,13 @@ První člen
 \begin{equation}
     b_0 Q_1(z) = b_0 \left(\frac{z}{2} \log \left|\frac{1+z}{1-z}\right| - 1\right)
 \end{equation}
-představuje axiálně symetrické Hottovo--Tanakovo řešení \cite{Hotta_1993}, které odpovídá boostu Schwarzschildova--(anti--)de Sitterova
-prostoročasu. Toto řešení je analogií Aichelburg--Sexlova řešení v (anti--)de Sitterově prostoročasu se singulární hmotou generující vlnu v $z=1$. V případě de Sitterova prostoročasu je impulzní nadplocha
-neexpandující sféra generovaná dvěma nehmotnými částicemi, které letí v opačném směru. V anti--de Sitterově prostoročasu je impulzní nadplocha hyperboloidální
-plochou generovaná částicí, která se (díky tomu, že se jedná o nakrytí $\mathbb{R}^4$ s topologií $\mathbb{S}^1 \times \mathbb{R}^3$) periodicky pohybuje mezi prostorovými nekonečny,
-z jedné strany na druhou.
+představuje axiálně symetrické Hottovo--Tanakovo řešení \cite{Hotta_1993}, které odpovídá boostu Schwarzschildova--(anti-)de Sitterova
+prostoročasu. Toto řešení je analogií Aichelburg--Sexlova řešení v (anti-)de Sitterově prostoročasu se singulární hmotou generující vlnu v $z=1$. V případě de Sitterova prostoročasu je impulzní nadplocha
+neexpandující sféra generovaná dvěma nehmotnými částicemi, které letí v opačném směru. V anti-de Sitterově prostoročasu je impulzní nadplocha hyperboloidální
+plochou generovanou částicí, která se (díky tomu, že se jedná o nakrytí $\mathbb{R}^4$ s topologií $\mathbb{S}^1 \times \mathbb{R}^3$) periodicky pohybuje mezi prostorovými nekonečny, tedy
+"z jedné strany na druhou".
 
-Na obrázku \ref{fig:funkceHhodnotyvADS} vidíme hodnoty funkce $\mathcal{H}(Z_2, Z_3, Z_4)$ Hottova--Tanakova řešení na vlnoploše v (A--)dS prostoročasu (s $|\Lambda | = 1$).
+Na obrázku \ref{fig:funkceHhodnotyvADS} vidíme hodnoty funkce $\mathcal{H}(Z_2, Z_3, Z_4)$ Hottova--Tanakova řešení na vlnoploše v (A-)dS prostoročasu (s $|\Lambda | = 1$).
 
 \begin{figure}[ht]
     \centering
@@ -768,9 +768,9 @@ Na obrázku \ref{fig:funkceHhodnotyvADS} vidíme hodnoty funkce $\mathcal{H}(Z_2
             \node[inner sep=0pt, anchor=south west] (ds) at (0,0)
             {\includegraphics[width=1\textwidth, clip]{../img/kap02/AdSWaveFrontHValue.pdf}};
         \end{tikzpicture}
-        \caption{anti--de Sitterův prostoročas}
+        \caption{anti-de Sitterův prostoročas}
     \end{subfigure}
-    \caption{Funkce $\mathcal{H}$ má v de Sitterově prostoročasu singulární body na pólech sféry odpovídající vlnoploše ($Z_4 = \pm a$), v anti--de Sitterově
+    \caption{Funkce $\mathcal{H}$ má v de Sitterově prostoročasu singulární body na pólech sféry odpovídající vlnoploše ($Z_4 = \pm a$); v anti-de Sitterově
     prostoročase singularity leží na vrcholech hyperboloidálních vlnoploch.}
     \label{fig:funkceHhodnotyvADS}
 \end{figure}
@@ -780,7 +780,7 @@ nezávislý na hodnotě kosmologické konstanty, chování na impulzní ploše s
 v konformně plochých souřadnicích tvar
 \begin{equation}
     \label{eq:Hotta_Tanaka_H_conf_flat_coords}
-    H(\eta, \bar{\eta}) = \frac{1}{24} b_0 \left((\Lambda \eta \bar{\eta} + 6) \log \left(\left| \frac{6}{\Lambda \eta \bar{\eta} }\right| \right)+2 (\Lambda \eta \bar{\eta} - 6)\right),
+    H(\eta, \bar{\eta}) = \frac{1}{24} b_0 \left((\Lambda \eta \bar{\eta} + 6) \log \left| \frac{6}{\Lambda \eta \bar{\eta} }\right| +2 (\Lambda \eta \bar{\eta} - 6)\right),
 \end{equation}
 a v derivacích $H$ ve směru $\eta$, respektive $\bar{\eta}$.
 
@@ -837,12 +837,12 @@ Tento pohyb je pro řešení s $b_0 = 1$ zobrazen v konformně plochých souřad
         \end{tikzpicture}
         \caption{$\Lambda = -1,5$}
     \end{subfigure}
-    \caption{Geodetický pohyb nulové částice ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) v nadploše $y = 0$ v Hottově--Tanakově řešení s parametrem $b_0 = 1$.}
+    \caption{Geodetický pohyb nulové testovací částice ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) v nadploše $y = 0$ v~Hottově--Tanakově řešení s parametrem $b_0 = 1$.}
     \label{fig:HottaTanakaNullY0}
 \end{figure}
 
 Pro nulové částice nenacházející se na nadploše obsahující osu symetrie dostáváme očekávané strhnutí k
-ose symetrie Hottova--Tanakova řešení, k $\eta=0$ (viz obrázek \ref{fig:HottaTanakaNullYsqrt2}). 
+ose symetrie Hottova--Tanakova řešení, tedy k $\eta=0$ (viz obrázek \ref{fig:HottaTanakaNullYsqrt2}). 
 
 \begin{figure}[ht]
     \centering
@@ -873,12 +873,12 @@ ose symetrie Hottova--Tanakova řešení, k $\eta=0$ (viz obrázek \ref{fig:Hott
         \end{tikzpicture}
         \caption{$\Lambda = -1$}
     \end{subfigure}
-    \caption{Geodetický pohyb nulových částic ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) v~nadploše $y = \sqrt{2}$ v Hottově-Tanakově řešení s parametrem $b_0 = 1$.}
+    \caption{Geodetický pohyb nulových částic ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) v~nadploše $y = \sqrt{2}$ v Hottově--Tanakově řešení s parametrem $b_0 = 1$.}
     \label{fig:HottaTanakaNullYsqrt2}
 \end{figure}
 
-Pro porovnání efektu impulzní vlny na časupodobné testovací částice v konformně plochých souřadnicích byly vykresleny případy geodetického pohybu v prostoročasu bez vlny
-a v prostoročasu s impulzní vlnou s parametrem $b_0=3$.
+Pro porovnání efektu impulzní vlny na časupodobné testovací částice v konformně plochých souřadnicích byly vykresleny případy geodetického pohybu v~prostoročasu bez vlny
+a v~prostoročasu s impulzní vlnou s parametrem $b_0=3$.
 
 \begin{figure}[ht]
     \centering
@@ -907,7 +907,7 @@ a v prostoročasu s impulzní vlnou s parametrem $b_0=3$.
             \filldraw[white] (1.75,1.05) circle (5pt);
             \node[text width=7pt] at (1.75,1.05) {\footnotesize{$y$}};
         \end{tikzpicture}
-        \caption{Hotta--Tanaka$(\Lambda = 1)$}
+        \caption{Hotta--Tanaka $(\Lambda = 1)$}
     \end{subfigure}
 
     \begin{subfigure}[b]{0.48\textwidth}
@@ -921,7 +921,7 @@ a v prostoročasu s impulzní vlnou s parametrem $b_0=3$.
             \filldraw[white] (1.75,1.05) circle (5pt);
             \node[text width=7pt] at (1.75,1.05) {\footnotesize{$y$}};
         \end{tikzpicture}
-        \caption{Anti--de Sitter $(\Lambda = -1)$}
+        \caption{anti-de Sitter $(\Lambda = -1)$}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
@@ -935,15 +935,15 @@ a v prostoročasu s impulzní vlnou s parametrem $b_0=3$.
             \filldraw[white] (1.75,1.05) circle (5pt);
             \node[text width=7pt] at (1.75,1.05) {\footnotesize{$y$}};
         \end{tikzpicture}
-        \caption{Hotta-Tanaka $(\Lambda = -1)$}
+        \caption{Hotta--Tanaka $(\Lambda = -1)$}
     \end{subfigure}
-    \caption{Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2N}$, $\dot \matv^-=-\frac{1}{N}$, $\dot \eta^-=0$), kde $N$ je normalizační faktor, v (A)--dS a Hottově--Tanakově řešení s parametrem $b_0 = 3$.}
+    \caption{Časupodobné geodetiky ($\dot \matu^-=\frac{1}{2N}$, $\dot \matv^-=-\frac{1}{N}$, $\dot \eta^-=0$), kde $N$ je normalizační faktor, v (A-)dS a Hottově--Tanakově řešení s parametrem $b_0 = 3$.}
     \label{fig:HottaTanakaMatter}
 \end{figure}
 
-Dále vizualizujeme efekt refrakce geodetik v 5--dimenzionálním formalismu. Nulové geodetiky tvoří generátory (A)--dS hyperboloidu, protože při refrakci nedochází
-ke změně kauzálního charakteru, po refrakci zůstává geodetika generátorem hyperboloidu, ale, jak vyplývá z refrakčních rovnic \eqref{eq:refraction_velocity_null_cart}, v jiné nadploše - dochází k refrakci
-ve všech směrech, kromě směru normály na vlnoplochu. Případ refrakce nulových částic na de Sitterově prostoročasu je na vizualizován na obrázku \ref{fig:HottaTanaka5D}.
+Dále vizualizujeme efekt refrakce geodetik v 5-dimenzionálním formalismu. Nulové geodetiky tvoří generátory (A-)dS hyperboloidu, protože při refrakci nedochází
+ke změně kauzálního charakteru, po refrakci zůstává geodetika generátorem hyperboloidu, ale, jak vyplývá z refrakčních rovnic \eqref{eq:refraction_velocity_null_cart}, v jiné nadploše -- dochází k refrakci
+ve všech směrech, kromě směru normály na vlnoplochu. Případ refrakce nulových částic na de Sitterově prostoročasu je pak vykreslen na obrázku \ref{fig:HottaTanaka5D}.
 
 \begin{figure}[ht]
     \centering
@@ -957,7 +957,7 @@ ve všech směrech, kromě směru normály na vlnoplochu. Případ refrakce nulo
         \filldraw[white] (9.8,2.4) circle (12pt);
         \node[text width=14pt] at (9.8,2.4) {\normalsize{$Z_1$}};
     \end{tikzpicture}
-    \caption{Geodetický pohyb nulové částice ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) procházející vlnoplochou $\Lambda=1$ Hottova--Tanakova řešení s parametrem $b_0 = 1$ v~$\eta=1,5$ a různých časech (tedy v různých hodnotách souřadnice $\matv$) vyobrazený ve vnoření do $\mathbb{E}^{1,4}$.}
+    \caption{Geodetický pohyb nulové testovací částice ($\dot \matu^-=1$, $\dot \matv^-=0$, $\dot \eta^-=0$) procházející vlnoplochou $\Lambda=1$ Hottova--Tanakova řešení s parametrem $b_0 = 1$ v~$\eta=1.5$ a různých časech (tedy v různých hodnotách souřadnice $\matv$) vyobrazený ve vnoření do $\mathbb{E}^{1,4}$.}
     \label{fig:HottaTanaka5D}
 \end{figure}
 

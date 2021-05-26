@@ -3,62 +3,66 @@
 
 \section*{Obecná teorie relativity}
 
-Roku 1915 Albert Einstein představil a publikoval Obecnou teorii relativity \cite{Einstein1915}, nejmodernější a doposud nejúspěšnější teorii gravitace. Za více jak 100 let od její formulace byly v nesčetném množství
-experimentů úspěšně ověřeny její předpovědi. První dva klíčové úspěchy této teorie byly objasnění anomálního stáčení perihelia Merkuru následované pozorováním ohybu paprsků světla procházejících v blízkosti slunce
-sirem Eddingtone při zatmění slunce v roce 1919.
-Technicky nejsložitější a nejdéle očekávaným testem obecné relativity byla první detekce gravitačních vln v roce 2015 na interferometrech LIGO v Livingstonu a Hanfordu \cite{PhysRevLett.116.061102}, která byla následována
+Roku 1915 Albert Einstein představil a publikoval Obecnou teorii relativity \cite{Einstein1915}, toho času nejmodernější a doposud nejúspěšnější teorii gravitace. Za více jak 100 let od její formulace byly v nesčetném množství
+experimentů úspěšně ověřeny její předpovědi. První dva klíčové úspěchy této teorie byly objasnění anomálního stáčení perihelia Merkuru následované pozorováním ohybu paprsků světla procházejících v blízkosti Slunce
+při jeho zatmění sirem Eddingtonem v roce 1919.
+Technicky nejsložitější a nejdéle očekávaným testem obecné relativity byla první detekce gravitačních vln v roce 2015 na interferometrech LIGO ve spojených státech, konkrétně v Livingstonu a Hanfordu \cite{PhysRevLett.116.061102}, která byla následována
 desítkami dalších detekcí k nimž nyní přispívá i evropský projekt VIRGO.
 
 
-Formálně je obecná teorie relativity geometrická teorie popisující chování hmoty a energie ve čtyřrozměrném prostoročase, který reprezentuje jako diferencovatelnou varietu $\mathcal{M}$ vybavenou metrickým tenzorem $g_{\mu \nu}$.
-Tvar metrického tenzoru, resp. jeho složek (metrických funkcí) je s fyzikální realitou gravitačního pole spojen Einsteinovými rovnicemi, které mají v geometrizovaných jednotkách
+Formálně je obecná teorie relativity geometrická teorie gravitace popisující chování hmoty a energie ve čtyřrozměrném prostoročase, který reprezentuje jako diferencovatelnou varietu $\mathcal{M}$ vybavenou metrickým tenzorem $g_{\mu \nu}$.
+Tvar metrického tenzoru, resp. jeho složek (metrických funkcí) je s fyzikální realitou gravitačního pole spojen Einsteinovými rovnicemi, které mají v přirozených geometrizovaných jednotkách
 tvar
 \begin{equation}
     \label{eq:einsten_field_equations}
     R_{\mu \nu} - \frac{1}{2} R g_{\mu \nu} + \Lambda g_{\mu \nu} = 8 \pi T_{\mu \nu},
 \end{equation}
-přičemž uvažujeme geometrické jednotky s $c = G = 1$.
-Jedná se o 10 nelineárních parciálních diferenciálních rovnic druhého řádu, jejichž levá strana představuje geometrii na $\mathcal{M}$ reprezentující prostoročas, $R_{\mu \nu}$ je Ricciho tenzor křivosti, $R$ je Ricciho skalární křivost a $\Lambda$
+přičemž uvažujeme $c = G = 1$.
+Technicky se jedná o 10 nelineárních parciálních diferenciálních rovnic druhého řádu, jejichž levá strana představuje geometrii na varietě $\mathcal{M}$ reprezentující prostoročas, $R_{\mu \nu}$ je Ricciho tenzor křivosti, $R$ je Ricciho skalární křivost a $\Lambda$
 je takzvaná kosmologická konstanta. Tenzor energie a hybnosti $T_{\mu \nu}$ na pravé straně pak dává spojení geometrických objektů s fyzikálním modelem, představuje rozložení hmoty,
-energie a jejich toky a hybnosti. Tyto rovnice tedy říkají, jak hmota ovlivňuje geometrii prostoročasu a jak geometrie prostoročasu udává dynamiku fyzikálního obsahu prostoročasu.
+energie a jejich toky a hybnosti. Tyto rovnice tedy říkají, jak hmota ovlivňuje geometrii prostoročasu a jak geometrie prostoročasu udává dynamiku jeho fyzikálního obsahu.
 Obecně je řešení této soustavy velmi obtížný problém, získání přesných řešení vyžaduje řadu zjednodušujících předpokladů, jako například
-předpoklady symetrie, viz \cite{griffiths_podolsky_2009}, \cite{stephani2003}. Běžně se k řešení těchto rovnic využívá poruchových metod a metod
+předpoklady symetrie, speciální algebraické vlastnosti tenzoru křivosti, či specifické chování kongruencí testovacích částic, viz přehledové monografie \cite{griffiths_podolsky_2009}, \cite{stephani2003}. Běžně se k řešení těchto rovnic využívá poruchových metod a metod
 numerické relativity. Přesná řešení však hrají důležitou roli na cestě k detailnímu porozumění obecné relativitě.
 
-
-Pomocí metrického tenzoru prostoročasové varietě zavádíme při metrickou a symetrickou (beztorzní) lineární konexi, Levi-Civitovu konexi. Pro její složky v lokálních souřadnicích platí
+Pra naší analýzu jsou klíčové pohyby volných testovacích částic. Rovnice, které musí splňovat jejich trajektorie na prostoročasové varietě, jsou závislé na geometrii přes metrický tenzor a jeho derivace.
+Pomocí nich na $\mathcal{M}$ zavádíme metrickou symetrickou (beztorzní) lineární konexi, Levi-Civitovu konexi. Pro její složky v lokálních souřadnicích platí
 \begin{equation}
+    \label{eq:affine_connection}
     \Gamma^\alpha_{~\mu \nu} = \frac{1}{2} g^{\alpha \sigma} \left( g_{\mu \sigma,\nu} + g_{\nu \sigma, \mu} - g_{\mu \nu, \sigma}\right),
 \end{equation}
-kde symbolem $g_{\alpha \beta, \gamma}$ myslíme parciální derivaci složek metriky $\partial_\gamma g_{\alpha \beta}$.
+kde symbolem $g_{\alpha \beta, \gamma}$ myslíme parciální derivaci složek metriky, tedy $\partial_\gamma g_{\alpha \beta}$.
 
 Volné (testovací) částice se pohybují po křívkách $z^\mu(\tau): \mathbb{R} \to \mathcal{M}$. Tyto křivky nazýváme geodetiky, jsou parametrizovány afinním parametrem $\tau$. Pro časupodobné geodetiky
 odpovídá $\tau$ \emph{vlastnímu času}. Geodetiky splňují rovnici geodetického pohybu
 \begin{equation}
+    \label{eq:geodesic_equation}
     \frac{\rmd^2 z^\mu}{\rmd \tau^2} + \Gamma^\mu_{~\alpha \beta} \frac{\rmd z^\alpha}{\rmd \tau} \frac{\rmd z^\beta}{\rmd \tau}.
 \end{equation}
 
 
 \section*{Impulzní gravitační vlny}
-V této práci se budeme zabývat impulzními gravitačními vlnami. Jedná se o přesná řešení Einsteinových rovnic s křivostí úměrnou $\delta$-funkci lokalizované
+V této práci se budeme zabývat prostoročasy s impulzními gravitačními vlnami. Jedná se o přesná řešení Einsteinových rovnic s křivostí úměrnou $\delta$-funkci lokalizované
 na nulové nadploše (ve smyslu teorie distribucí) na které se fyzikálně nachází infinitezimálně krátký pulz silného gravitačního záření.
 Mezi nejzkoumanější prostoročasy s impulzními vlnami se řadí jednoduché modely z Robinson-Trautmanovy třídy expandujících vln a z Kundtovy třídy
-neexpandujících vln, respektive jejich impulzní limity, kde se profil vlny limitně blíží k $\delta$-fukci.
+neexpandujících vln, respektive jejich impulzní limity, kde se profil vlny limitně blíží k $\delta$-fukci \cite{griffiths_podolsky_2009} \cite{PODOLSK2002}.
 V případě expandujících i neexpandujících vln se jedná o vlny šířící se na prostorech konstantní křivosti až na nadplochu představující impulz.
-Právě na ploše impulzu dochází k fyzikálně zajímavým efektům - v souřadnicích pozadí dochází ke skoku v polohách a čtyřrychlostech
-procházejících tetovacích částic.
+Právě na ploše impulzu dochází k fyzikálně zajímavým efektům - v souřadnicích pozadí dochází ke skoku a zlomu v polohách a čtyřrychlostech
+procházejících testovacích částic.
 
 Hlavním cílem této práce je vizualizovat a blíže popsat tuto interakci testovacích částic s impulzní gravitační vlnou. Zaměříme se
-zejména na neexpandující impulzní vlny Kundtovy třídy, kterým se věnuje kapitola \ref{chap:kap02}, dále v kapitole \ref{chap:kap03} na zobecnění na impulzní vlny generované
+zejména na neexpandující impulzní vlny Kundtovy třídy, kterým se věnuje kapitola \ref{chap:kap02}, dále v kapitole \ref{chap:kap03} na jejich zobecnění popisující impulzní vlny generované
 gyratonovým zdrojem, kde má prostoročas za impulzní vlnou dodatečné mimodiagonální členy.
 
 K vizualizacím geodetického pohybu využijeme
-formalismus refrakčních rovnic, které udávají podmínky napojení geodetik před průchodem impulsní plochou a po průchodu.
+formalismus refrakčních rovnic, které udávají podmínky napojení geodetik před průchodem impulsní plochou a po průchodu \cite{Podolsky:2014ysa}, \cite{Podolsky_2017}.
 Samotná vizualizace bude provedená za pomoci vlastního balíčku \emph{GRImpulsiveWaves} pro jazyk Python, který numericky řeší rovnici geodetiky na
 částech prostoročasů před a po refrakci a následně vytváří statické i interaktivní zobrazení geodetického pohybu.
 
 V příloze \ref{chap:kap04} nakonec přiblížíme možnost konstrukce impulsních expandujících vln pomocí spinorového popisu a představíme některé základní
-dosažené výsledky studia expandujících vln spinorovým i klasickým popisem.
+dosažené výsledky studia expandujících vln spinorovým i klasickým popisem odpovídající původním pracím \cite{PenroseNutku1992}, \cite{Podolsky:2016mqg}.
+Ačkoliv tento dodatek vybočuje z linie analyzované v hlavní části práce, rozhodli jsme se ho k práci
+připojit jako možný zdroj inspirace k dalšímu studiu.
 
 
 \clearpage

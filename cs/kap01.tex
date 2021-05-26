@@ -1,10 +1,10 @@
 \chapter{Prostoročasy konstantní křivosti}
 \label{chap:kap01}
 V této kapitole představíme prostoročasy, které budou sloužit jako pozadí pro propagaci impulzlních gravitačních vln. Jde o maximálně
-symetrická řešení Einsteinových polních rovnic \eqref{eq:einsten_field_equations} s nulovou pravou stranou a s konstantní skalární křivostí $R$ na celém prostoročase.
+symetrická řešení Einsteinových polních rovnic \eqref{eq:einsten_field_equations} s nulovou pravou stranou (to odpovídá vakuovému případu) a s konstantní skalární křivostí $R$ na celém prostoročase.
 Celkem rozlišujeme tři takové geometrie lišící se znaménkem skalární křivosti (a tedy znaménkem kosmologické konstanty). Nulová skalární křivost odpovídá řešení s nulovou
 kosmologickou konstantou, kterému se říká Minkowského prostoročas, kladná křivost odpovídá takzvanému de Sitterovu prostoročasu s kladnou kosmologickou
-konstantou a záporná odpovídá anti--de Sitterovu prostoročasu se zápornou kosmologickou konstantou. Vztah mezi kosmologickou konstantou a skalární
+konstantou a záporná odpovídá anti-de Sitterovu prostoročasu se zápornou kosmologickou konstantou. Vztah mezi kosmologickou konstantou a skalární
 křivostí ve vakuových řešeních (tedy s nulovým tenzorem energie a hybnosti) dostaneme kontrakcí polních rovnic \eqref{eq:einsten_field_equations} jako
 \begin{equation}
      R = 4 \Lambda.
@@ -14,9 +14,9 @@ Všechna tato řešení vykazují deset generátorů symetrie, tedy maximální 
 I přes svou jednoduchost jsou zmíněné prostoročasy na poli teoretické fyziky velmi podstatné, čtyřdimenzionální Minkowského prostoročas je arénou speciální
 teorie relativity a standardní kvantové teorie pole, vícedimenzionální Minkowského prostoročas pak často slouží jako vhodný prostor pro vnoření a vizualizaci složitějších prostoročasů.
 De-Sitterův prostoročas je pro moderní fyziku důležitý při popisu kosmologických modelů. Experimentální data
-ukazují, že v aproximaci do prvního řádu lze vesmír právě na velkých škálách (a také v inflační epoše) popsat právě jako de Sitterův prostoročas.
+ukazují, že v aproximaci do prvního řádu lze vesmír na velkých škálách (a také v inflační epoše) popsat právě jako de Sitterův prostoročas.
 Anti--de Sitterův prostoročas na poli teoretické fyziky nachází uplatnění v modelech snažících se o jednotný popis všech fyzikálních interakcí (Maldacenova dualita kalibračních teorií a gravitace).
-Pro další komentáře a reference k těmto řešením odkazujeme na úvodní kapitolu Bičákovy práce \cite{Bicak:2000ea}, podrobný popis geometrie a parametrizací Minkowského, de~Sitterova a anti--de~Sitterova
+Pro další komentáře a reference k těmto řešením odkazujeme na úvodní kapitolu práce \cite{Bicak:2000ea}, podrobný popis geometrie a souřadnicových parametrizací Minkowského, de~Sitterova a anti-de~Sitterova
 řešení je k nalezení v \cite{griffiths_podolsky_2009}. V následujících sekcích popíšeme nejpodstatnější vlasnosti
 a parametrizace těchto prostoročasů, používané ke zkoumání impulzních gravitačních vln.
 
@@ -25,7 +25,7 @@ Minkowského prostoročas $\mathbb{E}^{1,3}$ je nejjednodušší řešení Einst
 Jde o řešení s nulovou křivostí v celém prostoročase. Grupou symetrií Minkowského prostoročasu je Poincarého
 grupa, která je tvořena všemi translacemi a Lorentzovou grupou představující rotace a boosty.
 
-Metrika Minkowského prostoročasu má v nejpřirozenějším vyjádření, v kartézských souřadnicích, tvar
+Metrika Minkowského prostoročasu má v nejpřirozenějším vyjádření v kartézských souřadnicích tvar
 \begin{equation}
      \label{eq:minkowski}
      \rmd s^2 = - \rmd t^2 + \rmd x^2 + \rmd y^2 + \rmd z^2.
@@ -44,7 +44,7 @@ převedeme metriku do symetrického tvaru
      \label{eq:minkowski_null_metric}
      \rmd s^2 = -2 ~ \rmd \matu ~ \rmd \matv + 2 ~ \rmd \eta ~ \rmd \bar{\eta}.
 \end{equation}
-Souřadnicím $\matu$, $\matv$ zavedeným transformací \eqref{eq:retarded_coordinates} se říká retardovaná a advancovaná souřadnice,
+Souřadnicím $\matu$, $\matv$, zavedeným transformací \eqref{eq:retarded_coordinates} se říká retardovaná a advancovaná souřadnice,
 z důvodu symetrie se transformací \eqref{eq:complex_coordinates} zavádí komplexní souřadnice $\eta, \bar{\eta}$ a
 metrika \eqref{eq:minkowski_null_metric} je pak v symetrickém tvaru v takzvaných světelných (nulových) souřadnicích.
 Pokud zkoumáme axiálně symetrickou situaci na pozadí Minkowského prostoročasu, je vhodné zavést cylindrické
@@ -57,15 +57,15 @@ kde $\rho \in [0, \infty)$ a $\varphi \in [0, 2\pi)$. Metrika pak nabývá tvaru
      \rmd s^2 = -\rmd t^2 + \rmd \rho^2 + \rho^2 \rmd \varphi^2 + \rmd z^2.
 \end{equation}
 
-V Minkowského prostoročase jsou složky afinní konexe v kartézských souřadnicích,
-kterým odpovídá metrika \eqref{eq:minkowski}, identicky nulové. Řešení rovnice geodetiky pak
+V Minkowského prostoročase jsou složky afinní konexe \eqref{eq:affine_connection} v kartézských souřadnicích,
+kterým odpovídá metrika \eqref{eq:minkowski}, identicky nulové. Řešení rovnice geodetiky \eqref{eq:geodesic_equation} pak
 nabývá tvaru přímek, tedy
 \begin{equation}
      \label{eq:minkowski_cartesian_geodesics}
      \begin{split}
-     t(\lambda) &= t_0 + \lambda {\dot t}_0 \\
-     x(\lambda) &= x_0 + \lambda {\dot x}_0 \\
-     y(\lambda) &= y_0 + \lambda {\dot y}_0 \\
+     t(\lambda) &= t_0 + \lambda {\dot t}_0, \\
+     x(\lambda) &= x_0 + \lambda {\dot x}_0, \\
+     y(\lambda) &= y_0 + \lambda {\dot y}_0, \\
      z(\lambda) &= z_0 + \lambda {\dot z}_0,
      \end{split}
 \end{equation}
